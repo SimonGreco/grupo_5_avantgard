@@ -10,3 +10,7 @@ app.listen(3000, function(){
 // app.get("/", function(req, res){
 //     res.sendFile(path.join(__dirname, "/views/home.html"))
 // });
+
+//app.get("/register", function(req, res){
+//     res.sendFile(path.join(__dirname, "/views/registro.html"))
+//}); 
