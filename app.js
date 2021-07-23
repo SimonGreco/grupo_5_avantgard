@@ -10,3 +10,6 @@ app.listen(3000, function(){
 app.get("/", function(req, res){
     res.sendFile(path.join(__dirname, "/views/Home.html"))
 });
+app.get("/login", function(req, res){
+    res.sendFile(path.join(__dirname, "/views/login.html"))
+});

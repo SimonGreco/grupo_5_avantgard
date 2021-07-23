@@ -1,0 +1,165 @@
+.login-conteiner .fondo{
+    width: 100%;
+    background-attachment: fixed;
+    height: 100%;
+   
+}
+.login-conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+}
+
+.main-login{
+    width: 37%;
+    height: 550px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login-logo{
+    height: 20%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+}
+.formularios{
+    height: 80%;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.login-logo img{
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 30%;
+    display: block;
+}
+.txt-conteiner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-logo h2{
+    margin-left: 14px;
+    font-weight: 900;
+}
+.login-logo p{
+    margin-right: 12px;
+    color: blue;
+}
+hr{
+    width: 100%;
+    size: 10px;
+    margin-bottom: 0px;
+    margin-top: -17px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.Facebook-button{
+    width: 90%;
+    height: 60px;
+    border: solid 1px 	#4267B2;
+    color: 	#4267B2;
+    font-family: montserrat;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.formularios i{
+    margin: 0 10px;
+}
+.Google-button{
+    width: 90%;
+    height: 60px;
+    border: solid 1px 	#DB4437;
+    color: 	#DB4437;
+    font-family: montserrat;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 1%;
+}
+form .formularios-sesion{
+    width: 90%;
+    height: 50px;
+    font-family: montserrat;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 2%;
+    border: white solid 1px;
+    padding: 5px;
+
+}
+.checkbox{
+    font-size: 17px;
+}
+.login-button{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: transparent;
+    margin: 10px 10px;
+}
+.login-button button{
+    background-color: white;
+    width: 30%;
+    height: 50px;
+    border: white solid 1px;
+    border-radius: 6px;
+    color: black;
+    font-size: 20px;
+    font-family: montserrat;
+    margin-left: 5%;
+}
+.login-button p{
+    margin-right: 5%;
+    color: blue
+}
+
+/*ANIMACIONES*/
+
+
+.txt-conteiner p:hover{
+    text-decoration-line: underline;
+}
+.Google-button:hover{
+    background-color:#DB4437 ;
+    color: white;
+}
+.Google-button{
+    transition: all 300ms;
+}
+.Facebook-button:hover{
+    background-color:#4267B2 ;
+    color:white
+}
+.Facebook-button{
+    transition: all 300ms;
+}
+.acceder:hover{
+    background-color: grey;
+    color: white;
+}
+.acceder{
+    transition: all 100ms;
+}
+.Recuperacion-contraseña:hover{
+    text-decoration-line: underline;
+}

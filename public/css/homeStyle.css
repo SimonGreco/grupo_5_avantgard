@@ -134,7 +134,10 @@ hr{
 }
 
 /*CATEGORIAS*/
-
+.cat-txt{
+    color: white;
+    margin-left: 10%;
+}
 .main-categories{
     display: flex;
     justify-content: space-between;
