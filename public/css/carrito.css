@@ -228,6 +228,10 @@ hr {
     border: 3px solid black;
     width: 12%;
     height: 45px;
+    font-size: 20px;
+}
+.inicio:hover{
+    text-decoration-line: underline;
 }
 
 .botonContinuar:hover {
@@ -235,6 +239,10 @@ hr {
     color: black;
     border: 1px solid black;
 }
+.menosMas i{
+    font-size: 14px;
+}
+
 
 /* footer 
 
@@ -307,4 +315,9 @@ footer{
 }
 .txt{
     transition: all 400ms;
+}
+
+.menosMas i:hover{
+    font-size: 16px;
+    color: black;
 }

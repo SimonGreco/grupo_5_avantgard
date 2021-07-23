@@ -86,7 +86,7 @@ hr {
 }
 
 .cajaRegistro {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.7);
     border: 1px solid black;
     position: relative;
     left: 57%;
@@ -111,7 +111,7 @@ hr {
 .renglon {
     border: none;
     width: 100%;
-    height: 25px;
+    height: 45px;
     border-radius: 7px;
 }
 
@@ -127,8 +127,9 @@ hr {
     padding: 3px 10px;
     transition: all 450ms;
     border: 3px solid black;
-    width: 35%;
-    height: 30px;
+    width: 37%;
+    height: 45px;
+    font-size: 17px;
 }
 
 .boton:hover {
@@ -192,6 +193,7 @@ footer{
     bottom: 0px;
 
 }
+
 
 
 /*animaciones*/
