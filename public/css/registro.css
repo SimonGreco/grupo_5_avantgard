@@ -70,7 +70,16 @@ header img{
 
 /* main */
 
+.background {
+    position: relative;
+}
 
+.cajaRegistro {
+    border: 3px solid black;
+    position: absolute;
+    right: 20px;
+    padding: 15px;
+}
 
 /* footer */
 
