@@ -73,7 +73,7 @@ header img{
 /* main */
 
 main {
-    background-color: rgb(20,20,20);
+    background-color: #121655;
 }
 
 .sitio {
@@ -96,6 +96,7 @@ main {
     padding: 5px 20px;
     padding-bottom: 15px;
     background-color: white;
+    border-radius: 15px;
 }
 
 .cajaHija1 {
@@ -133,6 +134,26 @@ main {
     border: 1px solid black;
     border-radius: 5px;
     padding: 5px;
+    width: 75px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.menos {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.numero {
+    display: flex;
+    justify-content: center;
+}
+
+.mas {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .precio {
@@ -162,10 +183,16 @@ main {
     font-weight: bold;
 }
 
-.botonContinuar {
+.ubicacionBoton {
     display: flex;
     justify-content: flex-end;
-    border-radius: 5px;
+}
+
+.botonContinuar {
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    padding: 3px 10px;
 }
 
 /* footer 
