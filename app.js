@@ -8,13 +8,5 @@ app.listen(3000, function(){
 });
 
 app.get("/", function(req, res){
-     res.sendFile(path.join(__dirname, "/views/home.html"))
+    res.sendFile(path.join(__dirname, "/views/Home.html"))
 });
-
-app.get("/carrito", function(req, res){
-     res.sendFile(path.join(__dirname, "/views/carrito.html"))
-}); 
-
-//app.get("/registro", function(req, res){
-//    res.sendFile(path.join(__dirname, "/views/registro.html"))
-//}); 
