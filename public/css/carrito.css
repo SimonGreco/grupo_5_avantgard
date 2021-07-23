@@ -72,13 +72,18 @@ header img{
 
 /* main */
 
+.background {
+    background-size: contain;
+}
+
 main {
-    background-color: #121655;
+    width: 100%;
+    height: 100vw;
 }
 
 .sitio {
     display: flex;
-    width: 97%;
+    width: 95%;
     margin: auto;
     color: white;
 }
@@ -90,12 +95,12 @@ main {
 
 .cajaPadre {
     border: 1px solid black;
-    width: 97%;
-    height: 100%;
+    width: 95%;
+    height: 37%;
     margin: auto;
     padding: 5px 20px;
     padding-bottom: 15px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
 }
 
@@ -107,12 +112,21 @@ main {
     font-weight: bold;
     border-bottom: 3px solid black;
     margin-right: 75px;
+    text-align: center;
+    width: 15%;
+    padding-bottom: 10px;
 }
 
 .favoritos {
-    border-bottom: 1px solid black;
     width: 100%;
     font-weight: lighter;
+    padding-bottom: 10px;
+}
+
+hr {
+    width: 100%;
+    size: 10px;
+    margin-top: -20px;
 }
 
 .cajaHija2 {
@@ -128,36 +142,47 @@ main {
 .image {
     width: 125px;
     height: 125px;
+    margin-left: 10px;
+}
+
+.producto {
+    font-weight: bold;
 }
 
 .cantidad {
+    padding: 5px;
+    width: 75px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menosMas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
     border: 1px solid black;
     border-radius: 5px;
     padding: 5px;
     width: 75px;
     height: 40px;
-    display: flex;
-    align-items: center;
-    text-align: center;
 }
 
-.menos {
-    display: flex;
-    justify-content: flex-start;
+.eliminar {
+    font-size: 15px;
+    margin-top: -15px;
 }
 
-.numero {
-    display: flex;
-    justify-content: center;
-}
-
-.mas {
-    display: flex;
-    justify-content: flex-end;
+.eliminar:hover {
+    border-bottom: 1px solid black;
+    font-weight: bold;
 }
 
 .precio {
     font-weight: bold;
+    margin-right: 10px;
 }
 
 .cajaHija3 {
@@ -172,6 +197,11 @@ main {
     font-weight: bold;
 }
 
+.detallesDeEnvio {
+    width: 20%;
+    margin-right: 10px;
+}
+
 .cajaHija4 {
     display: flex;
     justify-content: flex-end;
@@ -181,6 +211,7 @@ main {
 .precioTotal {
     margin-left: 10px;
     font-weight: bold;
+    margin-right: 10px;
 }
 
 .ubicacionBoton {
@@ -193,6 +224,16 @@ main {
     background-color: black;
     color: white;
     padding: 3px 10px;
+    transition: all 450ms;
+    border: 3px solid black;
+    width: 12%;
+    height: 45px;
+}
+
+.botonContinuar:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
 }
 
 /* footer 
