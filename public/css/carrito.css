@@ -72,51 +72,171 @@ header img{
 
 /* main */
 
+.background {
+    background-size: contain;
+}
+
+main {
+    width: 100%;
+    height: 100vw;
+}
+
+.sitio {
+    display: flex;
+    width: 95%;
+    margin: auto;
+    color: white;
+}
+
 .ubicacion {
     font-weight: bold;
+    margin-left: 5px;
 }
 
 .cajaPadre {
-    border: 3px solid black;
+    border: 1px solid black;
+    width: 95%;
+    height: 37%;
+    margin: auto;
+    padding: 5px 20px;
+    padding-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
 }
 
 .cajaHija1 {
     display: flex;
-    justify-content: space-between;
 }
 
 .carrito {
     font-weight: bold;
-    border-bottom: 5px solid black;
+    border-bottom: 3px solid black;
+    margin-right: 75px;
+    text-align: center;
+    width: 15%;
+    padding-bottom: 10px;
 }
 
 .favoritos {
-    border-bottom: 3px solid black;
+    width: 100%;
+    font-weight: lighter;
+    padding-bottom: 10px;
+}
+
+hr {
+    width: 100%;
+    size: 10px;
+    margin-top: -20px;
 }
 
 .cajaHija2 {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding: 15px 0px;
+    align-items: center;
+}
+
+.image {
+    width: 125px;
+    height: 125px;
+    margin-left: 10px;
+}
+
+.producto {
+    font-weight: bold;
+}
+
+.cantidad {
+    padding: 5px;
+    width: 75px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menosMas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 75px;
+    height: 40px;
+}
+
+.eliminar {
+    font-size: 15px;
+    margin-top: -15px;
+}
+
+.eliminar:hover {
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
+.precio {
+    font-weight: bold;
+    margin-right: 10px;
 }
 
 .cajaHija3 {
     display: flex;
-    position: relative;
-    left: 100%;
+    border-bottom: 1px solid black;
+    justify-content: flex-end;
+    padding: 15px 0px;
+}
+
+.detalles {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.detallesDeEnvio {
+    width: 20%;
+    margin-right: 10px;
 }
 
 .cajaHija4 {
     display: flex;
-    position: relative;
-    left: 100%;
+    justify-content: flex-end;
+    padding: 15px 0px;
+}
+
+.precioTotal {
+    margin-left: 10px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.ubicacionBoton {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .botonContinuar {
-    position: relative;
-    left: 100%;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    padding: 3px 10px;
+    transition: all 450ms;
+    border: 3px solid black;
+    width: 12%;
+    height: 45px;
 }
 
-/* footer */
+.botonContinuar:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+/* footer 
 
 footer{
     position: absolute;
@@ -170,7 +290,7 @@ footer{
     position: absolute;
     bottom: 0px;
 
-}
+} */
 
 /*animaciones*/
 
