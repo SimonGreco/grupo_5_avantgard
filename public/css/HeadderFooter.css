@@ -6,6 +6,8 @@
 body{
     font-family: montserrat;
     margin: 0;
+    
+    /*background-color: rgb(212, 211, 211);*/
 }
 
 a{
@@ -21,6 +23,8 @@ a{
     background-color: black;
     color: white;
     font-weight: bold;
+    z-index: 100;
+    position: relative;
 }
 
 .headder-notification{
@@ -71,11 +75,12 @@ header img{
 /*FOOTER*/
 
 footer{
-    position: absolute;
+    position: relative;
     bottom: 0px;
+    width: 100%;
 }
 .img{
-    width: 100vw;
+    width: 100%;
     height: 90px;
     background-color: black;
     margin-bottom: 0px;
@@ -83,8 +88,7 @@ footer{
 }
 .img img{
     height: 50%;
-    margin: 30px 30px
-
+    margin: 30px 30px;
 }
 .footer-text-conteiner{
     width: 100%;
@@ -103,7 +107,7 @@ footer{
     font-size: 20px;
 }
 .bottom-footer{
-    width: 100vw;
+    width: 100%;
     height: 80px;
     background-color: rgb(165, 165, 165);
 }
@@ -123,6 +127,7 @@ footer{
     bottom: 0px;
 
 }
+
 
 
 /*animaciones*/
