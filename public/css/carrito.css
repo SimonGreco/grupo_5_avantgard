@@ -1,20 +1,3 @@
-*{
-    box-sizing: border-box;
-    
-}
-
-body{
-    font-family: montserrat;
-    margin: 0;
-}
-main{
-    background-repeat: no-repeat;
-}
-a{
-    text-decoration: none;
-    color:white
-}
-
 /* main */
 
 .background {
@@ -175,6 +158,7 @@ hr {
     height: 45px;
     font-size: 20px;
 }
+
 .inicio:hover{
     text-decoration-line: underline;
 }
@@ -213,11 +197,31 @@ hr {
 /*media queries*/
 
 @media (max-width: 480px) {
+    .cajaHija3 {
+        display: flex;
+        justify-content: center;
+    }
+    .botonContinuar {
+        font-size: 10px;
+        width: 25%;
+    }
 }
 
 @media (max-width: 768px) {
     .botonContinuar {
         font-size: 12px;
         width: 15%;
+    }
+    .image {
+        margin-left: 0;
+    }
+    .precio {
+        margin-right: 0;
+    }
+    .detallesDeEnvio {
+        margin-right: 0;
+    }
+    .precioTotal {
+        margin-right: 0;
     }
 }

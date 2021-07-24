@@ -1,27 +1,10 @@
-*{
-    box-sizing: border-box;
-    
-}
-
-body{
-    font-family: montserrat;
-    margin: 0;
-}
-
-main{
-    background-repeat: no-repeat;
-}
-
-a{
-    text-decoration: none;
-    color:white
-}
-
 /* main */
 
 main {
     width: 100%;
     height: auto;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .background {
@@ -37,12 +20,13 @@ hr {
 .cajaRegistro {
     background-color: rgba(255, 255, 255, 0.7);
     border: 1px solid black;
-    position: relative;
-    left: 57%;
     padding: 15px;
     height: 38%;
     width: 37%;
     border-radius: 15px;
+    margin-right: 8%;
+    margin-top: 8%;
+    margin-bottom: 8%;
 }
 
 .marca {
@@ -112,12 +96,16 @@ hr {
 /*media queries*/
 
 @media (max-width: 480px) {
+    .boton {
+        width: 45%;
+    }
 }
 
 @media (max-width: 768px) {
     .cajaRegistro {
-        position: relative;
-        left: 14.5%;
-        width: 70%;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 8%;
+        margin-bottom: 8%;
     }
 }
