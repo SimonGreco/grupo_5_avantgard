@@ -7,7 +7,9 @@ body{
     font-family: montserrat;
     margin: 0;
 }
-
+main{
+    background-repeat: no-repeat;
+}
 a{
     text-decoration: none;
     color:white
@@ -73,12 +75,13 @@ header img{
 /* main */
 
 .background {
-    background-size: contain;
+    background-size: cover;
+    
 }
 
 main {
     width: 100%;
-    height: 100vw;
+    height: auto;
 }
 
 .sitio {

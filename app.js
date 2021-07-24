@@ -21,3 +21,6 @@ app.get("/carrito", function(req, res){
 app.get("/registro", function(req, res){
     res.sendFile(path.join(__dirname, "/views/registro.html"))
 });
+app.get("/Header", function(req, res){
+    res.sendFile(path.join(__dirname, "/views/HeadderFooter.html"))
+});
