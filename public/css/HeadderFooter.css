@@ -6,8 +6,11 @@
 body{
     font-family: montserrat;
     margin: 0;
-    
+    width: 100%;
     /*background-color: rgb(212, 211, 211);*/
+}
+.phone-menu{
+    display: none
 }
 
 a{
@@ -16,8 +19,7 @@ a{
 }
 
 .main-headder{
-    width: 100%;
-    height: 50px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     background-color: black;
@@ -25,6 +27,7 @@ a{
     font-weight: bold;
     z-index: 100;
     position: relative;
+ 
 }
 
 .headder-notification{
@@ -34,28 +37,9 @@ a{
     margin: 15px;
 }
 
-/*.search-bar{
-    display: none;
-    border: white solid;
-    height: 30px;
-    width: 40vw;
-    z-index: 10;
-    position: absolute;
-    top:8px;
-    right: 10px;
-   
-    text-align: center;
-    
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    color: black;
-    font-size: 15px;
-    border-radius: 10px;
-}*/
 
 header img{
-    height: 60%;
+    height: 70%;
     margin: 5px 10px;
     padding: 1px;
     margin-top: 10px;
@@ -66,6 +50,7 @@ header img{
     text-align: center;
     margin-top: 10px;
     color: white;
+
 }
 
 .iconos .fas{
@@ -147,4 +132,138 @@ header img{
 }
 .txt{
     transition: all 400ms;
+}
+
+
+/*MEDIAS QUERIS Y COSAS RESPONSIVE*/
+
+@media(max-width: 480px){
+    /*header*/
+    .main-headder img{
+        width: 40%;
+        margin: 5px auto;
+        display: block;
+    }
+    .main-headder{
+        display: inline-block;
+        height: auto;
+       
+    }
+    .iconos{
+        display: none;
+
+    }
+    .main-headder .txt{
+        display: none;
+    }
+    .menu{
+        display: inline;
+        font-size: 20px;
+        margin-left: 4px;
+    }
+    .search-bar{
+        display: inline;
+        width: 70%;
+        height: 30px;
+        border-radius: 10px;
+    }
+    .search-bar input{
+        width: 100%;
+        font-size: 15px;
+        height: 100%;
+        border: 1px white solid;
+        border-radius: 10px;
+        padding: 8px;
+    }
+    
+    .phone-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 10px
+    }
+    .headder-notification{
+        display: inline-block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    /*footer*/
+    .bottom-text-footer-conteiner p{
+        display: none;
+    }
+    .bottom-footer{
+        height: 50px;
+    }
+    .footer-text p{
+        font-size: 10px;
+    }
+    .footer-text h2{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:768px){
+
+.main-headder img{
+        width: 40%;
+        margin: 5px auto;
+        display: block;
+    }
+    .main-headder{
+        display: inline-block;
+        height: auto;
+       
+    }
+    .iconos{
+        display: none;
+
+    }
+    .main-headder .txt{
+        display: none;
+    }
+    .menu{
+        display: inline;
+        font-size: 20px;
+        margin-left: 4px;
+    }
+    .search-bar{
+        display: inline;
+        width: 70%;
+        height: 30px;
+        border-radius: 10px;
+    }
+    .search-bar input{
+        width: 100%;
+        font-size: 15px;
+        height: 100%;
+        border: 1px white solid;
+        border-radius: 10px;
+        padding: 8px;
+    }
+    
+    .phone-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 10px
+    }
+    .headder-notification{
+        display: inline-block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+
+}
+@media (max-width:1200px){
+   .txt{
+       font-size: 15px;
+   }
+   .main-headder img{
+       height: 50%;
+   }
+   
 }

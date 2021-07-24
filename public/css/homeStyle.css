@@ -5,7 +5,7 @@ body{
 }
 .slider{
     width: 100%;
-    height: 600px;
+    height: auto;
     position: relative;
     
     
@@ -35,13 +35,13 @@ body{
 .slider form{
     position: absolute;
     z-index: 10px;
-    
-    bottom: 20px;
-    right: 200px;
+    width: 10%;
+    bottom: 4%;
+    right: 15%;
 }
 .slider button{
     width: 210%;
-    height: 70px;
+    height: 60px;
     border-radius: 20px;
     border: black 1px;
     background-color: black;
@@ -55,7 +55,7 @@ body{
     position: absolute;
     z-index: 10;
     right: 47%;
-    top: 93%;
+    bottom: 1%;
     color: white;
     margin: 0px
     
@@ -71,6 +71,7 @@ hr{
 .seccion-productos-contenedor{
     width: 100%;
     height: 500px;
+    
 }
 .product-catg{
     display:flex;
@@ -88,6 +89,7 @@ hr{
 }
 .seccion-productos{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
     align-items: center;
@@ -137,20 +139,22 @@ hr{
 .cat-txt{
     color: white;
     margin-left: 10%;
+    display: inline-block;
 }
 .main-categories{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    height: 800px;
-    margin: 20px auto;
+    height: 65vw;
+    margin: auto auto;
 
 }
 .categories-conteiner{
     height: 90%;
     width: 50%;
-    margin-right: 20px;
+    margin: 2% auto;
+    margin-left: 2%;
     display: flex;
     flex-direction: column;
 }
@@ -217,6 +221,8 @@ hr{
 .iconos-conteiner{
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 .icono{
     margin-right: 80px;
@@ -296,4 +302,110 @@ button{
 }
 .icono i{
     transition: all 100ms;
+}
+
+
+/*MEDIAS*/
+@media (max-width:480px){
+    /*Slider*/
+    .slider form{
+        display: none;
+    }
+    .slider i{
+        display: none
+    }
+    .slider-txt h2{
+        font-size: 15px;
+    }
+    .slider-txt p{
+        font-size: 11px;
+    }
+    .product-catg{
+        font-size: 15px;
+    }
+    .cat-txt{
+        font-size: 15px;
+    }
+    .iconos-conteiner p{
+        font-size: 15px;
+    }
+
+
+    /*body*/
+    
+    hr{
+        width: 60%;
+    }
+    .seccion-productos-contenedor{
+        margin-bottom: 325%;
+    }
+    .seccion-productos i{
+        display: none;
+    }
+    .producto{
+        width: 80%;
+        height: auto;
+        margin-bottom: 10px;
+        align-self: center;
+    }
+    .categories-conteiner div{
+        height: 40%;
+        width: auto;
+        margin-top: 6%;
+        margin-bottom: auto;
+    }
+    .ctg-txt-conteiner{
+        font-size: 0.7em;
+    }
+
+    .iconos-conteiner{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 90px auto;
+    }
+    .icono{
+        margin: 0 auto;
+        margin-top: 10%;
+    }
+}
+
+@media (max-width:768px){
+    .slider i{
+        display: none;
+    }
+    .slider button{
+        height: auto;
+    }
+    .slider-txt h2{
+        font-size: 20px
+    }
+    .slider-txt p{
+        font-size: 14px
+    }
+    .producto{
+        width: 40%;
+        margin-bottom: 20px;
+    }
+    .seccion-productos i{
+        display: none;
+    }
+    .seccion-productos-contenedor{
+        margin-bottom: 50%;
+    }
+    .ctg-txt-conteiner{
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width:1200px){
+    .slider button{
+        height: 70px;
+    }
+    .slider i{
+        display: none;
+    } 
+
 }
