@@ -1,21 +1,18 @@
-.login-conteiner .fondo{
-    width: 100%;
-    background-attachment: fixed;
-    height: 100%;
-   
+.login-conteiner{
+   height: 91.8vh;
+    background-image: url("https://cdn.pixabay.com/photo/2019/02/18/17/00/studio-4004849_960_720.jpg");
+    background-size: cover;
 }
+   
 .login-conteiner{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-attachment: fixed;
-    background-repeat: repeat-y;
 }
 
 .main-login{
     width: 37%;
-    height: 550px;
-    margin: 0 auto;
+    height: 80%;
     position: absolute;
     z-index: 10;
     background-color: rgba(255, 255, 255, 0.7);
@@ -64,7 +61,6 @@
 hr{
     width: 100%;
     size: 10px;
-    margin-bottom: 0px;
     margin-top: -17px;
 }
 form{
@@ -162,4 +158,59 @@ form .formularios-sesion{
 }
 .Recuperacion-contraseña:hover{
     text-decoration-line: underline;
+}
+
+/*MEDIAS*/
+
+@media (max-width:768px){
+    .main-login{
+        min-width: 90%;
+        max-height: 576px;
+        
+    }
+    .login-logo{
+        height: 15%;
+    }
+    .txt-conteiner h2{
+        font-size: 15px;
+        
+    }
+    .txt-conteiner p{
+        font-size: 12px;
+    }
+   .Google-button, .Facebook-button{
+        font-size: 17px;
+        height: 40px
+   }
+   form{
+       height: 50%;
+   }
+    form input{
+        height: 100%;
+    }
+    .formularios p{
+        font-size: 12px;
+    }
+    .login-button{
+        font-size: 15px;
+        height: 10%;
+    }
+    .login-button button{
+        font-size: 15px;
+    }
+    hr{
+        display: none
+    }
+    
+}
+@media(max-width: 1200px){
+    .main-login{
+        min-width: 80%;
+        max-width: 555px;
+        
+        max-height: 600px;
+    }
+    hr{
+        display: none;
+    }
 }
