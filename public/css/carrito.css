@@ -203,7 +203,7 @@ hr {
     }
     .botonContinuar {
         font-size: 10px;
-        width: 25%;
+        min-width: 40%;
     }
 }
 
