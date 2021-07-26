@@ -19,23 +19,20 @@
 <body>
 
     <header class="main-headder">
-        <a href="/"> 
-            <img src="/img/Logo Horizontal  .png">
-        </a>
-     
-
-        <div class="phone-menu">
-            <div class="menu"><i class="fas fa-bars"></i></div>
-            <span class="search-bar">
-                <form action="/" method="POST">
-                    <input type="text" name="busqueda" placeholder="Buscá productos, marcas y mas">
-
-                </form>
-
-            </span>
-            <i class="fas fa-user"></i>
-            <i class="fas fa-shopping-cart"></i>
-        </div>
+        <a href="/"> <img src="/img/Logo Horizontal  .png"></a>
+        
+       <div class="phone-menu"> <div class="menu"><i class="fas fa-bars"></i></div>
+        <span class="search-bar">
+            <form action="/" method="POST">
+                <input type="text" name="busqueda" placeholder="Buscá productos, marcas y mas">
+                
+            </form>
+            
+        </span>
+        <a href="/login"><i class="fas fa-user"></i></a>
+        <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+    </div>
         <div class="txt">
             <p>Categorías</p>
         </div>
@@ -51,14 +48,14 @@
 
 
         <div>
-            <a href="/">
+            <a href="/registro">
                 <p class="headder-notification">No estas registrado</p>
             </a>
         </div>
         <div class="iconos">
-            <a href="/"><i class="fas fa-user"></i></a>
+            <a href="/login"><i class="fas fa-user"></i></a>
 
-            <a href="/"><i class="fas fa-shopping-cart"></i></a>
+            <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
 
             <a href="/"><i class="fas fa-search"></i></a>
 
@@ -143,18 +140,18 @@
 
 
 
-                        <div class="color">
-                            <button type="submit" class="negro" name="negro"> Negro </button>
-                            <button type="submit" class="plateado" name="plateado"> Plateado </button>
-                        </div>
-
+                        <select class="color">
+                            <option value="Negro">Negro</option>
+                            <option value="Plateado">Plateado</option>
+                        </select>
+                        
                     </div>
                     <br>
                     <br>
                     <br>
                     <br>
 
-                    <div class="carrito">
+                    <div class="carrito1">
                         <!-- <a>  Agregar al carrito </a> <i class="fas fa-shopping-cart"></i> -->
                         <button type="submit" class="carrito" name="carrito"> Agregar al carrito <i
                                 class="fas fa-shopping-cart"> </i> </button>

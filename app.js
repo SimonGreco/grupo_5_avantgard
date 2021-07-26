@@ -8,21 +8,18 @@ app.listen(3000, function(){
 });
 
 app.get("/", function(req, res){
-    res.sendFile(path.join(__dirname, "/views/Home.html"))
+    res.sendFile(path.join(__dirname, "/views/index.html"))
 });
 app.get("/login", function(req, res){
     res.sendFile(path.join(__dirname, "/views/login.html"))
 });
 
 app.get("/carrito", function(req, res){
-    res.sendFile(path.join(__dirname, "/views/carrito.html"))
+    res.sendFile(path.join(__dirname, "/views/productCar.html"))
 });
 
 app.get("/registro", function(req, res){
-    res.sendFile(path.join(__dirname, "/views/registro.html"))
-});
-app.get("/Header", function(req, res){
-    res.sendFile(path.join(__dirname, "/views/HeadderFooter.html"))
+    res.sendFile(path.join(__dirname, "/views/register.html"))
 });
 app.get("/detalle", function(req, res){
     res.sendFile(path.join(__dirname, "/views/productDetail.html"))

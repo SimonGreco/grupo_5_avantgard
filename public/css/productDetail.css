@@ -157,12 +157,15 @@ color: #121655;
 }
 
 .carrito {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     margin-left: 10px;
-    text-align: left;
+    text-align: center;
     border-radius: 10px;
     color: #121655 ;
+    border: white solid 1px;
+    height: 40px;
+    width: 60%;
 }
 
 .color {
@@ -348,7 +351,13 @@ a{
   .producto{
       transition: all 100ms;
   } 
-
+.carrito:hover{
+    background-color: lightgrey;
+    border: lightgray solid 1px
+}
+.carrito{
+    transition: all 100ms;
+}
 
 
 
