@@ -24,3 +24,8 @@ app.get("/registro", function(req, res){
 app.get("/Header", function(req, res){
     res.sendFile(path.join(__dirname, "/views/HeadderFooter.html"))
 });
+app.get("/detalle", function(req, res){
+    res.sendFile(path.join(__dirname, "/views/productDetail.html"))
+});
+
+
