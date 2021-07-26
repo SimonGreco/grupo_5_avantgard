@@ -39,8 +39,8 @@ body {
     margin-left: 20px; 
     border-radius: 10px;
     margin-top: 50px;
-    color: white;
-    background-color: black
+    color: #121655;
+    background-color: rgba(255, 255, 255, 0.5);
 
     
    
@@ -128,9 +128,11 @@ h2 {
     justify-content: center;
     margin-top: 50px;
     margin-left: 50px;
-}
+} 
 
-img {
+
+
+.img-white {
     height: 100%;
     object-fit: contain;
     object-position: center center;
@@ -140,11 +142,18 @@ img {
     background-color: white;
     border-radius: 5px;
 } 
+
+
+
+
  
 
 
+
+
+
 .price {
-color: white;
+color: #121655;
 }
 
 .carrito {
@@ -153,6 +162,7 @@ color: white;
     margin-left: 10px;
     text-align: left;
     border-radius: 10px;
+    color: #121655 ;
 }
 
 .color {
@@ -161,6 +171,7 @@ color: white;
     margin-left: 20px;
     border-radius: 10px;
     font-family: montserrat;
+    color: #121655;
 }
 
 .negro {
@@ -168,6 +179,7 @@ color: white;
     font-size: 15px;
     font-weight: bold;
     border-radius: 5px;
+    color: #121655;
 }
 
 .plateado {
@@ -175,6 +187,7 @@ color: white;
     font-size: 15px;
     font-weight: bold;
     border-radius: 5px;
+    color: #121655;
 }
 
 .color-text { 
@@ -393,48 +406,61 @@ a{
         width: 90%;
         display: flex;
         justify-content: space-around;
-        text-align: center;
         margin: 0px;
+        justify-self: center;
+        position: relative;
+        left: 10%;
     }
 
     .container-two {
-        width: 400px;
-        height: 400px;
-        display: flex;
-        justify-self: center;
+        width: 500px;
+        height: 500px;
+        position: relative;
+        border-radius: 10%;
+        align-self: center;
+        
     
+    }
+    .two {
+        border-radius: 10px;
     }
     .img-product {
     width: 100%;
     height: 100%;
     justify-self: center;
+    position: relative;
+    right: 2%;
+    margin-bottom: 5%;
+   
     }
     .top {
     flex-direction: column;
     justify-self: center;
     }
     .container-three {
-    width: 100%;
+    width: 90%;
     height: 600px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0%;
+    margin-right: 0%;
     margin-top: 30px;
     margin-bottom: 20px;
     position: relative;
-    right: 5%;
+    left: 16%;
+   
     }
 
     .container-two {
     align-self: center;
     position: relative;
-    left: 15%;
+    left: 16%;
     }
     .productos {
     width: 100%;
     justify-self: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    position: relative;
+    left: 25%;
   
    
     }
@@ -464,12 +490,15 @@ a{
     }
 
     hr {
-        align-self: center;
+        justify-content: center;
+        width: 782px;
     }
     
     .bottom {
         align-self: center; 
     }
+
+    .bold {
+        justify-content: center;
+    }
 }
-
-
