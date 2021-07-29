@@ -17,3 +17,5 @@ https://www.mercadolibre.com.ar/
 
 
 Basamos nuestro trabajo en estas páginas por ser de las pocas cuya temática es similar a la que adoptamos. La mayoría de estas webs se caracterizan por tener diseños limpios y minimalistas, mismo a lo que apuntamos, ademas de tener interfaces estéticamente agradables, intuitivas y funcionales. 
+
+TABLERO DE TRELLO: https://trello.com/invite/b/RKDgd7B9/cec7bf91cec31f26dddf27e6f682c780/proyecto-integrador
