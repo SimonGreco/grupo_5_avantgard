@@ -50,12 +50,24 @@ header img{
     text-align: center;
     margin-top: 10px;
     color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 
 }
 
+.iconos a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    margin: 0 20px;
+}
 .iconos .fas{
-    margin-right: 20px;
+    font-size: 20px;
 }
+
 
 /*FOOTER*/
 
