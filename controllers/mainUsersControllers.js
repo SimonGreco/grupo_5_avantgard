@@ -7,6 +7,9 @@ let usersController = {
     },
     register: function(req, res){
         res.render("./users/register")
+    },
+    controlPanel: function(req, res){
+        res.render("./users/admin-control-panel")
     }
 }
 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../partials/head") %>
+    <title>Mi tienda</title>
+    <link href="/css/controlPanel.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include("../partials/logged-in-header") %>
+
+    <main>
+        
+        <article class="mainControlPanel">
+            <section class="optionsConteiner">
+                <h4><i class="fas fa-house-user"></i> Inicio</h3>
+                    <h5>Mi tienda</h5>
+                </h4>
+                <p><i class="fas fa-cog"></i> Datos</p>
+                <p id="productos"><i class="fas fa-box-open"></i> Productos</p>
+                <p><i class="fas fa-piggy-bank"></i> Formas de pago</p>
+                <p><i class="fas fa-truck"></i> Formas de envío</p>
+
+                <h5>Mis ventas</h4>
+                    <p><i class="fas fa-cart-arrow-down"></i> Ventas</p>
+                    <p><i class="fas fa-comments"></i> Preguntas recibidas</p>
+
+            </section>
+        </article>
+        
+        <div class="misProductos"><h2>Mis Productos</h2></div>
+        <article class="productsList">
+            <p class="ListadoDeProductos"> Listado de productos</p>
+            <form class="search-product-bar" method="GET" action="/">
+                <div class="search-bar"><input type="text" name="search-product"
+                        placeholder="Buscá entre tus productos"></div>
+                <button type="menu"> <i class="fas fa-plus"></i> Agregar nuevo</button>
+            </form>
+            <hr width="100%">
+            <div class="ids">
+                <div id="id"><p>#</p></div>
+                <div id="imagen"><p>Imagen</p></div>
+                <div id="nombre"><p>Nombre</p></div>
+                <div id="estado"><p>Estado</p></div>
+                <div id="categoria"><p>Categoria</p></div>
+                <div id="acciones"><p>Acciones</p></div>
+
+            </div>
+            <div class="product-view">
+                <div class="id">
+                    <p>1</p>
+                </div>
+                <div class="imagen" style="background-image: url('https://http2.mlstatic.com/D_NQ_NP_740449-MLA41153765496_032020-O.webp');" >
+                </div>
+                <div class="nombre">
+                    <p>Auriculares Behringer HPX6000 negro
+                    </p>
+                </div>
+                <div class="estado">
+                    <p>Disponible</p>
+                </div>
+                <div class="categoria">
+                    <p><a href="/">Estudio</a>/<a href="/">Auriculares</a>/<a href="/">Over Ear</a></p>
+                </div>
+                <div class="acciones">
+                    <p><a href="../product/list/edit"><i class="far fa-edit"></i></a>
+                        <a href="/"><i class="far fa-trash-alt"></i></p></a>
+                </div>
+            </div>
+            <div class="product-view">
+                <div class="id">
+                    <p>2</p>
+                </div>
+                <div class="imagen" style="background-image: url('https://http2.mlstatic.com/D_NQ_NP_969048-MLA43077916008_082020-O.webp');" >
+                </div>
+                <div class="nombre">
+                    <p>Controlador DJ Denon MCX8000 negro de 4 canales 100V/240V
+
+                    </p>
+                </div>
+                <div class="estado">
+                    <p>Disponible</p>
+                </div>
+                <div class="categoria">
+                    <p><a href="/">Estudio</a>/<a href="/">Equipos de Dj</a>/<a href="/">Controladores</a></p>
+                </div>
+                <div class="acciones">
+                    <p><a href="../product/list/edit"><i class="far fa-edit"></i></a>
+                        <a href="/"><i class="far fa-trash-alt"></i></p></a>
+                </div>
+            </div>
+            <div class="product-view">
+                <div class="id">
+                    <p>3</p>
+                </div>
+                <div class="imagen" style="background-image: url('https://http2.mlstatic.com/D_NQ_NP_614707-MLA40253346587_122019-O.webp');" >
+                </div>
+                <div class="nombre">
+                    <p>Auricular Profesional Estudio Monitoreo Alctron He580
+                    </p>
+                </div>
+                <div class="estado">
+                    <p>Disponible</p>
+                </div>
+                <div class="categoria">
+                    <p><a href="/">Estudio</a>/<a href="/">Auriculares</a>/<a href="/">Over Ear</a></p>
+                </div>
+                <div class="acciones">
+                    <p><a href="../product/list/edit"><i class="far fa-edit"></i></a>
+                        <a href="/"><i class="far fa-trash-alt"></i></p></a>
+                </div>
+            </div>
+            <div class="product-view">
+                <div class="id">
+                    <p>4</p>
+                </div>
+                <div class="imagen" style="background-image: url('https://http2.mlstatic.com/D_NQ_NP_682845-MLA43450883296_092020-O.webp');" >
+                </div>
+                <div class="nombre">
+                    <p>Microfono Boya By-m1000 Condenser Para Estudio Tipo Rode Nt
+
+
+                    </p>
+                </div>
+                <div class="estado">
+                    <p>Vendido</p>
+                </div>
+                <div class="categoria">
+                    <p><a href="/">Estudio</a>/<a href="/">Micrófonos</a>/<a href="/">Condensador</a></p>
+                </div>
+                <div class="acciones">
+                    <p><a href="../product/list/edit"><i class="far fa-edit"></i></a>
+                        <a href="/"><i class="far fa-trash-alt"></i></p></a>
+                </div>
+            </div>
+            <div class="next-page">
+                <p>Siguiente página</p>
+            </div>
+            
+
+        </article>
+
+        
+    </main>
+
+   
+   
+
+</body>
+
+</html>
