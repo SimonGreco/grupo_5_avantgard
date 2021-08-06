@@ -1,29 +1,38 @@
 const express = require("express");
-const path = require("path");
 const app = express();
 app.use(express.static("public"));
 
+
+
+
+
+//Ejecucion de ejs
+app.set('view engine', 'ejs')
+//------------------------
+
+
+//Servidor
 app.listen(3000, function(){
     console.log("servidor levantado en el puerto 3000")
 });
+//------------------------
 
-app.get("/", function(req, res){
-    res.sendFile(path.join(__dirname, "/views/index.html"))
-});
-app.get("/login", function(req, res){
-    res.sendFile(path.join(__dirname, "/views/login.html"))
-});
+//Ruteo
 
-app.get("/carrito", function(req, res){
-    res.sendFile(path.join(__dirname, "/views/productCar.html"))
-});
+const productRoutes = require("./routes/products");
+const userRoutes = require("./routes/users");
+const mainRoutes = require("./routes/main");
 
-app.get("/registro", function(req, res){
-    res.sendFile(path.join(__dirname, "/views/register.html"))
-});
-app.get("/detalle", function(req, res){
-    res.sendFile(path.join(__dirname, "/views/productDetail.html"))
-});
+app.use("/product", productRoutes);
+app.use("/", mainRoutes);
+app.use("/user", userRoutes);
+
+//------------------------
+
+
+
+
+
 
 
 

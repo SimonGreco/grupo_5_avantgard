@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../partials/head") %>
+    <title>Registro</title>
+    <link href="/css/registro.css" rel="stylesheet">
+    
+</head>
+
+<body>
+    <%- include("../partials/header") %>
+
+
+    <main style="background-image: url('https://cdn.pixabay.com/photo/2019/02/18/17/00/studio-4004849_960_720.jpg');" class="background">
+        <br>
+        <br>
+        <div class="cajaRegistro">
+            <img src="/img/Logo Horizotal Fondo blanco.png" alt="AvantGard" class="marca">
+            <hr>
+            <p class="completarDatos">Completa tus datos!</p>
+            <br>
+            <form action="/registro" method="POST">
+                <input type="text" name="Nombre" placeholder="Nombre" class="renglon">                
+                <br>
+                <br>
+                <input type="text" name="Apellido" placeholder="Apellido" class="renglon">
+                <br>
+                <br>
+                <input type="email" name="Correo" placeholder="E-Mail" class="renglon">
+                <br>
+                <br>
+                <input type="password" name="Constraseña" placeholder="Clave" class="renglon">
+            </form>
+            <br>
+            <br>
+            <div class="ubicacionBoton">
+                <button class="boton">Continuar</button>
+            </div>
+        </div>
+        <br>
+        <br>
+    </main>
+    <%- include("../partials/footer") %>
+</body>
+
+</html>

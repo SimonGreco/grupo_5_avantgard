@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>login</title>
+    <link href="/css/loginStyle.css" rel="stylesheet">
+    <%- include("../partials/head") %>
+</head>
+
+<body>
+    <%- include("../partials/header") %>
+
+    <div class="login-conteiner">
+
+        <div class="main-login">
+            <div class="login-logo">
+                <img src="/img/Logo Horizotal Fondo blanco.png" alt="logo">
+                <div class="txt-conteiner">
+                    <h2>Iniciá Sesión!</h2>
+                    <a href="/registro">
+                        <p>¿Aún no estas registrado?</p>
+                    </a>
+
+                </div>
+                <hr>
+
+
+            </div>
+            <div class="formularios">
+                <p>Iniciá sesión a través de tus redes sociales</p>
+                <button class="Facebook-button" type="submit" name="facebook"><i class="fab fa-facebook-f"></i>Continuá
+                    con Facebook</button>
+                <button class="Google-button" type="submit"><i class="fab fa-google"></i>Continuá con Google</button>
+
+                <p>O ingresá los datos de tu cuenta</p>
+                <form action="/" method="POST">
+                    <input class="formularios-sesion" type="email" name="mail" placeholder="Correo Electronico">
+                    <input class="formularios-sesion" type="password" name="password" id="password"
+                        placeholder="Contraseña">
+                    <br>
+                    <div class="checkbox"><input type="checkbox" name="recuerdame" id="recuerdame">Recuérdame</div>
+                    <br>
+                    <div class="login-button">
+                        <button type="submit" class="acceder" name="acceder">Acceder</button>
+                        <p class="Recuperacion-contraseña">¿Olvidaste tu contraseña?</p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include("../partials/footer") %>
+
+
+
+
+</body>
+
+</html>

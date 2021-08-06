@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/SimonGreco/grupo_5_avantgard#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "normalize.css": "^8.0.1"
   }
