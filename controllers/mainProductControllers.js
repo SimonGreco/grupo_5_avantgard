@@ -13,6 +13,9 @@ let productController = {
     },
     newProduct: function(req, res){
         res.render("./products/newProduct")
+    },
+    catalogo: function(req, res){
+        res.render("./products/productCtlg")
     }
 
 }
