@@ -88,9 +88,9 @@ hr{
 
 /* categorias */
 
-h2{
+.cat-txt{
     color: white;
-    margin-left: 12%;
+    margin-left: 10%;
     display: inline-block;
 }
 
