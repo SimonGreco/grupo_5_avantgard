@@ -12,7 +12,7 @@ app.set('view engine', 'ejs')
 
 
 //Servidor
-app.listen(3000, "192.168.0.163", function(){
+app.listen(3000, function(){
     console.log("servidor levantado en el puerto 3000")
 });
 //------------------------
