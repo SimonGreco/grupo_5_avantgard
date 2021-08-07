@@ -1,3 +1,12 @@
+body{
+    background-color: #121655;
+}
+
+h3{
+    margin-left: 65px;
+    color: white;
+}
+
 hr{
     size: 12px;
     color: black;
@@ -69,4 +78,147 @@ hr{
     margin: 0px;
     size: 10px;
     width: 100%;
+}
+
+/* categorias */
+
+h2{
+    color: white;
+    margin-left: 10%;
+    display: inline-block;
+}
+
+.main-categories{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 65vw;
+    margin: auto auto;
+
+}
+.categories-conteiner{
+    height: 90%;
+    width: 50%;
+    margin: 2% auto;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+}
+.categoria-grande{
+    height: 48%;
+    width: 100%;
+    background-color: black;
+    border-radius: 15px;
+    margin-bottom: 3%;
+    position: relative;
+}
+.categoria-chica{
+    height: 23%;
+    width: 100%;
+    background-color: black;
+    border-radius: 15px;
+    margin-top: 2%;
+    position: relative;
+}
+.categoria-chica1{
+    height: 23%;
+    width: 100%;
+    background-color: black;
+    border-radius: 15px;
+    margin-bottom: 2%;
+    position: relative;
+
+}
+.categoria-grande1{
+    height: 48%;
+    width: 100%;
+    background-color: black;
+    border-radius: 15px;
+    margin-top: 3%;
+    position: relative;
+}
+
+.main-categories .ctg-txt-conteiner{
+    position: absolute;
+    bottom: 0px;
+    height: 60px;
+    background-color: rgba(121, 121, 121,0.4);
+    width: 100%;
+    border-bottom-left-radius: 15px ;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+    color: white;
+}
+.ctg-img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+@supports (object-fit: cover){
+    .ctg-img{
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+/*medias*/
+
+@media (max-width:480px){
+    h3{
+        text-align: center;
+    }
+    hr{
+        width: 60%;
+    }
+    .seccion-productos-contenedor{
+        margin-bottom: 325%;
+    }
+    .seccion-productos i{
+        display: none;
+    }
+    .producto{
+        width: 80%;
+        height: auto;
+        margin-bottom: 10px;
+        align-self: center;
+    }
+    .categories-conteiner div{
+        height: 40%;
+        width: auto;
+        margin-top: 6%;
+        margin-bottom: auto;
+    }
+    .ctg-txt-conteiner{
+        font-size: 0.7em;
+    }
+
+    .iconos-conteiner{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 90px auto;
+    }
+    .icono{
+        margin: 0 auto;
+        margin-top: 10%;
+    }
+}
+
+@media (max-width:768px){
+    .producto{
+        width: 40%;
+        margin-bottom: 20px;
+    }
+    .seccion-productos i{
+        display: none;
+    }
+    .seccion-productos-contenedor{
+        margin-bottom: 50%;
+    }
+    .ctg-txt-conteiner{
+        font-size: 10px;
+    }
 }
