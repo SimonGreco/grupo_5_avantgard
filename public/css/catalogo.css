@@ -79,12 +79,18 @@ hr{
     size: 10px;
     width: 100%;
 }
+.fa-chevron-left{
+    color: white;
+}
+.fa-chevron-right{
+    color: white;
+}
 
 /* categorias */
 
 h2{
     color: white;
-    margin-left: 10%;
+    margin-left: 12%;
     display: inline-block;
 }
 
@@ -167,6 +173,9 @@ h2{
 
 @media (max-width:480px){
     h3{
+        text-align: center;
+    }
+    h2{
         text-align: center;
     }
     hr{
