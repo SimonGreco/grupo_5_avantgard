@@ -2,7 +2,7 @@ body{
     background-color: #121655;
 }
 
-h3{
+.catg{
     margin-left: 65px;
     color: white;
 }
@@ -172,8 +172,9 @@ hr{
 /*medias*/
 
 @media (max-width:480px){
-    h3{
+    .catg{
         text-align: center;
+        margin: 0 auto;
     }
     h2{
         text-align: center;
@@ -213,6 +214,9 @@ hr{
     .icono{
         margin: 0 auto;
         margin-top: 10%;
+    }
+    footer{
+        margin-top: 25%;
     }
 }
 
