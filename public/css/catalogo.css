@@ -169,6 +169,59 @@ hr{
     }
 }
 
+/* animaciones */
+
+.producto:hover{
+    box-shadow:
+      inset 0 -3em 3em rgba(0,0,0,0),
+            0 0  0 2px rgb(255, 255, 255),
+            0.3em 0.3em 1em rgba(0,0,0,0.3);
+            background-color: rgb(255, 255, 255);
+  }
+  .producto{
+      transition: all 100ms;
+  }
+  .descripcion:hover{
+      opacity: 1;
+  }
+  .descripcion{
+      transition: all 100ms;
+  }
+  .categoria-chica:hover{
+      box-shadow:
+      inset 0 -3em 3em rgba(0,0,0,0),
+            0 0  0 2px rgb(151, 151, 151),
+            0.3em 0.3em 1em rgba(0,0,0,0.3);
+            background-color: rgb(126, 126, 126);
+  }
+  .categoria-chica1:hover{
+      box-shadow:
+      inset 0 -3em 3em rgba(0,0,0,0),
+            0 0  0 2px rgb(151, 151, 151),
+            0.3em 0.3em 1em rgba(0,0,0,0.3);
+            background-color: rgb(126, 126, 126);
+  }
+  .categoria-grande:hover{
+      box-shadow:
+      inset 0 -3em 3em rgba(0,0,0,0),
+            0 0  0 2px rgb(151, 151, 151),
+            0.3em 0.3em 1em rgba(0,0,0,0.3);
+            background-color: rgb(126, 126, 126);
+  }
+  .categoria-grande1:hover{
+      box-shadow:
+      inset 0 -3em 3em rgba(0,0,0,0),
+            0 0  0 2px rgb(151, 151, 151),
+            0.3em 0.3em 1em rgba(0,0,0,0.3);
+            background-color: rgb(126, 126, 126);
+  }
+  .icono i:hover{
+      color:rgb(77, 76, 76)
+  }
+  .icono i{
+      transition: all 100ms;
+  }
+
 /*medias*/
 
 @media (max-width:480px){
