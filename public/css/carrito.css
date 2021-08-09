@@ -6,7 +6,6 @@
 
 main {
     width: 100%;
-    height: auto;
 }
 
 .sitio {
@@ -24,7 +23,6 @@ main {
 .cajaPadre {
     border: 1px solid black;
     width: 95%;
-    height: 37%;
     margin: auto;
     padding: 5px 20px;
     padding-bottom: 15px;
@@ -59,12 +57,11 @@ hr {
     margin-top: -18px;
 }
 
-.cajaHija2 {
+.productBox {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     border-bottom: 1px solid black;
-    text-align: center;
     padding: 15px 0px;
     align-items: center;
 }
