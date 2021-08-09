@@ -39,6 +39,7 @@ hr {
 
 .completarDatos {
     font-weight: bold;
+    font-size: 15px;
 }
 
 .renglon {
@@ -46,7 +47,7 @@ hr {
     width: 100%;
     height: 45px;
     border-radius: 7px;
-    font-size: 17px;
+    font-size: 12px;
     padding: 10px;
 }
 
@@ -64,7 +65,7 @@ hr {
     border: 3px solid black;
     width: 37%;
     height: 45px;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .boton:hover {

@@ -43,18 +43,20 @@ main {
     text-align: center;
     width: 15%;
     padding-bottom: 10px;
+    font-size: 15px;
 }
 
 .favoritos {
     width: 100%;
     font-weight: lighter;
     padding-bottom: 10px;
+    font-size: 15px;
 }
 
 hr {
     width: 100%;
     size: 10px;
-    margin-top: -20px;
+    margin-top: -18px;
 }
 
 .cajaHija2 {
@@ -156,7 +158,7 @@ hr {
     border: 3px solid black;
     width: 12%;
     height: 45px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .inicio:hover{
