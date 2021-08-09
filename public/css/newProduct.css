@@ -1,0 +1,174 @@
+body {
+    font-family: montserrat;
+    padding: 5%;
+    background-color: #121655;
+    color: white;
+}
+form {
+    text-align: center;
+
+}
+
+main{
+    text-align: center;
+}
+
+.other {
+    display: flex;
+}
+
+.product-description {
+    width: 100%;
+   
+    height: 120px;
+   
+}
+
+.descripción {
+    width: 50%;
+    height: 35%;
+}
+
+.field-1{
+    border-radius: 5px;
+    background-color: white;
+    color: #121655;
+}
+
+.title {
+    font-weight: bolder;
+}
+
+
+
+/* MEDIA QUERIES Y RESPONSIVE */
+
+@media (max-width: 468px) {
+    .title-sections {
+        text-align: left;
+    }
+    .field-1 {
+        width: 100%;
+        height: 35px;
+    }
+    .color {
+        color: #121655;
+        
+    }
+    .color-bar {
+        margin-top: 5px;
+        border-radius: 5px;
+        height: 20px;
+    }
+    .categorie {
+        border-radius: 5px;
+        width: 100%;
+        height: 40px;
+    }
+    .descripción {
+        border-radius: 5px;
+        width: 100%;
+    }
+    .price {
+        border-radius: 5px;
+        text-align: left;
+        height: 35px;
+
+    }
+    .field-picture {
+        width: 100%;
+    }
+    .field {
+       size: 35px;
+    }
+  
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .title-sections {
+        text-align: left;
+        font-size: 20px;
+    }
+    .field-1 {
+        width: 100%;
+        height: 45px;
+    }
+    .color {
+        color: #121655;
+        
+    }
+    .color-bar {
+        margin-top: 5px;
+        border-radius: 5px;
+        height: 20px;
+    }
+    .categorie {
+        border-radius: 5px;
+        width: 100%;
+        height: 50px;
+    }
+    .descripción {
+        border-radius: 5px;
+        width: 100%;
+    }
+    .price {
+        border-radius: 5px;
+        text-align: left;
+        height: 45px;
+
+    }
+    .field-picture {
+        width: 100%;
+    }
+    .product-colors {
+        font-size: 20px;
+    }
+    .title {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .title-sections {
+        text-align: center;
+        font-size: 20px;
+    }
+    .field-1 {
+        width: 80%;
+        height: 45px;
+    }
+    .color {
+        color: #121655;
+        
+    }
+    .color-bar {
+        margin-top: 5px;
+        border-radius: 5px;
+        height: 20px;
+    }
+    .categorie {
+        border-radius: 5px;
+        width: 81%;
+        height: 50px;
+    }
+    .descripción {
+        border-radius: 5px;
+        width: 80%;
+    }
+    .price {
+        border-radius: 5px;
+        text-align: center;
+        height: 45px;
+
+    }
+    .field-picture {
+        width: 100%;
+    }
+    .product-colors {
+        font-size: 20px;
+    }
+    .title {
+        font-size: 25px;
+    }
+
+}

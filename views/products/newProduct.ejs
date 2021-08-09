@@ -1,12 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrito de compras</title>
+    <link href="/css/newProduct.css" rel="stylesheet">
+    <%- include("../partials/head") -%>
 </head>
+
 <body>
-    
+    <%- include("./partials/header") -%>
+
+        <main>
+
+            <p class="title"> NEW PRODUCT </p>
+            <br>
+
+            <form class="add-product">
+
+                <div class="product-name">
+                    <p class="title-sections"> Nombre </p>
+                    <label for="name"> </label>
+                    <input type="text" id="name" name="name" class="field-1">
+                </div>
+
+                <br>
+
+                <div class="product-brand">
+                    <p class="title-sections"> Marca </p>
+                    <label for="brand"> </label>
+                    <input type="text" id="brand" name="brand" class="field-1">
+                </div>
+
+                <br>
+
+                <div class="product-model">
+                    <p class="title-sections"> Modelo </p>
+                    <label for="model"> </label>
+                    <input type="text" id="model" name="model" class="field-1">
+                </div>
+                <br>
+
+                <div class="product-stock">
+                    <p class="title-sections"> Stock </p>
+                    <input type="number" id="Stock" name="Stock" min="1" class="field-1">
+                </div>
+
+                <br>
+
+
+                <div class="product-categorie">
+                    <p class="title-sections"> Categoría </p>
+                    <select name="Categorie" class="categorie">
+                        <option> Auriculares </option>
+                        <option> Amplificadores y parlantes </option>
+                        <option> Teclados </option>
+                        <option> Sintetizadores </option>
+                        <option> Micrófonos </option>
+                        <option> Controladores MDI </option>
+                    </select>
+                </div>
+                <br>
+                <div class="price">
+                    <p class="title-sections"> Precio </p>
+                    <input type="number" min="0" step="1000" class="price" />
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="product-colors">
+
+                    <p class="title-sections"> Colores </p>
+
+                    <input type="checkbox" name="color" class="color">
+                    <label for="color"> Negro </label>
+
+                    <input type="checkbox" name="color" class="color">
+                    <label for="color"> Plateado </label>
+
+                    <input type="checkbox" name="color" class="color">
+                    <label for="color"> Gris </label>
+
+                    <input type="checkbox" name="color" class="color">
+                    <label for="color"> Blanco </label>
+
+                    <input type="text" placeholder="Otro" class="color-bar">
+                    <label for="otro"> </label>
+
+                </div>
+
+                <br>
+
+                <div class="product-description">
+                    <p class="title-sections"> Descripción </p>
+                    <input type="text" name="description" placeholder="Insertar descripción del producto"
+                        class="descripción">
+                    <label for="descripción"> </label>
+
+                </div>
+
+                <div class="field-picture">
+                    <p class="title-sections"> Añadir imágen del producto </p>
+                    <label for="picture"> </label>
+                    <input type="file" accept=".jpg" name="picture" style="max-width: 100%;" class="field">
+                </div>
+
+
+
+            </form>
+
+        </main>
+
+        <%- include("./partials/footer") -%>
 </body>
+
 </html>
