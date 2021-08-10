@@ -11,7 +11,7 @@ app.set('view engine', 'ejs')
 //------------------------
 
 
-//Servidor
+// Servidor
 app.listen(3000, function(){
     console.log("servidor levantado en el puerto 3000")
 });

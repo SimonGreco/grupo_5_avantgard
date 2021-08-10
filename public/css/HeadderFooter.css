@@ -211,9 +211,20 @@ header img{
     .footer-text p{
         font-size: 10px;
     }
-    .footer-text h2{
+    .footer-text h3{
         font-size: 15px;
     }
+    .img{
+        width: 100%;
+
+        
+    }
+    .img img{
+        width: 80%;
+        margin-left: 5px;
+        height: auto;
+    }
+    
 }
 
 @media (max-width:768px){

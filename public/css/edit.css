@@ -1,0 +1,151 @@
+body{
+    height: auto;
+    margin-bottom: 101%;
+    background-color: #121655;
+}
+#imagenPrincipal-txt{
+    width: 20%;
+    font-size: 15px;
+    color: rgb(83, 83, 83);
+    font-weight: bold;
+    margin-left: 15px;
+    margin-bottom: 2px;
+}
+#imgDetail{
+    font-size: 12px;
+    color: rgb(83, 83, 83);
+    font-weight: lighter;
+    margin-left: 15px;
+    margin-top: 0px;
+}
+.img-adicionales{
+    font-size: 15px;
+    color: rgb(83, 83, 83);
+    font-weight: bold;
+    margin-left: 15px;
+    margin-bottom: 2px;
+}
+.addFile{
+    font-size: 10px;
+    font-weight: 600;
+    color: grey;
+    background-color: white;
+    display: inline-block;
+    padding: 15px 40px ;
+    width: fit-content;
+    text-align: center;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+#AgregarImagen{
+ width: 0.1px;
+ height: 0.1px;
+ opacity: 0;
+ overflow: hidden;
+ position: absolute;
+ z-index: -1
+}
+.imagenMuestra{
+    width: 10%;
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+
+}
+.imagenMuestra img{
+    width:100%;
+    margin-left: 15px;
+}
+.imagenMuestra p{
+    margin-left: 20px;
+    color:darkblue
+}
+.formulario-txt{
+    min-width: 80%;
+    margin: 0 2%;
+    height: 30px;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+}
+.Descripcion{
+    width: 80%;
+    margin: 0 2%;
+    height: 100px;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+}
+h4{
+    font-size: 15px;
+    color: rgb(83, 83, 83);
+    font-weight: bold;
+    margin-left: 15px;
+    margin-bottom: 2px;
+}
+form p{
+    font-size: 12px;
+    color: rgb(83, 83, 83);
+    font-weight: lighter;
+    margin-left: 15px;
+    margin-top: 0px;
+}
+.oferta{
+    font-size: 15px;
+    color: rgb(83, 83, 83);
+    font-weight: bold;
+    margin-left: 15px;
+}
+#monedas{
+    min-width: 50%;
+    margin: 0 2%;
+    height: 30px;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+#precio{
+    min-width: 20%;
+    margin: 0 2%;
+
+    height: 30px;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+}
+
+button{
+   width: 80%;
+   height: 40px;
+   margin-left: 10%;
+   border-radius: 5px;
+   border: solid 1px lightgray;
+   background-color: lightgray;
+   font-size: 13px;
+   font-weight: bold;
+   font-family: montserrat;
+   color: rgb(70, 69, 69)
+}
+button:hover{
+    color: white
+}
+.buttons{
+   display: flex;
+   margin-left: 65%;
+   margin-right:5% ;
+   margin-top: 10%;
+   margin-bottom: 10px;
+
+}
+
+
+/*ANIMACIONES*/ 
+label:hover{
+    background-color: lightgray;
+    color: black;
+}
+.imagenMuestra p:hover{
+    text-decoration-line: underline;
+
+}
+.optionsConteiner{
+    position: fixed;
+}

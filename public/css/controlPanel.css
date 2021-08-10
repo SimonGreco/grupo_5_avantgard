@@ -1,5 +1,7 @@
 body{
-    background-color: #f8f4fc;
+    height: auto;
+    margin-bottom: 101%;
+    background-color: #121655;
 }
 main{
     height: auto;
@@ -10,7 +12,7 @@ main{
     left: 0px;
     padding: 10px;
     width: 20%;
-    min-height: 124%;
+    min-height: 100vw;
     color: white;
 }
 .optionsConteiner{
@@ -38,7 +40,7 @@ main{
 .misProductos{
     width: 75%;
     display: block;
-    color: black;
+    color: white;
     position: absolute;
     margin-top: 20px;
     right: 2.5%;
@@ -84,7 +86,7 @@ main{
     font-family: montserrat;
     font-size: 15px;
 }
-.search-bar{
+.search-bar1{
     width: 40%;
 }
 .ids{
@@ -93,6 +95,9 @@ main{
     font-size: 15px;
     font-weight: 600;
     color: rgb(73, 73, 73);
+}
+.optionsConteinerPhone{
+    display: none;
 }
 #id{
     width: 5%;
@@ -205,7 +210,35 @@ button:hover{
 
 @media(max-width:768px){
     .mainControlPanel{
-        width: 15%;
+        display: none;
+        
     }
+    .misProductos{
+        margin-right: 17%;
+        display: block;
+        font-size: 15px;
+       
+    }
+    .productsList{
+        margin-bottom: auto;
+        width: 90%;
+        margin-right: 2%;
+        margin-left: 5%;
+        margin-top: 80px;
+    }
+    .productsList h4{
+        font-size: 70%;
+    }
+    .productsList p{
+        font-size: 70%;
+    }
+    .productsList button{
+        font-size: 70%;
+    }
+    .productsList input{
+        font-size: 70%;
+    }
+    
+
     
 }
