@@ -12,7 +12,17 @@ app.set('view engine', 'ejs')
 
 
 // Servidor
-app.listen(3000, function(){
+
+//Funcion para ejecutar el servidor en la red local si se especifica la ip luego de ejecutar node app.js
+function servidorExterno(ip){
+    if(ip =! null){
+       return ip
+    }
+}
+//------------------------
+
+
+app.listen(3000, servidorExterno(process.argv[2]), function(){
     console.log("servidor levantado en el puerto 3000")
 });
 //------------------------

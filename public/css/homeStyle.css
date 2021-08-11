@@ -315,12 +315,7 @@ button{
     .slider i{
         display: none
     }
-    .slider-txt h2{
-        font-size: 15px;
-    }
-    .slider-txt p{
-        font-size: 11px;
-    }
+    
     .product-catg{
         font-size: 15px;
     }
@@ -349,6 +344,13 @@ button{
         margin-bottom: 10px;
         align-self: center;
     }
+    .product-txt-conteiner{
+        padding: 2px;
+    }
+    .product-txt-conteiner p{
+        font-size:70%;
+
+    }
     .categories-conteiner div{
         height: 40%;
         width: auto;
@@ -370,6 +372,12 @@ button{
         margin: 0 auto;
         margin-top: 10%;
     }
+    .iconos-conteiner i{
+        font-size: 40px;
+    }
+    .iconos-conteiner p{
+        font-size: 70%;
+    }
 }
 
 @media (max-width:768px){
@@ -380,10 +388,10 @@ button{
         height: auto;
     }
     .slider-txt h2{
-        font-size: 20px
+        font-size: 15px
     }
     .slider-txt p{
-        font-size: 14px
+        font-size: 10px
     }
     .producto{
         width: 40%;

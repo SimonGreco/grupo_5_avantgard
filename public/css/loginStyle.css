@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 700px;
 }
 
 .main-login{
@@ -29,7 +30,7 @@
     border-top-right-radius: 10px;
     position: relative;
 }
-.formularios{
+.formularios1{
     height: 80%;
     width: 100%;
     border-bottom-left-radius: 10px;
@@ -53,17 +54,19 @@
 .login-logo h2{
     margin-left: 14px;
     font-weight: 900;
+    font-size: 20px;
 }
 .login-logo p{
     margin-right: 12px;
     color: blue;
+    font-size: 15px;
 }
 hr{
     width: 100%;
     size: 10px;
     margin-top: -17px;
 }
-form{
+.formularios2{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -72,31 +75,31 @@ form{
 }
 .Facebook-button{
     width: 90%;
-    height: 60px;
+    height: 50px;
     border: solid 1px 	#4267B2;
     color: 	#4267B2;
     font-family: montserrat;
-    font-size: 20px;
+    font-size: 16px;
     border-radius: 10px;
 }
-.formularios i{
+.formularios1 i{
     margin: 0 10px;
 }
 .Google-button{
     width: 90%;
-    height: 60px;
+    height: 50px;
     border: solid 1px 	#DB4437;
     color: 	#DB4437;
     font-family: montserrat;
-    font-size: 20px;
+    font-size: 16px;
     border-radius: 10px;
     margin-top: 1%;
 }
 form .formularios-sesion{
     width: 90%;
-    height: 50px;
+    height: 40px;
     font-family: montserrat;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 10px;
     margin-top: 2%;
     border: white solid 1px;
@@ -104,7 +107,7 @@ form .formularios-sesion{
 
 }
 .checkbox{
-    font-size: 17px;
+    font-size: 15px;
 }
 .login-button{
     display: flex;
@@ -116,17 +119,18 @@ form .formularios-sesion{
 .login-button button{
     background-color: white;
     width: 30%;
-    height: 50px;
+    height: 40px;
     border: white solid 1px;
     border-radius: 6px;
     color: black;
-    font-size: 20px;
+    font-size: 15px;
     font-family: montserrat;
     margin-left: 5%;
 }
 .login-button p{
     margin-right: 5%;
-    color: blue
+    color: blue;
+    font-size: 15px;
 }
 
 /*ANIMACIONES*/
@@ -176,31 +180,30 @@ form .formularios-sesion{
         
     }
     .txt-conteiner p{
-        font-size: 12px;
+        font-size: 10px;
     }
    .Google-button, .Facebook-button{
-        font-size: 17px;
-        height: 40px
+        font-size: 14px;
+        height: 40px;
+        width: 70%;
    }
-   form{
-       height: 50%;
-   }
-    form input{
+ 
+   .formularios2 input{
         height: 100%;
+        font-size: 13px;
+        width: 70%;
     }
-    .formularios p{
-        font-size: 12px;
+    .formularios1 p{
+        font-size: 10px;
     }
     .login-button{
-        font-size: 15px;
-        height: 10%;
+        font-size: 12px;
+      
     }
     .login-button button{
-        font-size: 15px;
+        font-size: 12px;
     }
-    hr{
-        display: none
-    }
+    
     
 }
 @media(max-width: 1200px){
@@ -208,9 +211,7 @@ form .formularios-sesion{
         min-width: 80%;
         max-width: 555px;
         
-        max-height: 600px;
+        height: fit-content;
     }
-    hr {
-        display: none;
-    }
+    
 }
