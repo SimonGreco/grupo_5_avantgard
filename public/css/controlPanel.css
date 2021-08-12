@@ -3,6 +3,7 @@ body{
     margin-bottom: 101%;
     background-color: #121655;
 }
+
 main{
     height: auto;
 }
@@ -18,7 +19,9 @@ main{
 .optionsConteiner{
     margin-left: 10px;
     text-align: left;
+    position: fixed;
 }
+
 .optionsConteiner h4{
     margin: 40px 0px;
 }
@@ -240,5 +243,11 @@ button:hover{
     }
     
 
+    
+}
+@media(max-width: 1050px){
+    .mainControlPanel .optionsConteiner p, h4{
+        font-size: 70%;
+    }
     
 }
