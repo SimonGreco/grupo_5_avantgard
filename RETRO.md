@@ -27,6 +27,8 @@ Hacer menos:
 • No hacer las cosas con anticipación, como mencione anteriormente, porque si surge algún problema nos va a resultar aún mucho mas dificil resoverlo ya que corremos con el tiempo.
 Dejar de hacer:
 • Por el momento no tenemos nada que creemos que deberíamos dejar de hacer, consideramos que en la próxima retrospectiva teniendo en cuenta el segundo sprint vamos a encontrar las cosas que no nos estan sumando o, sin querer, estan empeorando o haciendo menos ágil nuestra dinámica de trabajo individual o como equipo.
+•
+
 
 
 

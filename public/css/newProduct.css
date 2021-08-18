@@ -201,7 +201,7 @@ main{
 
 /* MEDIA QUERIES Y RESPONSIVE */
 
-@media (max-width: 468px) {
+/* @media (max-width: 468px) {
     .title-sections {
         text-align: left;
     }
@@ -329,4 +329,4 @@ main{
         font-size: 25px;
     }
 
-} */
+} */ 
