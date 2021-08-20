@@ -70,6 +70,8 @@ hr{
 }
 .seccion-productos-contenedor{
     width: 100%;
+    max-width: 1380px;
+    margin: 0 auto;
     height: 500px;
     
 }
@@ -146,7 +148,9 @@ hr{
     justify-content: space-between;
     align-items: center;
     width: 80%;
+    max-width: 1200px;
     height: 65vw;
+    max-height: 900px;
     margin: auto auto;
 
 }
