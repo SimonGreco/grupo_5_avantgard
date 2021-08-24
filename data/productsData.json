@@ -87,6 +87,20 @@
         "description": "Fiel reflejo de la realidad. Con este producto lograrás que la reproducción obtenida sea lo más parecida a la original. Excelente para grabar voces debido a su sensibilidad y amplio rango de frecuencia.",
         "image": "/img/micro2.png"
     }
+    ,
+    {
+        "id": 9,
+        "name": "Consola Mezclador Mackie",
+        "price": 22500,
+        "categoria": "sintetizadores",
+        "estado": "nuevo",
+        "marca": "Mackie",
+        "modelo": "PROFX4V2",
+        "description": "",
+        "image": ""
+    }
+
+
 
 ]
 
