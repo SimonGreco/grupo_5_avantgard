@@ -129,8 +129,7 @@
         "estado": "nuevo",
         "marca": "Teenage Engineering",
         "modelo": "Po-32 tonic",
-        "description": "Sintetizador y secuenciador de batería y percusión con grabación de parámetros, efectos y sonidos ilimitados con el VST
-        Microtonic a través de transferencia de datos. El PO-32 es el primer Pocket Operator que admite sonidos ilimitados. Además de 16 sonidos preseteados, podes utilizar el VST de Sonic Charge, Microtonic para crear tus sonidos propios y transferirlo de manera inalámbrica a tu PO-32 a través del micrófono incorporado o utilizando un cable.",
+        "description": "Sintetizador y secuenciador de batería y percusión con grabación de parámetros, efectos y sonidos ilimitados con el VST Microtonic a través de transferencia de datos. El PO-32 es el primer Pocket Operator que admite sonidos ilimitados. Además de 16 sonidos preseteados, podes utilizar el VST de Sonic Charge, Microtonic para crear tus sonidos propios y transferirlo de manera inalámbrica a tu PO-32 a través del micrófono incorporado o utilizando un cable.",
         "image": "pocket.png"
     }, 
     {
@@ -141,14 +140,7 @@
         "estado": "nuevo",
         "marca": "JBL",
         "modelo": "LSR305",
-        "description": " 
-        Tamaño del driver de baja: frecuencia127 mm 5
-        Tamaño del driver de alta: frecuencia25 mm 1
-        Tipo de driver de alta frecuencia:Cúpula blanda
-        Cruce1725 Hz acústico de 4º orden Linkwitz-Riley
-        Configuración de potencia: Biamplificada
-        Amplificador de potencia de driver de alta: frecuencia41 W Clase D
-        Amplificador de potencia de driver de baja: frecuencia41 W Clase D",
+        "description": "Tamaño del driver de baja: frecuencia127 mm 5. Tamaño del driver de alta: frecuencia25 mm 1 Tipo de driver de alta frecuencia:Cúpula blanda Cruce1725 Hz acústico de 4º orden Linkwitz-RileyConfiguración de potencia: BiamplificadaAmplificador de potencia de driver de alta: frecuencia41 W Clase DAmplificador de potencia de driver de baja: frecuencia41 W Clase D",
         "image": "parlante2.png"
     }, 
     {
@@ -236,21 +228,6 @@
 
 ]
 
-
-
-// MODELO PARA COPIAR Y PEGAR //
-
-{
-    "id": ,
-    "name": "",
-    "price": ,
-    "categoria": "",
-    "estado": "",
-    "marca": "",
-    "modelo": "",
-    "description": ,
-    "image": ""
-}
 
 
 
