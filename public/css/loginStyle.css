@@ -13,7 +13,7 @@
 
 .main-login{
     width: 37%;
-    height: 80%;
+    max-width: 480px;
     position: absolute;
     z-index: 10;
     background-color: rgba(255, 255, 255, 0.7);

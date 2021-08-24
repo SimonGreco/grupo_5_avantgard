@@ -32,10 +32,11 @@
         <div class="misProductos"><h3>Mis Productos</h3></div>
         <article class="productsList">
             <p class="ListadoDeProductos"> Listado de productos</p>
-            <form class="search-product-bar" method="GET" action="/">
-                <div class="search-bar1"><input type="text" name="search-product"
+            <form class="search-product-bar" method="GET" action="../product/create">
+                <div class="search-bar1">
+                    <input type="text" name="search-product"
                         placeholder="Buscá entre tus productos"></div>
-                <button type="menu"> <i class="fas fa-plus"></i> Agregar nuevo</button>
+                <button type="submit"> <i class="fas fa-plus"></i> Agregar nuevo</button>
             </form>
             <hr width="100%">
             <div class="ids">
@@ -127,13 +128,14 @@
                     <p>Vendido</p>
                 </div>
                 <div class="categoria">
-                    <p><a href="/">Estudio</a>/<a href="/">Micrófonos</a>/<a href="/">Condensador</a></p>
+                    <p><a href="/">Estudio</a>/<a href="/">Equipos de DJ</a>/<a href="/">Micrófonos</a>/<a href="/">Condensador</a></p>
                 </div>
                 <div class="acciones">
                     <p><a href="../product/edit"><i class="far fa-edit"></i></a>
                         <a href="/"><i class="far fa-trash-alt"></i></p></a>
                 </div>
             </div>
+            
             <div class="next-page">
                 <p>Siguiente página</p>
             </div>
