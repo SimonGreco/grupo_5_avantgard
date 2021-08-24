@@ -8,7 +8,7 @@
         "marca": "Mackie",
         "modelo": "PROFX4V2",
         "description": "El Mackie ProFX4v2 es un mezclador de 4 canales robusto y versátil que ofrece una gran variedad de conexiones y efectos innovadores. Con dos potentes preamplificadores Vita, 16 efectos digitales incorporados, ecualización gráfica general de 5 vías y ecualizador de dos vías por canal, el ProFX4v2 entrega características premium de Mackie en una unidad compacta y fácil de llevar.",
-        "image": "/img/D_NQ_NP_2X_816025-MLA25347808916_022017-F.webp",
+        "image": "D_NQ_NP_2X_816025-MLA25347808916_022017-F.webp"
     },
     {
         "id": 2,
@@ -19,7 +19,7 @@
         "marca": "Pioneer DJ",
         "modelo": "DJS1000",
         "description": "Con una pantalla táctil de 7 pulgadas a todo color, 16 keys multicolores de entrada por pasos, performance pads multicolores, una gran cantidad de entradas y salidas, muestreo en vivo y otras características para directo, con el DJS-1000 en la cabina llevarás tus sets al siguiente nivel.",
-        "image": "/img/Diseño sin título (1).png"
+        "image": "Diseño sin título (1).png"
     },
     {
         "id": 3,
@@ -30,7 +30,7 @@
         "marca": "Akai",
         "modelo": "MPX8",
         "description": "Cargue virtualmente cualquier muestra a través de la tarjeta SD o SDHC estándar y asignela a cualquiera de las ocho almohadillas sensibles a la presión y la velocidad con retroiluminación del MPX8. Es así de simple. Úsalo en el estudio. Úsalo en vivo en el escenario o en el aire. MPX8 integra la probada tecnología Akai Pro en un diseño compacto y duradero diseñado para funcionar",
-        "image": "/img/sampler.png"
+        "image": "sampler.png"
     },
     {
         "id": 4,
@@ -41,7 +41,7 @@
         "marca": "Novation",
         "modelo": "Launchpad Mini MK3",
         "description": "Launchpad Mini es un controlador de grilla MIDI de 64 pads RGB retroiluminados. El más compacto y portátil. Te brinda todo lo que necesitas para comenzar a actuar en Ableton Live, y cabe en tu bolso. Commenzá a crear e interpretar pistas con Ableton Live donde quiera que esté, utilizando la gran variedad de sonidos en la caja para comenzar.",
-        "image": "/img/Diseño sin título (2).png"
+        "image": "ControladorMIDI.png"
     },
     {
         "id": 5,
@@ -52,7 +52,7 @@
         "marca": "Sennheiser",
         "modelo": "HD 650",
         "description": "Los HD 650 son lo último en diseño de auriculares dinámicos abiertos para audiófilos. Desarrollados a partir de los premiados HD 600, para el HD 650 se utilizan mejores materiales para una mejor reproducción de sonido. Capturan al usuario con su expresividad y emoción mientras mantienen una absoluta precisión y reproducción realista. Disfrute del sonido perfecto.",
-        "image": "/img/auricular.png"
+        "image": "auricular.png"
     },
     {
         "id": 6,
@@ -63,7 +63,7 @@
         "marca": "Behringer",
         "modelo": "CMD DV-1",
         "description": "La música une y crea momentos únicos, por eso con este controlador Behringer vas a poder darle tu propio toque a las canciones que más te gustan y pinchar como DJ profesional.",
-        "image": "/img/controlador.png"
+        "image": "controlador.png"
     },
     {
         "id": 7,
@@ -74,7 +74,7 @@
         "marca": "Korg",
         "modelo": "Kaosspad KP3+",
         "description": "La serie Kaoss Pad, de unidades de efectos, es famosa por su intuitivo panel táctil. El modelo insignia KP3, que apareció en 2006, continúa siendo aclamado por los músicos y DJs de todo el mundo por sus potentes programas de efecto, y sus completas funcionalidades de Sampling. Los sonidos dance, la música EDM y los efectos utilizados para crearlas, han evolucionado significativamente en estos últimos siete años. Te presentamos el KP3+.",
-        "image": "/img/Diseño sin título.png"
+        "image": "Diseño sin título.png"
     },
     {
         "id": 8,
@@ -85,23 +85,11 @@
         "marca": "Audio-Technica",
         "modelo": "AT2050",
         "description": "Fiel reflejo de la realidad. Con este producto lograrás que la reproducción obtenida sea lo más parecida a la original. Excelente para grabar voces debido a su sensibilidad y amplio rango de frecuencia.",
-        "image": "/img/micro2.png"
+        "image": "micro2.png"
     }
-
 ]
 
 
 
 
 
-{
-    "id": 9,
-    "name": "Consola Mezclador Mackie",
-    "price": 22500,
-    "categoria": "sintetizadores",
-    "estado": "nuevo",
-    "marca": "Mackie",
-    "modelo": "PROFX4V2",
-    "description": "",
-    "image": ""
-}
