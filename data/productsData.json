@@ -86,8 +86,7 @@
         "modelo": "AT2050",
         "description": "Fiel reflejo de la realidad. Con este producto lograrás que la reproducción obtenida sea lo más parecida a la original. Excelente para grabar voces debido a su sensibilidad y amplio rango de frecuencia.",
         "image": "micro2.png"
-    }
-    ,
+    },
     {
         "id": 9,
         "name": "Monitor De Estudio Krk Rp7 G4 Rokit",
@@ -111,15 +110,15 @@
         "image": "microfono.png"
     },
     {
-    "id": 11,
-    "name": "Parlante Thonet & Vander Hi-End Kugel con bluetooth black 100V/240V",
-    "price": 75400,
-    "categoria": "Amplificadores y parlantes",
-    "estado": "nuevo",
-    "marca": "Thonet & Vander",
-    "modelo": "Kugel",
-    "description": "Disfrutar de un amplio espectro de sonidos, incluso los más agudos es posible con este parlante woofer, tweeter. Vas a sentir la diferencia en la calidad sonora excelente. Al ser activo solo necesitarás conectarlo a la fuente de sonido y el mismo equipo se encargará de amplificar y reproducir: ganarás practicidad y espacio, ya que además requiere menos cableado que uno pasivo. Es la solución más conveniente si querés producir música en tu casa o en un estudio, y también para DJs.",
-    "image": "parlante.png"
+        "id": 11,
+        "name": "Parlante Thonet & Vander Hi-End Kugel con bluetooth black 100V/240V",
+        "price": 75400,
+        "categoria": "Amplificadores y parlantes",
+        "estado": "nuevo",
+        "marca": "Thonet & Vander",
+        "modelo": "Kugel",
+        "description": "Disfrutar de un amplio espectro de sonidos, incluso los más agudos es posible con este parlante woofer, tweeter. Vas a sentir la diferencia en la calidad sonora excelente. Al ser activo solo necesitarás conectarlo a la fuente de sonido y el mismo equipo se encargará de amplificar y reproducir: ganarás practicidad y espacio, ya que además requiere menos cableado que uno pasivo. Es la solución más conveniente si querés producir música en tu casa o en un estudio, y también para DJs.",
+        "image": "parlante.png"
     },
     {
         "id": 12,
@@ -131,7 +130,7 @@
         "modelo": "Po-32 tonic",
         "description": "Sintetizador y secuenciador de batería y percusión con grabación de parámetros, efectos y sonidos ilimitados con el VST Microtonic a través de transferencia de datos. El PO-32 es el primer Pocket Operator que admite sonidos ilimitados. Además de 16 sonidos preseteados, podes utilizar el VST de Sonic Charge, Microtonic para crear tus sonidos propios y transferirlo de manera inalámbrica a tu PO-32 a través del micrófono incorporado o utilizando un cable.",
         "image": "pocket.png"
-    }, 
+    },
     {
         "id": 13,
         "name": "Jbl Lsr-305 Bafle",
@@ -142,7 +141,7 @@
         "modelo": "LSR305",
         "description": "Tamaño del driver de baja: frecuencia127 mm 5. Tamaño del driver de alta: frecuencia25 mm 1 Tipo de driver de alta frecuencia:Cúpula blanda Cruce1725 Hz acústico de 4º orden Linkwitz-RileyConfiguración de potencia: BiamplificadaAmplificador de potencia de driver de alta: frecuencia41 W Clase DAmplificador de potencia de driver de baja: frecuencia41 W Clase D",
         "image": "parlante2.png"
-    }, 
+    },
     {
         "id": 14,
         "name": "Proco Px-12 Consola Audio Mixer Potenciada Usb Bluetooth",
@@ -151,7 +150,7 @@
         "estado": "nuevo",
         "marca": "Proco",
         "modelo": "PX12",
-        "description":"Mezcladora potenciada, 12 canales. Bluetooth / USB / Grabación",
+        "description": "Mezcladora potenciada, 12 canales. Bluetooth / USB / Grabación",
         "image": "sintC.png"
     },
     {
@@ -162,7 +161,7 @@
         "estado": "nuevo",
         "marca": "Yamaha",
         "modelo": "MONTAGE8 WH",
-        "description":"El motor de síntesis de control de movimiento unifica y controla dos motores de sonido icónicos: AWM2 (forma de onda y síntesis de alta calidad) y fm-x (síntesis de modulación de frecuencia pura y moderna).",
+        "description": "El motor de síntesis de control de movimiento unifica y controla dos motores de sonido icónicos: AWM2 (forma de onda y síntesis de alta calidad) y fm-x (síntesis de modulación de frecuencia pura y moderna).",
         "image": "sintetizador.png"
     },
     {
@@ -175,7 +174,7 @@
         "modelo": "Launchpad Mini MK3",
         "description": "Launchpad Mini es un controlador de grilla MIDI de 64 pads RGB retroiluminados. El más compacto y portátil. Te brinda todo lo que necesitas para comenzar a actuar en Ableton Live, y cabe en tu bolso. Commenzá a crear e interpretar pistas con Ableton Live donde quiera que esté, utilizando la gran variedad de sonidos en la caja para comenzar.",
         "image": "ControladorMIDI.png"
-    }, 
+    },
     {
         "id": 17,
         "name": "Consola Mezclador Mackie",
@@ -195,7 +194,7 @@
         "estado": "nuevo",
         "marca": "Novation",
         "modelo": "Peak",
-        "description": "Con tres nuevos osciladores Oxford por voz, cada uno con formas de onda tradicionales y acceso a 17 wavetables digitales, el sintetizador analógico polifónico NOVATION PEAK de 8 voces es perfecto para los productores de música electrónica moderna. También es perfecto para el diseño de sonido, con una matriz de modulación de 16 slots más 16 asignaciones directas accesibles directamente desde el panel frontal. Cada voz puede utilizar su propio filtro multimodo analógico, con distorsión pre y post filtro también disponibles. Tene en cuenta la reverberb, el delay y el chorus incorporados, un arpegiador flexible y una entrada de modulación de CV para la integración con el equipo modular, y el potencial creativo en el módulo del sintetizador Novation Peak se hace evidente." ,
+        "description": "Con tres nuevos osciladores Oxford por voz, cada uno con formas de onda tradicionales y acceso a 17 wavetables digitales, el sintetizador analógico polifónico NOVATION PEAK de 8 voces es perfecto para los productores de música electrónica moderna. También es perfecto para el diseño de sonido, con una matriz de modulación de 16 slots más 16 asignaciones directas accesibles directamente desde el panel frontal. Cada voz puede utilizar su propio filtro multimodo analógico, con distorsión pre y post filtro también disponibles. Tene en cuenta la reverberb, el delay y el chorus incorporados, un arpegiador flexible y una entrada de modulación de CV para la integración con el equipo modular, y el potencial creativo en el módulo del sintetizador Novation Peak se hace evidente.",
         "image": "novation.png"
     },
     {
@@ -220,16 +219,4 @@
         "description": "Este poderoso controlador también viene con varios títulos de software aclamados que le hará crear grabaciones profesionales en poco tiempo. Analog Lab Lite le permite realizar cientos de sonidos legendarios de sintetizadores, pianos, órganos y cuerdas. Ableton Live Lite le permite grabar, organizar y cultivar sus ideas musicales en un producto terminado. UVI Grand es una recreación del piano Steinway modelo D.",
         "image": "arturia.png"
     }
-
-
-    
-
-
-
 ]
-
-
-
-
-
-
