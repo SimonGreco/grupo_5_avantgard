@@ -140,8 +140,9 @@ hr{
 /*CATEGORIAS*/
 .cat-txt{
     color: white;
-    margin-left: 10%;
-    display: inline-block;
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 .main-categories{
     display: flex;
