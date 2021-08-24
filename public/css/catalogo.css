@@ -95,8 +95,10 @@ hr{
 
 .cat-txt{
     color: white;
-    margin-left: 10%;
-    display: inline-block;
+    width: 95%;
+    max-width: 1300px;
+    margin: 20px auto;
+    font-size: 18px;
 }
 
 .main-categories{
@@ -243,6 +245,7 @@ hr{
     hr{
         width: 60%;
     }
+    
     .seccion-productos-contenedor{
         margin-bottom: 325%;
     }
@@ -254,6 +257,7 @@ hr{
         height: auto;
         margin-bottom: 10px;
         align-self: center;
+        
     }
     .categories-conteiner div{
         height: 40%;
@@ -261,8 +265,8 @@ hr{
         margin-top: 6%;
         margin-bottom: auto;
     }
-    .ctg-txt-conteiner{
-        font-size: 0.7em;
+    .cat-txt{
+        font-size: 15px;
     }
 
     .iconos-conteiner{
@@ -278,6 +282,12 @@ hr{
     }
     footer{
         margin-top: 25%;
+    }
+    .product-txt-conteiner p{
+        font-size: 15px;
+    }
+    .product-txt-conteiner .descripcion{
+        font-size: 10px;
     }
 }
 
