@@ -1,121 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Carrito de compras</title>
-    <link href="/css/newProduct.css" rel="stylesheet">
-    <%- include("../partials/head") %> 
-</head>
-
-<body>
- 
-
-        <main>
-
-            <p class="title"> NEW PRODUCT </p>
-            <br>
-
-            <form class="add-product">
-
-                <div class="product-name">
-                    <p class="title-sections"> Nombre </p>
-                    <label for="name"> </label>
-                    <input type="text" id="name" name="name" class="field-1">
-                </div>
-
-                <br>
-
-                <div class="product-brand">
-                    <p class="title-sections"> Marca </p>
-                    <label for="brand"> </label>
-                    <input type="text" id="brand" name="brand" class="field-1">
-                </div>
-
-                <br>
-
-                <div class="product-model">
-                    <p class="title-sections"> Modelo </p>
-                    <label for="model"> </label>
-                    <input type="text" id="model" name="model" class="field-1">
-                </div>
-                <br>
-
-                <div class="product-stock">
-                    <p class="title-sections"> Stock </p>
-                    <input type="number" id="Stock" name="Stock" min="1" class="field-1">
-                </div>
-
-                <br>
-
-
-                <div class="product-categorie">
-                    <p class="title-sections"> Categoría </p>
-                    <select name="Categorie" class="categorie">
-                        <option> Auriculares </option>
-                        <option> Amplificadores y parlantes </option>
-                        <option> Teclados </option>
-                        <option> Sintetizadores </option>
-                        <option> Micrófonos </option>
-                        <option> Controladores MDI </option>
-                    </select>
-                </div>
-                <br>
-                <div class="price">
-                    <p class="title-sections"> Precio </p>
-                    <input type="number" min="0" step="1000" class="price" />
-                </div>
-                <br>
-                <br>
-                <br>
-                <div class="product-colors">
-
-                    <p class="title-sections"> Colores </p>
-
-                    <input type="checkbox" name="color" class="color">
-                    <label for="color"> Negro </label>
-
-                    <input type="checkbox" name="color" class="color">
-                    <label for="color"> Plateado </label>
-
-                    <input type="checkbox" name="color" class="color">
-                    <label for="color"> Gris </label>
-
-                    <input type="checkbox" name="color" class="color">
-                    <label for="color"> Blanco </label>
-
-                    <input type="text" placeholder="Otro" class="color-bar">
-                    <label for="otro"> </label>
-
-                </div>
-
-                <br>
-
-                <div class="product-description">
-                    <p class="title-sections"> Descripción </p>
-                    <input type="text" name="description" placeholder="Insertar descripción del producto"
-                        class="descripción">
-                    <label for="descripción"> </label>
-
-                </div>
-
-                <div class="field-picture">
-                    <p class="title-sections"> Añadir imágen del producto </p>
-                    <label for="picture"> </label>
-                    <input type="file" accept=".jpg" name="picture" style="max-width: 100%;" class="field">
-                </div>
-
-
-
-            </form>
-
-        </main>
-
-        
-</body>
-
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -171,24 +53,24 @@
             <div id="imgDetail">
                 <p>La imagen debe ser de almenos 500 x 500 píxeles</p>
             </div>
-            <form action="/" method="POST">
+            <form action="/products" method="POST">
                 <label for="AgregarImagen" class="addFile">
                     <span>Añadi una nueva imagen</span>
                 </label>
-                <input type="file" name="imagenNueva" id="AgregarImagen">
+                <input type="file" name="image" id="AgregarImagen" >
 
                 <h4>Titulo</h4>
                 <p>Agrega un título para describir el artículo. Los títulos pueden tener hasta 150 caracteres, pero
                     recomendamos usar menos de 65.
                 </p>
 
-                <input type="text" name="Titulo" id="Titulo" maxlength="150" class="formulario-txt">
+                <input type="text" name="name" id="Titulo" maxlength="150" class="formulario-txt">
 
                 <h4>Descripcion</h4>
                 <p>Agrega detalles del artículo, incluidas las características que lo hacen único para que las personas
                     comprendan los beneficios que ofrece..</p>
 
-                <textarea type="text" name="Titulo" id="Titulo" maxlength="1500" class="Descripcion"></textarea>
+                <textarea type="text" name="description" id="Titulo" maxlength="1500" class="Descripcion"></textarea>
 
                 <h4>Precio</h4>
                 <p>Elige una divisa y agrega el precio completo del artículo tal como se muestra en tu sitio web.</p>
@@ -197,11 +79,11 @@
                         <option value="arg">ARS- Peso Argentino</option>
                         <option value="usd">USD- Dólar EstadoUnidense</option>
                     </select>
-                    <input type="number" name="precio" id="precio" placeholder="Precio">
+                    <input type="number" name="price" id="precio" placeholder="Precio">
                 </div>
 
 
-                <input type="checkbox" name="oferta" class="oferta">Este articulo esta en oferta
+                <input type="checkbox" name="Oferta" value="Yes" class="oferta">Este articulo esta en oferta
 
 
                 <h4>Marca</h4>
@@ -209,7 +91,7 @@
 
                 <h4>ID</h4>
                 <p>Agrega un ID unico por producto para identificarlo</p>
-                <input type="text" name="id" id="id" placeholder="ID" class="formulario-txt">
+                <input type="text" name="localID" id="id" placeholder="ID" class="formulario-txt">
 
 
                 <h4>Categoria</h4>

@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 app.use(express.static("public"));
 
+app.use(express.urlencoded({extended: false}));
+app.use(express.json())
+
 
 
 
@@ -32,6 +35,7 @@ app.listen(3000, servidorExterno(process.argv[2]), function(){
 const productRoutes = require("./routes/products");
 const userRoutes = require("./routes/users");
 const mainRoutes = require("./routes/main");
+const { urlencoded } = require("express");
 
 app.use("/products", productRoutes);
 app.use("/", mainRoutes);
