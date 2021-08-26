@@ -133,7 +133,7 @@ hr{
     color: rgb(82, 82, 82);
 }
 .producto hr{
-    margin: 0px;
+    margin: -1px;
     size: 10px;
     width: 100%;
 }

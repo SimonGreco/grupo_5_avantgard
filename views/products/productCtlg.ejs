@@ -20,7 +20,7 @@
             <% for(let i=4 ; i<8; i++){ %>
 
                 <% producto=productos[i] %>
-                    <a href="/product/detalle/<%= producto.id %> " class="producto">
+                    <a href="/products/<%= producto.id %> " class="producto">
 
                         <img src="/img/Productos/<%=producto.image%>" alt="Imagen de producto">
 
@@ -47,7 +47,7 @@
             <% for(let i=8 ; i<12; i++){ %>
 
                 <% producto=productos[i] %>
-                    <a href="/product/detalle/<%= producto.id %> " class="producto">
+                    <a href="/products/<%= producto.id %> " class="producto">
 
                         <img src="/img/Productos/<%=producto.image%>" alt="Imagen de producto">
 
@@ -79,7 +79,7 @@
                         <% if(producto.Oferta !=undefined){ %>
                             
                             <% contadorDeOfertas = contadorDeOfertas + 1 %> 
-                               <a href="/product/detalle/<%= producto.id %> " class="producto">
+                               <a href="/products/<%= producto.id %> " class="producto">
 
                                     <img src="/img/Productos/<%=producto.image%>" alt="Imagen de producto">
 
@@ -112,7 +112,7 @@
             <% for(let i=12 ; i<16; i++){ %>
 
                 <% producto=productos[i] %>
-                    <a href="/product/detalle/<%= producto.id %> " class="producto">
+                    <a href="/products/<%= producto.id %> " class="producto">
 
                         <img src="/img/Productos/<%=producto.image%>" alt="Imagen de producto">
 

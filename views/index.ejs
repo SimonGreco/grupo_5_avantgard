@@ -40,8 +40,8 @@
             <% for(let i = 0 ; i<4; i++){ %> 
                 
                 <% producto = productos[i] %> 
-                <a href="/product/detalle/<%= producto.id %> " class="producto">
                 
+                <a href="/products/<%= producto.id %>" class="producto">
                     <img src="/img/Productos/<%=producto.image%>" alt="Imagen de producto">
                 
                     <hr>
@@ -49,8 +49,9 @@
                     <p class="Precio">$<%=producto.price%></p>
                     <p class="descripcion"><%=producto.name%></p>
                      </div>
+                    </a>
+                   
                 
-                </a>
         
             <% } %> 
 
