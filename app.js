@@ -36,6 +36,10 @@ const mainRoutes = require("./routes/main");
 app.use("/product", productRoutes);
 app.use("/", mainRoutes);
 app.use("/user", userRoutes);
+app.use(function(req,res,next){
+    res.status(404).render("404.ejs")
+    next()
+})
 
 //------------------------
 
