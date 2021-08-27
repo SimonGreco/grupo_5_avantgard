@@ -5,6 +5,9 @@ app.use(express.static("public"));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json())
 
+//METHOD OVERRIDE
+const methodOverride = require("method-override");
+app.use(methodOverride("_method"));
 
 
 

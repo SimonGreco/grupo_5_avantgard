@@ -29,7 +29,7 @@ router.post("/", upload.any(), productController.create);
 
 //EDITAR PRODUCTOS
 router.get("/:id/edit", productController.edit);
-router.put("/", productController.update)
+router.put("/:id", productController.update)
 //----------
 
 
