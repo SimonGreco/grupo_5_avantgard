@@ -6,7 +6,7 @@ body {
 .container-one {
     border: 3px solid white;
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     margin-top: 60px;
     margin-bottom: 50px;
     
@@ -60,7 +60,7 @@ body {
     border: 3px solid white;
     width: 150px;
     height: 150px;
-    float: inline-end;
+    float: inline-start;
     border-radius: 10px;
 } 
 
@@ -193,7 +193,7 @@ color: #121655;
     color: #121655 ;
     border: white solid 1px;
     height: 40px;
-    width: 60%;
+    width: 70%;
 }
 
 .color {
@@ -714,6 +714,15 @@ a{
         font-size: 0px;
     }
 }
+
+
+@media (min-width:1024px) 
+{
+    .img-product 
+
+}
+
+
 
 
 
