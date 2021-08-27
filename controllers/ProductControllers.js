@@ -14,7 +14,8 @@ let productController = {
         res.render("./products/productCar")
     },
     edit: function(req, res){
-        res.render("./products/editProduct")
+        let idS = req.params.id
+        res.render("./products/editProduct", {productos: productos, idS : idS})
     },
     newProduct: function(req, res){
         res.render("./products/newProduct")
@@ -41,6 +42,15 @@ let productController = {
 		fs.writeFileSync( productsFilePath, productJSON);
         res.redirect("/products/")
         
+    },
+    //EDICION DE PRODUCTO
+    update: function(req,res){
+       var productoAEditar = productos.filter(function(elemento){
+           return elemento.id == req.params.id
+       })
+      res.send(productoAEditar)
+
+    
     }
 
 }
