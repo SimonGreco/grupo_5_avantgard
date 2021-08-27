@@ -53,28 +53,30 @@
         <div id="imgDetail">
             <p>La imagen debe ser de almenos 500 x 500 píxeles</p>
         </div>
-        <div class="imagenMuestra"><img src="/img/Productos/Diseño sin título (1).png" alt="" />
+        <% for(let producto of productos){ %> 
+           <% if(producto.id == idS){ %>  
+        <div class="imagenMuestra"><img src="/img/Productos/<%= producto.image %>" alt="" />
            <a href="/"> <p>Reemplazar</p></a>
         </div>
         <p class="img-adicionales">imagenes adicionales</p>
-        <form action="/" method="POST">
+        <form action="/products/<%= producto.id %>?_method=PUT" method="POST">
             <label for="AgregarImagen" class="addFile">
                 <span>Añadi una nueva imagen</span>
             </label>
-            <input type="file" name="imagenNueva" id="AgregarImagen">
+            <input type="file" name="image" id="AgregarImagen">
 
             <h4>Titulo</h4>
             <p>Agrega un título para describir el artículo. Los títulos pueden tener hasta 150 caracteres, pero
                 recomendamos usar menos de 65.
             </p>
 
-            <input type="text" name="Titulo" id="Titulo" maxlength="150" class="formulario-txt">
+            <input type="text" name="name" id="Titulo" value="<%= producto.name %> " maxlength="150" class="formulario-txt">
 
             <h4>Descripcion</h4>
             <p>Agrega detalles del artículo, incluidas las características que lo hacen único para que las personas
                 comprendan los beneficios que ofrece..</p>
 
-            <textarea type="text" name="Titulo" id="Titulo" maxlength="1500" class="Descripcion"></textarea>
+            <textarea type="text" name="description" id="Titulo" maxlength="1500" class="Descripcion"><%=producto.description%></textarea>
 
             <h4>Precio</h4>
             <p>Elige una divisa y agrega el precio completo del artículo.</p>
@@ -83,28 +85,28 @@
                     <option value="arg">ARS- Peso Argentino</option>
                     <option value="usd">USD- Dólar EstadoUnidense</option>
                 </select>
-                <input type="number" name="precio"  id="precio" placeholder="Precio" >
+                <input type="number" name="price" value="<%= producto.price%>" id="precio" placeholder="Precio" >
             </div>
 
 
-            <input type="checkbox" name="oferta" class="oferta"><label for="Oferta" class="Oferta-txt">Este articulo esta en oferta</label>
+            <input type="checkbox" name="Oferta" class="oferta"><label for="Oferta" class="Oferta-txt">Este articulo esta en oferta</label>
 
             <h4>Estado</h4>
-            <select name="Estado" id="estado" class="formulario-txt">
+            <select name="estado" id="estado" class="formulario-txt">
                 <option value="usado">Usado</option>
                 <option value="Nuevo">Nuevo</option>
             </select>
 
 
             <h4>Marca</h4>
-            <input type="text" name="marca" id="marca" placeholder="Marca" class="formulario-txt">
+            <input type="text" name="marca" id="marca" value="<%= producto.marca %>" placeholder="Marca" class="formulario-txt">
 
             <h4>Modelo</h4>
-            <input type="text" name="marca" id="marca" placeholder="Modelo" class="formulario-txt">
+            <input type="text" name="modelo" id="marca" value="<%= producto.modelo %>" placeholder="Modelo" class="formulario-txt">
 
             <h4>ID</h4>
             <p>Agrega un ID unico por producto para identificarlo</p>
-            <input type="text" name="id" id="id" placeholder="ID" class="formulario-txt">
+            <input type="text" name="localID" value="<%= producto.localID %> " id="id" placeholder="ID" class="formulario-txt">
 
 
             <h4>Categoria</h4>
@@ -126,6 +128,8 @@
             
         </div>
         </form>
+        <% } %>
+        <% } %> 
 
     </article>
    

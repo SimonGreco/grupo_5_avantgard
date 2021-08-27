@@ -6,7 +6,7 @@ const multer = require("multer");
 
 
 router.get("/carrito", productController.carrito);
-router.get("/edit", productController.edit);
+
 
 //Creacion de productos
 //MULTER
@@ -23,12 +23,16 @@ const storage = multer.diskStorage({
 
 
 router.get("/create", productController.newProduct);
-router.post("/", upload.any(), function(req,res){
-  console.log(req.file)
-  res.send("hola")
-});
+router.post("/", upload.any(), productController.create);
 
 //---------------------------
+
+//EDITAR PRODUCTOS
+router.get("/:id/edit", productController.edit);
+router.put("/:id", productController.update)
+//----------
+
+
 router.get("/", productController.catalogo);
 router.get("/:id", productController.detail);
 module.exports = router

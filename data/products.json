@@ -37,15 +37,14 @@
   },
   {
     "id": 4,
-    "name": "Controlador Midi Novation Launchpad",
-    "price": 25600,
-    "categoria": "Sintetizadores",
+    "name": "CONTROLADOR MIDI",
+    "price": "25600",
+    "categoria": "auriculares",
     "estado": "nuevo",
     "marca": "Novation",
     "modelo": "Launchpad Mini MK3",
     "description": "Launchpad Mini es un controlador de grilla MIDI de 64 pads RGB retroiluminados. El más compacto y portátil. Te brinda todo lo que necesitas para comenzar a actuar en Ableton Live, y cabe en tu bolso. Commenzá a crear e interpretar pistas con Ableton Live donde quiera que esté, utilizando la gran variedad de sonidos en la caja para comenzar.",
-    "image": "ControladorMIDI.png",
-    "Oferta": "yes"
+    "image": "ControladorMIDI.png"
   },
   {
     "id": 5,
