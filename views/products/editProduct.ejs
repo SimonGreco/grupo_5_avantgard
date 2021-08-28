@@ -56,10 +56,10 @@
         <% for(let producto of productos){ %> 
            <% if(producto.id == idS){ %>  
         <div class="imagenMuestra"><img src="/img/Productos/<%= producto.image %>" alt="" />
-           <a href="/"> <p>Reemplazar</p></a>
+           <label for="AgregarImagen"><p>Reemplazar</p></label>
         </div>
         <p class="img-adicionales">imagenes adicionales</p>
-        <form action="/products/<%= producto.id %>?_method=PUT" method="POST">
+        <form action="/products/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <label for="AgregarImagen" class="addFile">
                 <span>Añadi una nueva imagen</span>
             </label>
@@ -132,5 +132,6 @@
         <% } %> 
 
     </article>
-   
+    
+</body>   
 </html>

@@ -53,11 +53,12 @@
             <div id="imgDetail">
                 <p>La imagen debe ser de almenos 500 x 500 píxeles</p>
             </div>
-            <form action="/products" method="POST">
+            <form action="/products" method="POST" enctype="multipart/form-data">
+                <span class="AgregarImagen"><input type="file" name="image" id="AgregarImagen" ></span>
                 <label for="AgregarImagen" class="addFile">
-                    <span>Añadi una nueva imagen</span>
+                    <span >Añadi una nueva imagen</span>
                 </label>
-                <input type="file" name="image" id="AgregarImagen" >
+           
 
                 <h4>Titulo</h4>
                 <p>Agrega un título para describir el artículo. Los títulos pueden tener hasta 150 caracteres, pero
@@ -118,5 +119,8 @@
             </form>
 
         </article>
+        
+
+</body>
 
 </html>

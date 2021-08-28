@@ -28,7 +28,7 @@ let productController = {
         let productoNuevo = {
             name: req.body.name,
             id: Date.now(),
-            image: req.body.image,
+            image: req.file.filename,
             price: req.body.price,
             categoria: req.body.categoria,
             estado: req.body.estado,
@@ -43,6 +43,8 @@ let productController = {
 		fs.writeFileSync( productsFilePath, productJSON);
         res.redirect("/products/")
         
+        
+        
     },
     //EDICION DE PRODUCTO
     update: function(req,res){
@@ -51,6 +53,7 @@ let productController = {
        })
       productoAEditar.name = req.body.name; 
       productoAEditar.price = req.body.price;
+      productoAEditar.image = req.file.filename;
       productoAEditar.categoria = req.body.categoria;
       productoAEditar.marca = req.body.marca;
       productoAEditar.description = req.body.description;
