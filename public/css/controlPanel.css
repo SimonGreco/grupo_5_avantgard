@@ -177,6 +177,13 @@ main{
     width: 60%;
     font-size: 20px;
 }
+.acciones form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+   
+}
 .next-page{
     display: flex;
     justify-content: flex-end;

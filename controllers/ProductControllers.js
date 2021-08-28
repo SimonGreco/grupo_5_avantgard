@@ -74,6 +74,7 @@ delete: function(req,res){
     let productosSinEliminar = productos.filter(function(elemento){
         return elemento.id != req.params.id
     })
+    
     productosJSON = JSON.stringify(productosSinEliminar, null, 2);
     fs.writeFileSync(productsFilePath, productosJSON)
     res.redirect("/products")

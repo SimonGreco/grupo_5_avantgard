@@ -32,6 +32,9 @@ router.get("/:id/edit", productController.edit);
 router.put("/:id", productController.update)
 //----------
 
+//ELIMINAR PRODUCTOS
+router.delete("/:id", productController.delete)
+
 
 router.get("/", productController.catalogo);
 router.get("/:id", productController.detail);

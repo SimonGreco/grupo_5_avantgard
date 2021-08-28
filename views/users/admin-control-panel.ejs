@@ -67,8 +67,13 @@
                     <p><a href="/">Estudio</a>/<a href="/"><%= producto.categoria %></a></p>
                 </div>
                 <div class="acciones">
-                    <p><a href="../products/<%= producto.id %>/edit "><i class="far fa-edit"></i></a>
-                        <a href="/"><i class="far fa-trash-alt"></i></p></a>
+                    <p><a href="../products/<%= producto.id %>/edit "><i class="far fa-edit"></i></a></p>
+
+                        <form action="../products/<%= producto.id %>?_method=DELETE" method="POST">
+                            
+                            <button id="delete-button" type="delete" style="background-color: transparent; border: transparent; font-size: 20px;"><i class="far fa-trash-alt"></i></button>
+                            
+                        </form>
                 </div>
             </div>
             <% } %> 
