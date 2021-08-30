@@ -216,26 +216,13 @@
   },
   {
     "id": 19,
-    "name": "Procesador Sampler De Efectos Dinámicos Korg",
-    "price": 40600,
-    "categoria": "Sintetizadores",
+    "name": "Procesador Sampler De Efectos Dinámicos Korg cambio",
+    "price": "40600",
+    "categoria": "auriculares",
     "estado": "nuevo",
     "marca": "Korg",
     "modelo": "Kaosspad KP3+",
     "description": "La serie Kaoss Pad, de unidades de efectos, es famosa por su intuitivo panel táctil. El modelo insignia KP3, que apareció en 2006, continúa siendo aclamado por los músicos y DJs de todo el mundo por sus potentes programas de efecto, y sus completas funcionalidades de Sampling. Los sonidos dance, la música EDM y los efectos utilizados para crearlas, han evolucionado significativamente en estos últimos siete años. Te presentamos el KP3+.",
-    "image": "Diseño sin título.png",
-    "Oferta": "yes"
-  },
-  {
-    "id": 20,
-    "name": "Minilab Mkii Arturia Teclado Midi 25 Teclas 8 Pads Y Knobs",
-    "price": 23300,
-    "categoria": "Teclados",
-    "estado": "nuevo",
-    "marca": "Arturia",
-    "modelo": "MINILAB MKII",
-    "description": "Este poderoso controlador también viene con varios títulos de software aclamados que le hará crear grabaciones profesionales en poco tiempo. Analog Lab Lite le permite realizar cientos de sonidos legendarios de sintetizadores, pianos, órganos y cuerdas. Ableton Live Lite le permite grabar, organizar y cultivar sus ideas musicales en un producto terminado. UVI Grand es una recreación del piano Steinway modelo D.",
-    "image": "arturia.png",
-    "Oferta": "yes"
+    "image": "1630286757683_img_.png"
   }
 ]
