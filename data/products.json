@@ -216,9 +216,9 @@
   },
   {
     "id": 19,
-    "name": "Procesador Sampler De Efectos Dinámicos Korg",
-    "price": 40600,
-    "categoria": "Sintetizadores",
+    "name": "Procesador Sampler De Efectos Dinámicos Korg cambio",
+    "price": "40600",
+    "categoria": "auriculares",
     "estado": "nuevo",
     "marca": "Korg",
     "modelo": "Kaosspad KP3+",
