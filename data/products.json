@@ -228,14 +228,13 @@
   },
   {
     "id": 20,
-    "name": "Minilab Mkii Arturia Teclado Midi 25 Teclas 8 Pads Y Knobs",
-    "price": 23300,
-    "categoria": "Teclados",
+    "name": "Minilab Mkii Arturia Teclado Midi 25 Teclas 8 Pads Y Knobs ",
+    "price": "23300",
+    "categoria": "auriculares",
     "estado": "nuevo",
     "marca": "Arturia",
     "modelo": "MINILAB MKII",
     "description": "Este poderoso controlador también viene con varios títulos de software aclamados que le hará crear grabaciones profesionales en poco tiempo. Analog Lab Lite le permite realizar cientos de sonidos legendarios de sintetizadores, pianos, órganos y cuerdas. Ableton Live Lite le permite grabar, organizar y cultivar sus ideas musicales en un producto terminado. UVI Grand es una recreación del piano Steinway modelo D.",
-    "image": "arturia.png",
-    "Oferta": "yes"
+    "image": "arturia.png"
   }
 ]
