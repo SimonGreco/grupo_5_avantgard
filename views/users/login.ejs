@@ -34,15 +34,21 @@
                 <button class="Google-button" type="submit"><i class="fab fa-google"></i>Continuá con Google</button>
 
                 <p>O ingresá los datos de tu cuenta</p>
-                <form action="/" method="POST" class="formularios2">
-                    <input class="formularios-sesion" type="email" name="mail" placeholder="Correo Electronico">
+                <form action="/user/login" method="POST" class="formularios2">
+                    <input class="formularios-sesion" type="email" name="email" placeholder="Correo Electronico">
+                    <% if (locals.errors && errors.email) { %>
+                        <div style="color: rgb(173, 2, 2); font-size: 13px; margin-right: 40%;"> <%= errors.email.msg %> </div>
+                    <% } %>
                     <input class="formularios-sesion" type="password" name="password" id="password"
                         placeholder="Contraseña">
+                        <% if (locals.errors && errors.password) { %>
+                            <div style="color: rgb(173, 2, 2); font-size: 13px; margin-right: 40%;"> <%= errors.password.msg %> </div>
+                        <% } %>
                     <br>
                     <div class="checkbox"><input type="checkbox" name="recuerdame" id="recuerdame">Recuérdame</div>
                     <br>
                     <div class="login-button">
-                        <button type="submit" class="acceder" name="acceder">Acceder</button>
+                        <button type="submit" class="acceder" >Acceder</button>
                         <p class="Recuperacion-contraseña">¿Olvidaste tu contraseña?</p>
                     </div>
 

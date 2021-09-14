@@ -1,3 +1,55 @@
+<% if (session.userLoged != undefined) { %>
+    <header class="main-headder">
+        <img src="/img/Logo Horizontal  .png">
+       
+      <div class="phone-menu"> <div class="menu"><i class="fas fa-bars"></i></div>
+       <span class="search-bar">
+           <form action="/" method="POST">
+               <input type="text" name="busqueda" placeholder="Buscá productos, marcas y mas">
+               
+           </form>
+           
+       </span>
+       <a href="../user/control-panel"><i class="fas fa-user"></i></a>
+       <a href="../user/control-panel"><i class="fas fa-store-alt"></i></a>
+       <a href="../products/carrito"><i class="fas fa-shopping-cart"></i></a>
+    
+    </div>
+    </div>
+    <div class="txt">
+        <p><a href="../#Categoriass">Categorías</a></p>
+    </div>
+    <div class="txt">
+        <p><a href="../products/#Ofertass">Ofertas</a></p>
+    </div>
+    <div class="txt">
+        <p>Historial</p>
+    </div>
+    <div class="txt">
+        <p><a href="/products">Explorar</a></p>
+    </div>
+    
+    
+       
+       <div class="iconos">
+           <a href="../user/control-panel">
+            <i class="fas fa-store-alt"></i>
+               Tienda
+           </a>
+           <a href="../user/control-panel"><i class="fas fa-user"></i>Perfil</a>
+    
+           <a href="../products/carrito"><i class="fas fa-shopping-cart"></i>Carrito</a>
+    
+           <a href="/"><i class="fas fa-search"></i></a>
+    
+    
+    
+    
+       </div>
+    
+    </header>
+<% }else{ %>
+
 <header class="main-headder">
     
     <img src="/img/Logo Horizontal  .png">
@@ -46,3 +98,4 @@
    </div>
 
 </header>
+<% } %> 

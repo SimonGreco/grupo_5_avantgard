@@ -20,23 +20,24 @@
             <hr>
             <p class="completarDatos">Completa tus datos!</p>
             <br>
-            <form action="/registro" method="POST">
-                <input type="text" name="Nombre" placeholder="Nombre" class="renglon">                
+            <form action="/user" method="POST" >
+                <input type="text" name="first_name" placeholder="Nombre" class="renglon">                
                 <br>
                 <br>
-                <input type="text" name="Apellido" placeholder="Apellido" class="renglon">
+                <input type="text" name="last_name" placeholder="Apellido" class="renglon">
                 <br>
                 <br>
-                <input type="email" name="Correo" placeholder="E-Mail" class="renglon">
+                <input type="email" name="email" placeholder="E-Mail" class="renglon">
                 <br>
                 <br>
-                <input type="password" name="Constraseña" placeholder="Clave" class="renglon">
+                <input type="password" name="password" placeholder="Clave" class="renglon">
+                <br>
+            <br>
+                <div class="ubicacionBoton">
+                <button class="boton" type="submit">Continuar</button>
+                 </div>
             </form>
-            <br>
-            <br>
-            <div class="ubicacionBoton">
-                <button class="boton">Continuar</button>
-            </div>
+            
         </div>
         <br>
         <br>
