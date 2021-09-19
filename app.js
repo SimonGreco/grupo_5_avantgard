@@ -2,10 +2,15 @@ const express = require("express");
 const app = express();
 app.use(express.static("public"));
 const session = require("express-session")
+const userLoggedMiddleware = require("./middlewares/userLogedMiddleware");
+const cookies = require("cookie-parser");
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json())
 app.use(session({secret: "mensaje", resave : false, saveUninitialized: false}))
+app.use(cookies());
+app.use(userLoggedMiddleware);
+
 
 //METHOD OVERRIDE
 const methodOverride = require("method-override");

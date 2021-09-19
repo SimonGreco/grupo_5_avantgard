@@ -15,13 +15,13 @@ const session = require("express-session");
 
 let usersController = {
     login: function(req, res){
-        res.render("./users/login", {session:session})
+        res.render("./users/login")
     },
     register: function(req, res){
-        res.render("./users/register", {session:session})
+        res.render("./users/register")
     },
     controlPanel: function(req, res){
-        res.render("./users/admin-control-panel", {productos:productos,session:session})
+        res.render("./users/admin-control-panel", {productos:productos})
     },
 
     //CRUD DE USUARIO A PARTIR DE ACA; NO TOCAR
@@ -43,12 +43,13 @@ let usersController = {
     }else{res.send("el usuario ya existe")}
 },
     loginProcess: function(req, res){
-        let userData = req.body
+       
         let allUsers = JSON.parse(fs.readFileSync("./data/users.json", "utf-8"));
         let userToLog = allUsers.find(function(elemento){
             return elemento.email == req.body.email;
 
         })
+       
         if(userToLog == undefined){
             res.render("./users/login", {
                 errors: {
@@ -56,11 +57,20 @@ let usersController = {
                         msg :"No se encontro un email valido"
                     }
                 }
-            },{session:session})
+            })
         }else{
             if(bcryptjs.compareSync(req.body.password, userToLog.password) == true){
+                delete userToLog;
                 req.session.userLoged = userToLog
+                if(req.body.recuerdame){
+                res.cookie("userEmail", req.body.email, {maxAge: Infinity})
+                 }
                 res.redirect("/")
+
+
+                
+
+
             }else{
                 res.render("./users/login", {
                     errors: {
@@ -68,12 +78,20 @@ let usersController = {
                             msg :"Las credenciales son invalidas"
                         }
                     }
-                },{session:session})
+                })
             }
             
         }
+        
 
 
+    },
+    logout: function(req, res){
+
+        res.clearCookie("userEmail")
+        req.session.destroy()
+    
+        return res.redirect("/")
     }
     
 }
