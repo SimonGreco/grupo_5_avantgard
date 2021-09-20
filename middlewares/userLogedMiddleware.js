@@ -11,6 +11,7 @@ const fs = require("fs")
          })
       if(userToLog){
          req.session.userLoged = userToLog
+         
       }   
         
       
@@ -20,6 +21,7 @@ const fs = require("fs")
      res.locals.isLogged = false
      if(req.session && req.session.userLoged){
         res.locals.isLogged = true
+        res.locals.userLogged = req.session.userLoged
      }
 
      
