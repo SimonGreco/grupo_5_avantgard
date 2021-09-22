@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Perfil de Uusario</title>
+    <link href="/css/userProfile.css" rel="stylesheet">
+    <%- include("../partials/head") %>
+</head>
+<body>
+    <br>
+    <div class="miCuenta">
+        <h3>Tu cuenta AvantGard!</h3>
+    </div>
+    <br>
+    <div class="box">
+        <article class="profileChanges">
+            <div id="imagenPrincipal-txt">
+                <p>Foto de Perfil</p>
+            </div>
+            <div id="imgDetail">
+                <p>La imagen debe ser de almenos 500 x 500 píxeles</p>
+            </div>
+            <div class="imagenMuestra"><img src="/img/Diseño sin título (1).png" alt="" />
+                <a href="/">
+                    <p>Reemplazar</p>
+                </a>
+            </div>
+            
+            <form action="/" method="POST">
+                <label for="AgregarImagen" class="addFile">
+                    <span>Añadi una nueva imagen</span>
+                </label>
+                <input type="file" name="imagenNueva" id="AgregarImagen">
+
+                <br>
+                <br>
+
+                <h4>Usuario</h4>
+                <p>
+                </p>
+                <input type="text" name="user" id="user" maxlength="150" class="formulario-txt">
+
+                <h4>E-mail</h4>
+                <p>
+                </p>
+                <input type="text" name="email" id="email" maxlength="150" class="formulario-txt">
+
+                <br>
+                <br>
+                <br>
+
+                <h4>Nombre y Apellido</h4>
+                <p> </p>
+
+                <input type="text" name="name" id="name" maxlength="150" class="formulario-txt">
+
+
+                <h4>Documento</h4>
+                <input type="text" name="doc" id="doc" maxlength="150" class="formulario-txt">
+
+                <h4>Teléfono</h4>
+                <p></p>
+                <input type="text" name="tel" id="tel" maxlength="150" class="formulario-txt">
+
+                <br>
+                <br>
+                <br>
+
+                <h4>Domicilio</h4>
+                <p></p>
+                <input type="text" name="adress" id="adress" maxlength="150" class="formulario-txt">
+                
+
+                <div class="buttons"><button type="reset">Reset</button>
+                    <button type="submit">Guardar Cambios</button>
+
+
+                </div>
+            </form>
+
+        </article>
+    </div>
+</body>
+
+</html>
