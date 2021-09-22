@@ -3,6 +3,7 @@
 body{
     background-color: #121655;
 }
+
 .slider{
     width: 100%;
     height: auto;
@@ -10,11 +11,23 @@ body{
     
     
 }
+
+
 .slider img{
-    object-fit: fill;
+   
     width: 100%;
+   
     
 }
+.imagen_slider{
+    content: url("/img/Slider.gif");
+    width: 100%;
+    transition: all 2000ms;
+    
+
+}
+
+
 .slider-txt{
     position: absolute;
     z-index: 10;
@@ -250,6 +263,7 @@ hr{
 
 
 /*ANIMACIONES*/
+
 
 button:hover{
     background-color:grey;
