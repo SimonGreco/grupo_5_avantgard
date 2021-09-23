@@ -1,12 +1,11 @@
 const express = require("express");
-
 const path = require("path");
 const fs = require("fs");
 const { json } = require("express");
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const usersFilePath = path.join(__dirname, '../data/users.json');
 const bcryptjs = require("bcryptjs");
 const session = require("express-session");
+const productos = JSON.parse(fs.readFileSync("./data/products.json", 'utf-8'));
 const { validationResult } = require("express-validator")
 
 
@@ -43,7 +42,7 @@ let usersController = {
         }) == undefined){
         
         userData.id = Date.now()
-        userData.image = "Default.png"
+        userData.image = "Default.jpg"
         userData.password = bcryptjs.hashSync(req.body.password, 10);
         allUsers.push(userData)
         fs.writeFileSync("./data/users.json", JSON.stringify(allUsers, null, " "))
@@ -64,6 +63,7 @@ let usersController = {
         
         
 },
+//LOGIN PROCESS
     loginProcess: function(req, res){
        
         let allUsers = JSON.parse(fs.readFileSync("./data/users.json", "utf-8"));
@@ -110,12 +110,47 @@ let usersController = {
 
 
     },
+    //LOGOUT
     logout: function(req, res){
 
         res.clearCookie("userEmail")
         req.session.destroy()
     
         return res.redirect("/")
+    },
+    //PROFILE Y EDICION
+    profile: function(req, res){
+        res.render("./users/userProfile")
+    },
+    userEdit: function(req, res){
+       
+        let allUsers = JSON.parse(fs.readFileSync("./data/users.json", "utf-8"));
+        let userToEdit = allUsers.find(function(elemento){
+            return elemento.email == req.session.userLoged.email;
+
+        })
+      
+        
+       userToEdit.first_name = req.body.first_name; 
+       userToEdit.last_name = req.body.last_name;
+       userToEdit.email = req.body.email;
+       userToEdit.documento = req.body.documento;
+       userToEdit.phone = req.body.phone;
+       userToEdit.adress = req.body.adress;
+  
+       if(req.file != undefined){
+         userToEdit.image = req.file.filename
+       }
+ 
+       let indice = allUsers.indexOf(userToEdit)
+      
+     
+    var usuarios = allUsers
+     usuarios[indice] = userToEdit
+     
+     UsersJSON = JSON.stringify(usuarios, null, 2);
+     fs.writeFileSync(usersFilePath, UsersJSON)
+     res.redirect("/user/profile")
     }
     
 }

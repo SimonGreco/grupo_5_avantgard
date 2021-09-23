@@ -5,6 +5,8 @@ const usersController = require("../controllers/UsersControllers");
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware")
 const { body } = require("express-validator");
+const multer = require("multer");
+const path = require("path")
 const validations = [
   body("first_name").notEmpty().withMessage("El campo no puede estar vacio"),
   body("last_name").notEmpty().withMessage("El campo no puede estar vacio"),
@@ -22,10 +24,11 @@ const validations = [
 
 
 
+
 router.get("/control-panel", authMiddleware, usersController.controlPanel);
 
 
-//Creacion de usuarios
+ //Creacion de usuarios
 
 
 
@@ -40,6 +43,22 @@ router.get("/control-panel", authMiddleware, usersController.controlPanel);
 
   //LOGOUT DE USUARIO
   router.get("/logout", usersController.logout);
+ 
+  //EDICION DE USUARIO Y ENTRADA AL PERFIL
+  //MULTER
 
+  const storage = multer.diskStorage({ 
+    destination: function (req, file, cb) { 
+        let folder = path.join(__dirname, "../public/img/users")
+      cb(null, folder); 
+    }, 
+    filename: function (req, file, cb) { 
+      cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
+  });
+  const upload = multer({ storage:storage });
+  router.put("/profile", upload.single("image"), usersController.userEdit)
+  router.get("/profile", authMiddleware,usersController.profile)
+  
+  
 
 module.exports = router

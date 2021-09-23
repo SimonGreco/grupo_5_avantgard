@@ -5,15 +5,84 @@ body{
     font-family: montserrat;
 }
 .box {
-    background-color: white;
+    width: 90%;
     padding: 1%;
-    margin: 2%;
+    margin: 2% ;
+    margin-left: 4%;
+    display: flex;
+    justify-content: space-between;
+ 
+    
+}
+.user_image_box{
+    width: 16%;
+    height: max-content;
+    border-radius: 25px;
+    text-align: center ;
+    position: relative;
+}
+.user_image:hover{
+    filter: blur(1.5px);
+    z-index: 14;
+}
+.user_image{
+width: 100%;
+border-radius: 10%;
+background-size: contain;
+z-index: 16;
+display:block;
+
+
+}
+
+.camera{
+    font-size: 50px;
+    width: 27%;
+    position: absolute;
+    bottom: 40%;
+    left: 37%;
     
     
+   
+     
+}
+.camera_container{
+ width: 100%;
+ height: 100%;
+ opacity: 0;
+
+}
+.camera_container p{
+    position: absolute;
+    bottom: 0px;
+    margin-left: 24%;
+    color: black;
+}
+.camera_container:hover{
+    opacity: 1;
+}
+
+.profileChanges{
+    width: 70%;
+   
+}
+.formulario_cambio{
+    width: 100%;
+}
+.edita_perfil{
+    color: white;
+    font-size: 20px;
+    margin-top: 1px;
 }
 .miCuenta {
     margin-left: 2.5%;
     color: white;
+}
+.box p{
+    color: rgb(226, 226, 226);
+}
+.user_image_box{
+    color: black;
 }
 .mainControlPanel{
     height: 1260px;
@@ -43,8 +112,8 @@ body{
 .addFile{
     font-size: 10px;
     font-weight: 600;
-    color: grey;
-    background-color: white;
+    color: black;
+    background-color: lightgray;
     display: inline-block;
     padding: 15px 40px ;
     width: fit-content;
@@ -77,11 +146,12 @@ body{
     color:darkblue
 }
 .formulario-txt{
-    min-width: 50%;
+    width: 70%;
     margin: 0 2%;
     height: 30px;
-    border: solid 1px lightgray;
+    border: solid 1px rgb(211, 211, 211);
     border-radius: 5px;
+    background-color:rgb(211, 211, 211)  ;
 }
 .Descripcion{
     width: 80%;
@@ -92,21 +162,21 @@ body{
 }
 .profileChanges h4{
     font-size: 15px;
-    color: rgb(83, 83, 83);
-    font-weight: bold;
+    color: rgb(226, 226, 226);
+    font-weight: 300;
     margin-left: 15px;
     margin-bottom: 2px;
 }
 form p{
     font-size: 12px;
-    color: rgb(83, 83, 83);
+    color: rgb(226, 226, 226);
     font-weight: lighter;
     margin-left: 15px;
     margin-top: 0px;
 }
 
 .profileChanges button{
-   width: 80%;
+   width: 20%;
    height: 40px;
    margin-left: 10%;
    border-radius: 5px;
@@ -122,8 +192,8 @@ form p{
 }
 .profileChanges .buttons{
    display: flex;
-   margin-left: 65%;
-   margin-right:5% ;
+   align-items: center;
+   
    margin-top: 10%;
    margin-bottom: 10px;
 
@@ -186,4 +256,11 @@ label:hover{
         width: 200%;
     }
  
+}
+@media(max-width: 600px){
+    .box{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
