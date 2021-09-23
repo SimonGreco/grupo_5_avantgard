@@ -46,8 +46,8 @@ header img{
     
 }
 .options_box{
-    border: solid 1px red;
     position: absolute;
+    margin-right: 4.5%;
     top: 0px;
     margin-right: 3%;
     z-index: 15;
@@ -55,26 +55,38 @@ header img{
     height: 190%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     opacity: 0;
+
 }
 .options_box:hover{
     opacity: 1;
 }
 .caja_separadora{
     width: 100%;
-    height: 55%;
-    border: blue solid 1px
+    height: 48%;
 }
 .profile_option{
     width: 100%;
     height: 22%;
-    border: yellow solid 1px;
-    background-color: black;
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+
+   
+    
 }
-.profile_option_txt{
-    font-size: 10px;
-    color: white;
+.a{
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
 }
+.b{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 
 .iconos{
     padding: 5px;
@@ -98,6 +110,7 @@ header img{
 }
 .iconos .fas{
     font-size: 20px;
+    margin-bottom: 3px;
 }
 
 
