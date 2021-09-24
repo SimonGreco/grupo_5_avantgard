@@ -42,22 +42,37 @@
                 <p> </p>
 
                 <input type="text" name="first_name" id="name" maxlength="150" class="formulario-txt" value="<%= locals.userLogged.first_name  %>">
+                <% if (locals.errors && errors.first_name) { %>
+                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.first_name.msg %>  </p>
+                    <% } %> 
                 <h4>Apellido</h4>
                 <p> </p>
 
                 <input type="text" name="last_name" id="name" maxlength="150" class="formulario-txt" value="<%= locals.userLogged.last_name  %>">
+                <% if (locals.errors && errors.last_name) { %>
+                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.last_name.msg %>  </p>
+                    <% } %> 
                 <h4>E-mail</h4>
                 <p>
                 </p>
                 <input type="text" name="email" id="email" maxlength="150" class="formulario-txt" value="<%= locals.userLogged.email  %>">
+                <% if (locals.errors && errors.email) { %>
+                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.email.msg %>  </p>
+                    <% } %> 
 
 
                 <h4>Documento</h4>
                 <input type="text" name="documento" id="doc" maxlength="150" class="formulario-txt" value="<%= locals.userLogged.documento  %>" >
+                <% if (locals.errors && errors.documento) { %>
+                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.documento.msg %>  </p>
+                    <% } %> 
 
                 <h4>Teléfono</h4>
                 <p></p>
                 <input type="text" name="phone" id="tel" maxlength="150" class="formulario-txt" value="<%= locals.userLogged.phone  %>">
+                <% if (locals.errors && errors.phone) { %>
+                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.phone.msg %>  </p>
+                    <% } %> 
 
                 <br>
                 
@@ -66,6 +81,9 @@
                 <h4>Domicilio</h4>
                 <p></p>
                 <input type="text" name="adress" id="adress" maxlength="150" class="formulario-txt"  value="<%= locals.userLogged.adress  %>">
+                <% if (locals.errors && errors.adress) { %>
+                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.adress.msg %>  </p>
+                    <% } %> 
                 
 
                 <div class="buttons"><button type="reset">Reset</button>

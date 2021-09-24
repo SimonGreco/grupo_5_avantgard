@@ -1,19 +1,15 @@
 body{
-    height: auto;
-    margin-bottom: 101%;
+    
     background-color: #121655;
 }
 
-main{
-    height: auto;
-}
 .mainControlPanel{
     position: absolute;
     background-color: #201c14;
     left: 0px;
     padding: 10px;
     width: 20%;
-    min-height: 100vw;
+    min-height: 120%;
     color: white;
 }
 .optionsConteiner{

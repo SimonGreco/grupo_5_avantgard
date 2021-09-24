@@ -16,10 +16,17 @@ const validations = [
     { minLength: 8, minLowercase: 1, minUppercase: 0, minNumbers: 1, minSymbols: 0, returnScore: false, pointsPerUnique: 1, pointsPerRepeat: 0.5, pointsForContainingLower: 10, pointsForContainingUpper: 10, pointsForContainingNumber: 10, pointsForContainingSymbol: 10 }
 
 
-
   )
   .withMessage("La contraseña debe tener al menos 8 caracteres y contener letras y numeros")
 
+]
+const validationsProfile = [
+  body("first_name").notEmpty().withMessage("El campo no puede estar vacio"),
+  body("last_name").notEmpty().withMessage("El campo no puede estar vacio"),
+  body("email").notEmpty().withMessage("El campo no puede estar vacio").bail(),
+  body("documento").notEmpty().withMessage("El campo no puede estar vacio").bail().isNumeric().withMessage("Debe ser un tipo de documento valido"),
+  body("phone").notEmpty().withMessage("El campo no puede estar vacio").bail().isNumeric().withMessage("Debe ser un numero de telefono valido"),
+  body("adress").notEmpty().withMessage("El campo no puede estar vacio")
 ]
 
 
@@ -56,7 +63,7 @@ router.get("/control-panel", authMiddleware, usersController.controlPanel);
       cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
   });
   const upload = multer({ storage:storage });
-  router.put("/profile", upload.single("image"), usersController.userEdit)
+  router.put("/profile", upload.single("image"), validationsProfile, usersController.userEdit)
   router.get("/profile", authMiddleware,usersController.profile)
   
   
