@@ -41,6 +41,11 @@ Hacer menos:
 Dejar de hacer:
 • Por el momento no tenemos nada que creemos que deberíamos dejar de hacer, consideramos que en la próxima retrospectiva teniendo en cuenta el segundo sprint vamos a encontrar las cosas que no nos estan sumando o, sin querer, estan empeorando o haciendo menos ágil nuestra dinámica de trabajo individual o como equipo.
 
+<!-- SPRINT 5 -->
+<!-- ACLARACION --> El formulario de registro tiene los campos minimos necesarios para el registro de un usuario, similar a como funcionan otras paginas, estos son: Nombre, Apellido, Email y contraseña. Al igual que en la mayoria de paginas al registrase se setea una imagen de perfil por defecto que luego puede ser cambiada entrando a la vista de perfil. Lo hicimos de esta forma ya que no es el estandar de las paginas web solicitar una foto de perfil en la pestaña de registro. 
+
+
+
 
 
 
