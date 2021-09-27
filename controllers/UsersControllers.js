@@ -23,9 +23,7 @@ let usersController = {
     controlPanel: function(req, res){
         res.render("./users/admin-control-panel", {productos:productos})
     },
-    // userProfile: function(req,res){
-    //     res.render("./users/userProfile")
-    // },
+   
 
     //CRUD DE USUARIO A PARTIR DE ACA; NO TOCAR
     create: function(req, res){
