@@ -451,13 +451,21 @@
   },
   {
     "first_name": "Simon ",
-    "last_name": "Greco ",
+    "last_name": "Greco",
     "email": "simongreco@gmail.com",
     "password": "$2a$10$6xvA5I9kZwaCeqLrIYnac.Dj5f5cRHuUt58Ab/kz1lW2gl2S9cFEq",
     "id": 1631579958482,
-    "image": "Default.jpg",
-    "documento": " 44169473",
-    "phone": " 2241677945",
+    "image": "1632512149473_img_.ico",
+    "documento": "44169473",
+    "phone": "2241677945",
     "adress": "Arenales 384"
+  },
+  {
+    "first_name": "Pedro",
+    "last_name": "Muñoz",
+    "email": "munozpedro2002@gmail.com",
+    "password": "$2a$10$PNQQwgOMCgSMly35KowDc.N8vOeFHHRTaGdqBb9NAC8i6os1g0rbG",
+    "id": 1632431392396,
+    "image": "Default.jpg"
   }
 ]
