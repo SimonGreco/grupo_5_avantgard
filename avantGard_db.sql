@@ -1,4 +1,4 @@
-CREATE DATABASE `AvantGard` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+CREATE DATABASE AvantGard /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
 -- cities definition
 
@@ -6,11 +6,11 @@ CREATE DATABASE `AvantGard` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
 --  DROP TABLE cities;
 
-CREATE TABLE "cities" (
-	"id" int(11) auto_increment NOT NULL,
-	"name" varchar(45) NULL,
-	CONSTRAINT id_PK PRIMARY KEY ("id"),
-	CONSTRAINT id_UN UNIQUE KEY ("id")
+CREATE TABLE cities (
+	id int(11) auto_increment NOT NULL,
+	name varchar(45) NULL,
+	CONSTRAINT id_PK PRIMARY KEY (id),
+	CONSTRAINT id_UN UNIQUE KEY (id)
 )
 ENGINE=InnoDB
 DEFAULT CHARSET=utf8mb4
@@ -24,11 +24,11 @@ DROP TABLE IF EXISTS cities;
 
 --  DROP TABLE categories;
 
-CREATE TABLE "categories" (
-	"id" INT(11) auto_increment NULL,
-	"name" varchar(45) NULL,
-	CONSTRAINT id_PK PRIMARY KEY ("id"),
-	CONSTRAINT categories_UN UNIQUE KEY ("id","name")
+CREATE TABLE categories (
+	id INT(11) auto_increment NULL,
+	name varchar(45) NULL,
+	CONSTRAINT id_PK PRIMARY KEY (id),
+	CONSTRAINT categories_UN UNIQUE KEY (id, name)
 )
 ENGINE=InnoDB
 DEFAULT CHARSET=utf8mb4
@@ -42,20 +42,20 @@ DROP TABLE IF EXISTS categories;
 
 --  DROP TABLE products;
 
-CREATE TABLE "products" (
-	"id" INT(11) auto_increment NULL,
-	"name" varchar(100) NOT NULL,
-	"price" varchar(100) NOT NULL,
-	"estado" varchar(100) NULL,
-	"marca" VARCHAR(100) NULL,
-	"modelo" VARCHAR(100) NULL,
-	"description" TEXT NULL,
-	"image" BLOB NULL,
-	"oferta" BOOL NULL,
-	"categoria_Id" INT NOT NULL,
-	"usuario_Id" INT NOT NULL,
-	CONSTRAINT id_PK PRIMARY KEY ("id"),
-	CONSTRAINT id_UN UNIQUE KEY ("id")
+CREATE TABLE products (
+	id INT(11) auto_increment NULL,
+	name varchar(100) NOT NULL,
+	price varchar(100) NOT NULL,
+	estado varchar(100) NULL,
+	marca VARCHAR(100) NULL,
+	modelo VARCHAR(100) NULL,
+	description TEXT NULL,
+	image BLOB NULL,
+	oferta BOOL NULL,
+	categoria_Id INT NOT NULL,
+	usuario_Id INT NOT NULL,
+	CONSTRAINT id_PK PRIMARY KEY (id),
+	CONSTRAINT id_UN UNIQUE KEY (id)
 )
 ENGINE=InnoDB
 DEFAULT CHARSET=utf8mb4
@@ -69,17 +69,17 @@ DROP TABLE IF EXISTS products;
 
 --  DROP TABLE users;
 
-CREATE TABLE "users" (
-	"id" INT(11) auto_increment NULL,
-	"firstName" varchar(100) NOT NULL,
-	"lastName" varchar(100) NOT NULL,
-	"email" varchar(100) NOT NULL,
-	"password" varchar(255) NOT NULL,
-	"admin" BOOL NOT NULL,
-	"document" INT(8) NOT NULL,
-	"phone" INT(11) NULL,
-	"adress" varchar(100) NULL,
-	"postCode" INT NULL,
+CREATE TABLE users (
+	id INT(11) auto_increment NULL,
+	firstName varchar(100) NOT NULL,
+	lastName varchar(100) NOT NULL,
+	email varchar(100) NOT NULL,
+	password varchar(255) NOT NULL,
+	admin BOOL NOT NULL,
+	document INT(8) NOT NULL,
+	phone INT(11) NULL,
+	adress varchar(100) NULL,
+	postCode INT NULL,
 	CONSTRAINT id_PK PRIMARY KEY (id),
 	CONSTRAINT users_UN UNIQUE KEY (id,email)
 )
