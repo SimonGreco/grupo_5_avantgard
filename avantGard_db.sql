@@ -1,104 +1,92 @@
-CREATE DATABASE `AvantGard` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
+CREATE DATABASE `AvantGard` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
-DROP TABLE IF EXISTS 'cities';
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+-- cities definition
 
-CREATE TABLE 'cities'(
-'id' int(11) AUTO_INCREMENT NOT NULL,
-'name' varchar(45),
-PRIMARY KEY ('id'),
-UNIQUE KEY ('id'),
-)  DEFAULT CHARSET=utf8mb4;
+--  Drop table
 
+--  DROP TABLE cities;
 
-LOCK TABLES 'cities' WRITE;
-/*!40000 ALTER TABLE `cities` DISABLE KEYS */;
-
-UNLOCK TABLES;
-
---
--- Table structure for "categories" 
---
-
-DROP TABLE IF EXISTS 'categories';
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-
-CREATE TABLE 'categories' (
-  'id' int(11)  AUTO_INCREMENT,
-  'name' varchar(45),
-  PRIMARY KEY ('id'),
-  UNIQUE KEY 'categories_un' ('id','name')
-)  DEFAULT CHARSET=utf8mb4;
+CREATE TABLE "cities" (
+	"id" int(11) auto_increment NOT NULL,
+	"name" varchar(45) NULL,
+	CONSTRAINT id_PK PRIMARY KEY ("id"),
+	CONSTRAINT id_UN UNIQUE KEY ("id")
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_general_ci;
+DROP TABLE IF EXISTS cities;
 
 
-LOCK TABLES 'categories' WRITE;
-/*!40000 ALTER TABLE `categories` DISABLE KEYS */;
+-- categories definition
 
-UNLOCK TABLES;
+--  Drop table
 
---
--- Table structure for 'users' 
---
+--  DROP TABLE categories;
 
-DROP TABLE IF EXISTS 'users';
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-
-CREATE TABLE 'users' (
-   'id' int(11) AUTO_INCREMENT,
-   'firstName' varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-   'lastName' varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-   'email' varchar (100) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-   'password' varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-   'admin' bool NOT NULL,
-   'document' int(8) NOT NULL,
-   'phone' int(11),
-   'adress' varchar,
-   'postCode' int,
-   PRIMARY KEY ('id'),
-   UNIQUE KEY ('id', 'email')
-   FOREIGN KEY ('postCode')
-) DEFAULT CHARSET=utf8mb4;
-
-LOCK TABLES 'users' WRITE;
-/*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-
-UNLOCK TABLES;
-
---
--- Table structure for 'products'
---
-
-DROP TABLE IF EXISTS 'products';
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-
-CREATE TABLE 'products' (
-   'id' int(11) AUTO_INCREMENT,
-   'name' varchar COLLATE utf8mb4_unicode_520_ci NOT NULL,
-   'price' varchar COLLATE utf8mb4_unicode_520_ci NOT NULL,
-   'estado' varchar COLLATE utf8mb4_unicode_520_ci,
-   'marca' varchar COLLATE utf8mb4_unicode_520_ci,
-   'modelo' varchar COLLATE utf8mb4_unicode_520_ci,
-   'description' text COLLATE utf8mb4_unicode_520_ci,
-   'image' blob,
-   'oferta' bool,
-   'categoria_id' int NOT NULL,
-   'usuario_id' int NOT NULL,
-   PRIMARY KEY ('id'),
-   UNIQUE KEY ('id'),
-   FOREIGN KEY ('categoria_id', 'usuario_id')
-) DEFAULT CHARSET=utf8mb4;
-
-LOCK TABLES 'products' WRITE;
-/*!40000 ALTER TABLE `categories` DISABLE KEYS */;
+CREATE TABLE "categories" (
+	"id" INT(11) auto_increment NULL,
+	"name" varchar(45) NULL,
+	CONSTRAINT id_PK PRIMARY KEY ("id"),
+	CONSTRAINT categories_UN UNIQUE KEY ("id","name")
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_general_ci;
+DROP TABLE IF EXISTS categories;
 
 
-UNLOCK TABLES;
+-- products definition
+
+--  Drop table
+
+--  DROP TABLE products;
+
+CREATE TABLE "products" (
+	"id" INT(11) auto_increment NULL,
+	"name" varchar(100) NOT NULL,
+	"price" varchar(100) NOT NULL,
+	"estado" varchar(100) NULL,
+	"marca" VARCHAR(100) NULL,
+	"modelo" VARCHAR(100) NULL,
+	"description" TEXT NULL,
+	"image" BLOB NULL,
+	"oferta" BOOL NULL,
+	"categoria_Id" INT NOT NULL,
+	"usuario_Id" INT NOT NULL,
+	CONSTRAINT id_PK PRIMARY KEY ("id"),
+	CONSTRAINT id_UN UNIQUE KEY ("id")
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_general_ci;
+DROP TABLE IF EXISTS products;
 
 
+-- users definition
+
+--  Drop table
+
+--  DROP TABLE users;
+
+CREATE TABLE "users" (
+	"id" INT(11) auto_increment NULL,
+	"firstName" varchar(100) NOT NULL,
+	"lastName" varchar(100) NOT NULL,
+	"email" varchar(100) NOT NULL,
+	"password" varchar(255) NOT NULL,
+	"admin" BOOL NOT NULL,
+	"document" INT(8) NOT NULL,
+	"phone" INT(11) NULL,
+	"adress" varchar(100) NULL,
+	"postCode" INT NULL,
+	CONSTRAINT id_PK PRIMARY KEY (id),
+	CONSTRAINT users_UN UNIQUE KEY (id,email)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_general_ci;
+DROP TABLE IF EXISTS users;
 
 --
 -- Dumping routines for database 'AvantGard'
