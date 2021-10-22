@@ -5,6 +5,7 @@ const fs = require("fs");
 const { json } = require("express");
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require("../database/models")
 
 let productController = {
     detail: function(req, res){

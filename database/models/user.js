@@ -54,7 +54,7 @@ module.exports = function(sequelize, dataTypes){
         timestamps: false
     }
 
-    const categoria = sequelize.define(alias, cols, config);
-
-    return categoria
+    const user = sequelize.define(alias, cols, config);
+  
+    return user
 }

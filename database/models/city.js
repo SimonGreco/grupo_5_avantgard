@@ -18,7 +18,8 @@ module.exports = function(sequelize, dataTypes){
         timestamps: false
     }
 
-    const categoria = sequelize.define(alias, cols, config);
+    const city = sequelize.define(alias, cols, config);
+    
 
-    return categoria
+    return city
 }
