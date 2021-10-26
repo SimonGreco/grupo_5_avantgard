@@ -115,12 +115,10 @@
             <p>Elegir la categoría o subcategoría más específica garantiza que los compradores vean la información más
                 relevante de tu artículo.</p>
             <div><select name="categoria" id="categoria" class="formulario-txt">
-                    <option value="auriculares">Auriculares</option>
-                    <option value="Microfonos">Microfonos</option>
-                    <option value="Sintetizadores">Sintetizadores</option>
-                    <option value="Amplificadores y parlantes">Amplificadores y parlantes</option>
-                    <option value="Teclados">Teclados</option>
-                    <option value="Controladores MIDI">Controladores MIDI</option>
+                <% for(let i = 0; i < categorias.length; i++){ %> 
+                    <option value="auriculares"><%= categorias[i].dataValues.name %></option>
+                    
+                    <% } %> 
                 </select>
             </div>
 

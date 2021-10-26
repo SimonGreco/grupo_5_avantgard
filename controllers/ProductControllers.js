@@ -1,11 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path");
+const db = require("../database/models");
 const fs = require("fs");
 const { json } = require("express");
 const productsFilePath = path.join(__dirname, '../data/products.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const db = require("../database/models")
+const productos =  JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const { localsName } = require("ejs");
 
 let productController = {
     detail: function(req, res){
@@ -17,38 +19,51 @@ let productController = {
     },
     edit: function(req, res){
         let idS = req.params.id
-        res.render("./products/editProduct", {productos: productos, idS : idS})
+        db.categories.findAll()
+        .then(function(element){
+            res.render("./products/editProduct", {
+                productos: productos, idS : idS, categorias: element})
+           
+        })
+        
     },
     newProduct: function(req, res){
-        res.render("./products/newProduct")
+        db.categories.findAll()
+        .then(function(e){
+            res.render("./products/newProduct" , {categorias: e})
+            
+        })
+        
     },
     catalogo: function(req, res){
-        res.render("./products/productCtlg", {productos: productos})
+        let hola = db.users.findAll({
+            include: [{association: "product"}, {association: "ciudad"}]
+        }).catch(function(error){
+            console.log(error)
+        })
+        
+            res.render("./products/productCtlg", {productos: productos})
+            console.log(hola)
+        
+        
     },
     create: function(req,res){
-        let productoNuevo = {
+        
+        db.products.create({
+            id: "DEFAULT",
             name: req.body.name,
-            id: Date.now(),
             price: req.body.price,
-            categoria: req.body.categoria,
-            estado: req.body.estado,
-            marca: req.body.marca,
-            modelo: req.body.modelo,
-            description: req.body.description,
-            Oferta: req.body.Oferta,
-            image: "Default.png"
-        }
-        if(req.file != undefined){
-            productoNuevo.image = req.file.filename
-        }
-        let newJSON = productos.concat(productoNuevo);
-		let productJSON = JSON.stringify(newJSON, null, 2);
-
-		fs.writeFileSync( productsFilePath, productJSON);
-        res.redirect("/products/")
-        
-        
-        
+            estado:req.body.estado,
+            marca:req.body.marca,
+            modelo:req.body.modelo,
+            description:req.body.description,
+            image: req.file ? req.file.filename: "Default.png",
+            oferta: req.body.oferta,
+            categoria_id: req.body.categoria,
+            usuario_id: 51 //req.session.userLoged.id ,
+        }).then(function(){
+            res.redirect("/products/")
+        })
     },
     //EDICION DE PRODUCTO
     update: function(req,res){

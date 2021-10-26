@@ -84,7 +84,7 @@
                 </div>
 
 
-                <input type="checkbox" name="Oferta" value="Yes" class="oferta">Este articulo esta en oferta
+                <input type="checkbox" name="oferta" value="true" class="oferta">Este articulo esta en oferta
 
 
                 <h4>Marca</h4>
@@ -104,12 +104,11 @@
                     relevante de tu artículo.</p>
                 <div>
                     <select name="categoria" id="categoria" class="formulario-txt">
-                        <option value="auriculares">Auriculares</option>
-                        <option value="Microfonos">Microfonos</option>
-                        <option value="Sintetizadores">Sintetizadores</option>
-                        <option value="Amplificadores y parlantes">Amplificadores y parlantes</option>
-                        <option value="Teclados">Teclados</option>
-                        <option value="Controladores MIDI">Controladores MIDI</option>
+                        <% for(let i = 0; i < categorias.length; i++){ %>
+                            <option value= "<%= categorias[i].id  %>"> <%= categorias[i].name %> </option>
+                            <% } %>  
+                        
+                        
                     </select>
                 </div>
 

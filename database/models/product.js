@@ -56,7 +56,19 @@ module.exports = function(sequelize, dataTypes){
     }
 
     const product = sequelize.define(alias, cols, config);
-    
+    product.associate = function(models){
+        product.belongsTo(models.categories, {
+            
+            foreingKey: "categoria_id",
+            as: "category",
+            
+        })
+        product.belongsTo(models.users, {
+            as:"users",
+            foreingKey: "usuario_id"
+        })
+        
+    }
 
     return product
 }

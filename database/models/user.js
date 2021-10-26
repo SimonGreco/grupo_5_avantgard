@@ -45,6 +45,7 @@ module.exports = function(sequelize, dataTypes){
         },
         ciudad_id: {
             type : dataTypes.INTEGER,
+             primaryKey: true,
 
         },
     };
@@ -55,6 +56,21 @@ module.exports = function(sequelize, dataTypes){
     }
 
     const user = sequelize.define(alias, cols, config);
-  
+    
+    user.associate = function(models){
+        user.belongsTo(models.cities, {
+            as: "ciudad",
+            foreingKey : "ciudad_id",
+
+        
+            
+        })
+        user.hasMany(models.products, {
+            as: "product",
+            foreingKey : "usuario_id",
+           
+            
+        })
+    }
     return user
 }

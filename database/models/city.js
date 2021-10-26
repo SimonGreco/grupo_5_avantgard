@@ -19,7 +19,14 @@ module.exports = function(sequelize, dataTypes){
     }
 
     const city = sequelize.define(alias, cols, config);
-    
+    city.associate = function(models){
+        city.hasMany(models.users, {
+            as: "user",
+            foreingKey: "ciudad_id",
+            
+            
+        })
+    }
 
     return city
 }
