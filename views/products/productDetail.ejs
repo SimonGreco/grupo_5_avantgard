@@ -20,8 +20,7 @@
             <span class="categories">
                 volver al listado 
             </span>
-            <% for(let producto of productos){ %> 
-                <% if(producto.id == idS){ %> 
+            
                     <div class="top">
                         <div class="img-product">
 
@@ -51,7 +50,14 @@
                             <div class="textBox">
                                 <h1> <%= producto.name%> </h1>
                                 <br>
-                                <h6> <%= producto.categoria%> </h6>
+                                <h6> <% for(let i = 0; i < categoria.length; i++){ %> 
+                                <% if (categoria[i].id == producto.categoryId) { %>
+                                    <%= categoria[i].name  %> 
+                                <% } %>
+                                <% } %> 
+                                
+                                
+                                </h6>
                            
                                 <div class=price>
                                     <h1> $<%= producto.price%> </h1>
@@ -137,8 +143,7 @@
                     <hr>
                     <br>
                     <br>
-                <% } %> 
-            <% } %>
+               
 
 
 
@@ -151,7 +156,7 @@
 
                     <% for(let i=8 ; i<12; i++){ %>
         
-                        <% producto=productos[i] %>
+                        
                             <a href="../products/<%= producto.id %> " class="producto">
         
                                 <img src="/img/Productos/<%=producto.image%>" alt="Imagen de producto">

@@ -8,6 +8,7 @@ const session = require("express-session");
 const productos = JSON.parse(fs.readFileSync("./data/products.json", 'utf-8'));
 const { validationResult } = require("express-validator");
 const { localsName } = require("ejs");
+const db = require("../database/models");
 
 
 
@@ -35,38 +36,51 @@ let usersController = {
                 oldData: req.body
             })
         } else {
-            let userData = req.body
-            let allUsers = JSON.parse(fs.readFileSync("./data/users.json", "utf-8"));
-            if (allUsers.find(function (elemento) {
-                return elemento.email == req.body.email
-            }) == undefined) {
+            
 
-                userData.id = Date.now()
-                userData.image = "Default.jpg"
-                userData.password = bcryptjs.hashSync(req.body.password, 10);
-                allUsers.push(userData)
-                fs.writeFileSync("./data/users.json", JSON.stringify(allUsers, null, " "))
-                res.redirect("/user/login");
+            db.users.findOne({where: {email: req.body.email}})
+            .then(function(user){
+                if (user == null) {
+                    db.users.create({
+                        id: "DEFAULT",
+                        first_name: req.body.first_name,
+                        last_name: req.body.last_name ,
+                        email: req.body.email ,
+                        password: bcryptjs.hashSync(req.body.password, 10) ,
+                        admin: true,
+                        image: "Default.jpg",
+                        documento: "",
+                        phone: "",
+                        address: "",
+                        cityId: 1
+                    })
 
+                    res.redirect("/user/login");
+                   
+    
+    
+                } else {
+                    res.render("./users/register", {
+                        errors: { email: { msg: "El mail ingresado pertenece a un usuario existente" } },
+                        oldData: req.body
+    
+    
+    
+                    })
+    
+                }
+            })
 
-            } else {
-                res.render("./users/register", {
-                    errors: { email: { msg: "El mail ingresado pertenece a un usuario existente" } },
-                    oldData: req.body
-
-
-
-                })
-
-            }
+            
 
         }
 
 
     },
     //LOGIN PROCESS
+    
     loginProcess: function (req, res) {
-
+       
         let allUsers = JSON.parse(fs.readFileSync("./data/users.json", "utf-8"));
         let userToLog = allUsers.find(function (elemento) {
             return elemento.email == req.body.email;
@@ -107,6 +121,7 @@ let usersController = {
             }
 
         }
+        
 
 
 
@@ -142,34 +157,23 @@ let usersController = {
 
 
 
-                let allUsers = JSON.parse(fs.readFileSync("./data/users.json", "utf-8"));
-                let userToEdit = allUsers.find(function (elemento) {
-                    return elemento.email == req.session.userLoged.email;
+               
+                db.users.update({
+                    first_name: req.body.first_name,
+                    last_name: req.body.last_name,
+                    email: req.body.email,
+                    documento: req.body.documento,
+                    phone: req.body.phone,
+                    addres: req.body.adress,
+                    image: req.file ? req.file.filename : req.body.image
 
+                }, {where: {email: req.session.userLoged.email}})
+                .then(function(){
+                    res.redirect("/user/profile")
                 })
 
 
-                userToEdit.first_name = req.body.first_name;
-                userToEdit.last_name = req.body.last_name;
-                userToEdit.email = req.body.email;
-                userToEdit.documento = req.body.documento;
-                userToEdit.phone = req.body.phone;
-                userToEdit.adress = req.body.adress;
-
-                if (req.file != undefined) {
-                    userToEdit.image = req.file.filename
-                }
-
-                let indice = allUsers.indexOf(userToEdit)
-
-
-                var usuarios = allUsers
-                usuarios[indice] = userToEdit
-
-                UsersJSON = JSON.stringify(usuarios, null, 2);
-                fs.writeFileSync(usersFilePath, UsersJSON)
-                res.redirect("/user/profile")
-
+                
 
 
                 

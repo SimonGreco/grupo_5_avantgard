@@ -1,19 +1,23 @@
-const fs = require("fs")
+const fs = require("fs");
+const db = require("../database/models");
 
  function guestMiddleware(req, res, next){
 
 
-  
+      
       let UserEmailInCookie = req.cookies.userEmail
-      let allUsers = JSON.parse(fs.readFileSync("./data/users.json", "utf-8"));
-         let userToLog = allUsers.find(function(elemento){
-             return elemento.email == UserEmailInCookie;
-         })
-      if(userToLog){
-         req.session.userLoged = userToLog
+     
+      db.users.findOne({where: {email: req.cookies.userEmail ? req.cookies.userEmail: null}})
+      .then(function(userToLog){
          
-      }   
+     if(userToLog){
+        req.session.userLoged = userToLog
         
+     }   
+     
+      })
+        
+      
       
    
       

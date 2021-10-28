@@ -84,14 +84,14 @@ CREATE TABLE `products` (
   `description` text NOT NULL,
   `image` varchar(100) DEFAULT NULL,
   `oferta` tinyint(4) NOT NULL,
-  `categoria_id` int(11) NOT NULL,
-  `usuario_id` int(11) NOT NULL,
+  `categoryId` int(11) NOT NULL,
+  `userId` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
-  KEY `usuario_id_idx` (`usuario_id`),
-  KEY `categoria_id_idx` (`categoria_id`),
-  CONSTRAINT `categoria_id` FOREIGN KEY (`categoria_id`) REFERENCES `categories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `usuario_id` FOREIGN KEY (`usuario_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `usuario_id_idx` (`userId`),
+  KEY `categoria_id_idx` (`categoryId`),
+  CONSTRAINT `categoryId` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `userId` FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -123,12 +123,12 @@ CREATE TABLE `users` (
   `documento` int(11) DEFAULT NULL,
   `phone` int(11) DEFAULT NULL,
   `addres` varchar(100) DEFAULT NULL,
-  `ciudad_id` int(11) DEFAULT NULL,
+  `cityId` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`),
-  KEY `ciudad_id_idx` (`ciudad_id`),
-  CONSTRAINT `ciudad_id` FOREIGN KEY (`ciudad_id`) REFERENCES `cities` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `ciudad_id_idx` (`cityId`),
+  CONSTRAINT `cityId` FOREIGN KEY (`cityId`) REFERENCES `cities` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -151,4 +151,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-22 15:02:12
+-- Dump completed on 2021-10-27 23:15:26

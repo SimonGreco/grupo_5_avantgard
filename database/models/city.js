@@ -1,14 +1,14 @@
-module.exports = function(sequelize, dataTypes){
+module.exports = function (sequelize, dataTypes) {
     let alias = "cities"
     let cols = {
         id: {
-            type : dataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
             unique: true
         },
-        name:{
-            type : dataTypes.STRING,
+        name: {
+            type: dataTypes.STRING,
 
         },
     };
@@ -18,15 +18,8 @@ module.exports = function(sequelize, dataTypes){
         timestamps: false
     }
 
-    const city = sequelize.define(alias, cols, config);
-    city.associate = function(models){
-        city.hasMany(models.users, {
-            as: "user",
-            foreingKey: "ciudad_id",
-            
-            
-        })
-    }
+    const City = sequelize.define(alias, cols, config);
+    
 
-    return city
+    return City
 }

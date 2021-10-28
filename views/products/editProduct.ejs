@@ -55,8 +55,7 @@
         <div id="imgDetail">
             <p>La imagen debe ser de almenos 500 x 500 píxeles</p>
         </div>
-        <% for(let producto of productos){ %> 
-           <% if(producto.id == idS){ %>  
+        
         <div class="imagenMuestra"><img src="/img/Productos/<%= producto.image %>" alt="" />
            <label for="AgregarImagen"><p>Reemplazar</p></label>
         </div>
@@ -65,7 +64,7 @@
             <label for="AgregarImagen" class="addFile">
                 <span>Añadi una nueva imagen</span>
             </label>
-            <input type="file" name="image" id="AgregarImagen" >
+            <input type="file" name="image" id="AgregarImagen" value="<%= producto.image %>">
     
             <h4>Titulo</h4>
             <p>Agrega un título para describir el artículo. Los títulos pueden tener hasta 150 caracteres, pero
@@ -91,7 +90,9 @@
             </div>
 
 
-            <input type="checkbox" name="Oferta" class="oferta"><label for="Oferta" class="Oferta-txt">Este articulo esta en oferta</label>
+            <input type="checkbox" name="Oferta" class="oferta" <% if (producto.oferta == true) { %>
+                checked
+                <% } %>><label for="Oferta" class="Oferta-txt" >Este articulo esta en oferta</label>
 
             <h4>Estado</h4>
             <select name="estado" id="estado" class="formulario-txt">
@@ -116,8 +117,13 @@
                 relevante de tu artículo.</p>
             <div><select name="categoria" id="categoria" class="formulario-txt">
                 <% for(let i = 0; i < categorias.length; i++){ %> 
-                    <option value="auriculares"><%= categorias[i].dataValues.name %></option>
+
+                    <% if(categorias[i].id == producto.categoryId){ %> 
+                    <option value="<%= categorias[i].id %>" selected><%= categorias[i].name %></option>
                     
+                    <% }else{ %> 
+                        <option value="<%= categorias[i].id %>" ><%= categorias[i].name %></option>
+                    <% } %> 
                     <% } %> 
                 </select>
             </div>
@@ -128,8 +134,7 @@
             
         </div>
         </form>
-        <% } %>
-        <% } %> 
+        
         
     </article>
     

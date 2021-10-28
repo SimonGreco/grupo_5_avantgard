@@ -1,50 +1,50 @@
-module.exports = function(sequelize, dataTypes){
+module.exports = function (sequelize, dataTypes) {
     let alias = "products"
     let cols = {
         id: {
-            type : dataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
             unique: true
         },
-        name:{
-            type : dataTypes.STRING,
+        name: {
+            type: dataTypes.STRING,
 
         },
         price: {
-            type : dataTypes.STRING,
+            type: dataTypes.STRING,
 
         },
         estado: {
-            type : dataTypes.STRING,
+            type: dataTypes.STRING,
 
         },
         marca: {
-            type : dataTypes.STRING,
+            type: dataTypes.STRING,
 
         },
-        modelo:{
-            type : dataTypes.STRING,
+        modelo: {
+            type: dataTypes.STRING,
 
         },
         description: {
-            type : dataTypes.STRING,
+            type: dataTypes.STRING,
 
         },
         image: {
-            type : dataTypes.STRING,
+            type: dataTypes.STRING,
 
         },
         oferta: {
-            type : dataTypes.BOOLEAN,
+            type: dataTypes.BOOLEAN,
 
         },
-        categoria_id: {
-            type : dataTypes.INTEGER,
+        categoryId: {
+            type: dataTypes.INTEGER,
 
         },
-        usuario_id:{
-            type : dataTypes.INTEGER,
+        userId: {
+            type: dataTypes.INTEGER,
 
         }
 
@@ -56,19 +56,6 @@ module.exports = function(sequelize, dataTypes){
     }
 
     const product = sequelize.define(alias, cols, config);
-    product.associate = function(models){
-        product.belongsTo(models.categories, {
-            
-            foreingKey: "categoria_id",
-            as: "category",
-            
-        })
-        product.belongsTo(models.users, {
-            as:"users",
-            foreingKey: "usuario_id"
-        })
-        
-    }
-
+    
     return product
 }

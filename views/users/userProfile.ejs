@@ -32,7 +32,7 @@
         
             <form action="/user/profile?_method=PUT" method="POST" class="formulario_cambio" enctype="multipart/form-data">
 
-                <input type="file" name="image" id="AgregarImagen" >
+                <input type="file" name="image" id="AgregarImagen" value="<%= locals.userLogged.image %>">
 
                 
 
