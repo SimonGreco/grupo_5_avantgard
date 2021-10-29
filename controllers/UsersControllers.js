@@ -9,6 +9,8 @@ const productos = JSON.parse(fs.readFileSync("./data/products.json", 'utf-8'));
 const { validationResult } = require("express-validator");
 const { localsName } = require("ejs");
 const db = require("../database/models");
+const { waitForDebugger } = require("inspector");
+const { log } = require("console");
 
 
 
@@ -80,52 +82,54 @@ let usersController = {
     //LOGIN PROCESS
     
     loginProcess: function (req, res) {
+        
        
-        let allUsers = JSON.parse(fs.readFileSync("./data/users.json", "utf-8"));
-        let userToLog = allUsers.find(function (elemento) {
-            return elemento.email == req.body.email;
-
-        })
-
-        if (userToLog == undefined) {
-            res.render("./users/login", {
-                errors: {
-                    email: {
-                        msg: "No se encontro un email valido"
-                    }
-                }
-            })
-        } else {
-            if (bcryptjs.compareSync(req.body.password, userToLog.password) == true) {
-                delete userToLog;
-                req.session.userLoged = userToLog
-
-                if (req.body.recuerdame) {
-                    res.cookie("userEmail", req.body.email, { maxAge: Infinity })
-                }
-                res.redirect("/")
-
-
-
-
-
-
-            } else {
+        
+        db.users.findOne({where: {email: req.body.email}})
+        .then(function(userToLog){
+            if (userToLog == undefined) {
                 res.render("./users/login", {
                     errors: {
-                        password: {
-                            msg: "Las credenciales son invalidas"
+                        email: {
+                            msg: "No se encontro un email valido"
                         }
                     }
                 })
+            } else {
+                if (bcryptjs.compareSync(req.body.password, userToLog.password) == true) {
+                   
+                    req.session.userLoged = userToLog
+    
+                    if (req.body.recuerdame) {
+                        res.cookie("userEmail", req.body.email, { maxAge: Infinity })
+                    }
+                    res.redirect("/")
+    
+    
+    
+    
+    
+    
+                } else {
+                    res.render("./users/login", {
+                        errors: {
+                            password: {
+                                msg: "Las credenciales son invalidas"
+                            }
+                        }
+                    })
+                }
+    
             }
 
-        }
+
+
+        })
         
 
 
 
-    },
+},
     //LOGOUT
     logout: function (req, res) {
 
@@ -167,10 +171,10 @@ let usersController = {
                     addres: req.body.adress,
                     image: req.file ? req.file.filename : req.body.image
 
-                }, {where: {email: req.session.userLoged.email}})
-                .then(function(){
-                    res.redirect("/user/profile")
+                }, {where: {email: req.session.userLoged.email}}).then(function(){
+                    res.redirect("../")
                 })
+                
 
 
                 
