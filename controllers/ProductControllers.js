@@ -74,7 +74,7 @@ let productController = {
             image: req.file ? req.file.filename : "Default.png",
             oferta: req.body.oferta,
             categoryId: req.body.categoria,
-            userId: 51 //req.session.userLoged.id ,
+            userId: req.session.userLoged.id ,
         }).then(function () {
             res.redirect("/products/")
         })
@@ -92,7 +92,7 @@ let productController = {
             image: req.file ? req.file.filename : req.body.image,
             oferta: req.body.oferta,
             categoryId: req.body.categoria,
-            userId: 51 //req.session.userLoged.id ,
+            
         }, {where: {id: req.params.id}}).then(function () {
             res.redirect("/products/" + req.params.id)
         })
