@@ -2,10 +2,10 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 const { json } = require("express");
-const usersFilePath = path.join(__dirname, '../data/users.json');
+
 const bcryptjs = require("bcryptjs");
 const session = require("express-session");
-const productos = JSON.parse(fs.readFileSync("./data/products.json", 'utf-8'));
+
 const { validationResult } = require("express-validator");
 const { localsName } = require("ejs");
 const db = require("../database/models");
@@ -25,7 +25,11 @@ let usersController = {
         res.render("./users/register")
     },
     controlPanel: function (req, res) {
-        res.render("./users/admin-control-panel", { productos: productos })
+        db.products.findAll()
+        .then(function(productos){
+            res.render("./users/admin-control-panel", { productos: productos })
+        })
+        
     },
    
 
@@ -153,8 +157,7 @@ let usersController = {
 
 
         } else {
-            let userData = req.body
-            let allUsers = JSON.parse(fs.readFileSync("./data/users.json", "utf-8"));
+            
             if (req.body.email == req.session.userLoged.email) {
 
             
