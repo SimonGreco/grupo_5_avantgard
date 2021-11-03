@@ -73,8 +73,8 @@ let productController = {
             description: req.body.description,
             image: req.file ? req.file.filename : "Default.png",
             oferta: req.body.oferta,
-            categoria_id: req.body.categoria,
-            usuario_id: 51 //req.session.userLoged.id ,
+            categoryId: req.body.categoria,
+            userId: 51 //req.session.userLoged.id ,
         }).then(function () {
             res.redirect("/products/")
         })
@@ -91,8 +91,8 @@ let productController = {
             description: req.body.description,
             image: req.file ? req.file.filename : req.body.image,
             oferta: req.body.oferta,
-            categoria_id: req.body.categoria,
-            usuario_id: 51 //req.session.userLoged.id ,
+            categoryId: req.body.categoria,
+            userId: 51 //req.session.userLoged.id ,
         }, {where: {id: req.params.id}}).then(function () {
             res.redirect("/products/" + req.params.id)
         })
