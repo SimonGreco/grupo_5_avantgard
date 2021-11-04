@@ -20,13 +20,16 @@
             <span class="categories">
                 volver al listado 
             </span>
-            
+                <% for(let i = 0; i< producto.length; i++){ %> 
+                    <% if (producto[i].id == idS) { %>
+                     
+                    
                     <div class="top">
                         <div class="img-product">
 
 
                             <div class="container-two">
-                                <img class = "two" src="/img/Productos/<%=producto.image%>" alt="Imagen de producto">
+                                <img class = "two" src="/img/Productos/<%=producto[i].image%>" alt="Imagen de producto">
 
                             </div>
 
@@ -48,10 +51,10 @@
 
                         <div class="container-three">
                             <div class="textBox">
-                                <h1> <%= producto.name%> </h1>
+                                <h1> <%= producto[i].name%> </h1>
                                 <br>
                                 <h6> <% for(let i = 0; i < categoria.length; i++){ %> 
-                                <% if (categoria[i].id == producto.categoryId) { %>
+                                <% if (categoria[i].id == producto[i].categoryId) { %>
                                     <%= categoria[i].name  %> 
                                 <% } %>
                                 <% } %> 
@@ -60,11 +63,11 @@
                                 </h6>
                            
                                 <div class=price>
-                                    <h1> $<%= producto.price%> </h1>
+                                    <h1> $<%= producto[i].price%> </h1>
                                     
                                 </div>
                            
-                                <h5> <%= producto.description%> </h5>
+                                <h5> <%= producto[i].description%> </h5>
 
 
 
@@ -118,12 +121,12 @@
                         <br>
                         <div class="marcaModelo">
                             <div class="marca"> Marca </div>
-                            <div class="modelo"> <%= producto.marca%></div>
+                            <div class="modelo"> <%= producto[i].marca%></div>
                         </div>
                         <br>
                         <div class="marcaModelo">
                             <div class="marca"> Modelo </div>
-                            <div class="modelo"> <%= producto.modelo%> </div>
+                            <div class="modelo"> <%= producto[i].modelo%> </div>
                         </div>
                         <br>
                         <br>
@@ -132,14 +135,15 @@
                         <br>
                         <br>
                         <div class="lista">
-                            <%= producto.description%>
+                            <%= producto[i].description%>
                         </div>
                         <br>
                         <br>
 
                     </div>
 
-
+                   <% } %>
+                   <% } %>
                     <hr>
                     <br>
                     <br>
@@ -157,16 +161,16 @@
                     <% for(let i=8 ; i<12; i++){ %>
         
                         
-                            <a href="../products/<%= producto.id %> " class="producto">
+                            <a href="../products/<%= producto[i].id %> " class="producto">
         
-                                <img src="/img/Productos/<%=producto.image%>" alt="Imagen de producto">
+                                <img src="/img/Productos/<%=producto[i].image%>" alt="Imagen de producto">
         
                                 <hr>
                                 <div class="product-txt-conteiner">
-                                    <p class="Precio">$<%=producto.price%>
+                                    <p class="Precio">$<%=producto[i].price%>
                                     </p>
                                     <p class="descripcion">
-                                        <%=producto.name%>
+                                        <%=producto[i].name%>
                                     </p>
                                 </div>
         

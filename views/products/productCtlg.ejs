@@ -76,7 +76,7 @@
                 <% for(let i=productos.length -1 ; i>0; i--){ %>
                     <% if(contadorDeOfertas < 4){ %> 
                     <% producto=productos[i] %>
-                        <% if(producto.Oferta !=undefined){ %>
+                        <% if(producto.oferta !=undefined){ %>
                             
                             <% contadorDeOfertas = contadorDeOfertas + 1 %> 
                                <a href="/products/<%= producto.id %> " class="producto">

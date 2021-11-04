@@ -12,8 +12,9 @@ let productController = {
 
         
         let idS = req.params.id
-        let producto = db.products.findByPk(idS);
+        let producto = db.products.findAll();
         let categoria = db.categories.findAll()
+      
         
         Promise.all([producto, categoria])
         .then(function([producto, categoria]){
