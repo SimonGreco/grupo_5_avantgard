@@ -1,0 +1,10 @@
+#myVideo {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -4%;
+    bottom: 0;
+    z-index: -5;
+    width: 110%;
+  }
