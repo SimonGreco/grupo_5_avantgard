@@ -25,12 +25,13 @@
             
             </div>
             <p class="change_avatar">Cambia tu avatar</p></div>
+            <% if (locals.errors && errors.image) { %>
+                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%; margin: 0 auto;" ><%= locals.errors.image.msg %>  </p>
+                <% } %> 
 
         </label>
 
-        <% if (locals.errors && errors.image) { %>
-            <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.image.msg %>  </p>
-            <% } %> 
+        
         <article class="profileChanges">
             <h2 class="edita_perfil">Editá tu perfil!</h2>
         

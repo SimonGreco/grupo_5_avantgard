@@ -29,12 +29,14 @@ const validationsProfile = [
   body("phone").notEmpty().withMessage("El campo no puede estar vacio").bail().isNumeric().withMessage("Debe ser un numero de telefono valido").trim().escape(),
   body("adress").notEmpty().withMessage("El campo no puede estar vacio").escape(),
   body("image").custom((value, {req})=>{
-    let file = req.file.originalname
-
-    let acceptedExt = [".png", ".jpg", ".jpeg"]
-    let extension = (path.extname(file)).toLowerCase();
-    if(!acceptedExt.includes(extension))
-    throw new Error("este tipo de archivo no esta permitido");
+    let file = req.file
+    if(file){
+      let acceptedExt = [".png", ".jpg", ".jpeg"]
+      let extension = (path.extname(file.originalname)).toLowerCase();
+      if(!acceptedExt.includes(extension))
+      throw new Error("este tipo de archivo no esta permitido");
+    }
+    
     return true
   })
 
@@ -76,7 +78,7 @@ router.get("/control-panel", authMiddleware, usersController.controlPanel);
       cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
   });
   const upload = multer({ storage:storage });
-  router.put("/profile", upload.single("image"), validations, validationsProfile, usersController.userEdit)
+  router.put("/profile", upload.single("image"), validationsProfile, usersController.userEdit)
   router.get("/profile", authMiddleware,usersController.profile)
   
   
