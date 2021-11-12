@@ -27,12 +27,16 @@
             <p class="change_avatar">Cambia tu avatar</p></div>
 
         </label>
+
+        <% if (locals.errors && errors.image) { %>
+            <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.image.msg %>  </p>
+            <% } %> 
         <article class="profileChanges">
             <h2 class="edita_perfil">Editá tu perfil!</h2>
         
             <form action="/user/profile?_method=PUT" method="POST" class="formulario_cambio" enctype="multipart/form-data">
 
-                <input type="file" name="image" id="AgregarImagen" value="<%= locals.userLogged.image %>">
+                <input type="file" name="image" id="AgregarImagen" value="<%= locals.userLogged.image %>" accept="image/jpeg,image/jpg,image/png">
 
                 
 
@@ -55,21 +59,21 @@
                 <h4>E-mail</h4>
                 <p>
                 </p>
-                <input type="text" name="email" id="email" maxlength="150" class="formulario-txt" value="<%= locals.userLogged.email  %>">
+                <input type="email" name="email" id="email" maxlength="150" class="formulario-txt" value="<%= locals.userLogged.email  %>">
                 <% if (locals.errors && errors.email) { %>
                     <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.email.msg %>  </p>
                     <% } %> 
 
 
                 <h4>Documento</h4>
-                <input type="text" name="documento" id="doc" maxlength="150" class="formulario-txt" value="<%= locals.userLogged.documento  %>" >
+                <input type="number" name="documento" id="doc" maxlength="150" class="formulario-txt" value="<%= locals.userLogged.documento  %>" >
                 <% if (locals.errors && errors.documento) { %>
                     <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.documento.msg %>  </p>
                     <% } %> 
 
                 <h4>Teléfono</h4>
                 <p></p>
-                <input type="text" name="phone" id="tel" maxlength="150" class="formulario-txt" value="<%= locals.userLogged.phone  %>">
+                <input type="number" name="phone" id="tel" maxlength="150" class="formulario-txt" value="<%= locals.userLogged.phone  %>">
                 <% if (locals.errors && errors.phone) { %>
                     <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.phone.msg %>  </p>
                     <% } %> 

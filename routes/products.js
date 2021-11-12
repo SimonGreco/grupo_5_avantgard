@@ -3,7 +3,29 @@ const router = express.Router();
 const productController = require("../controllers/ProductControllers");
 const path = require("path");
 const multer = require("multer");
-const authMiddleware = require("../middlewares/authMiddleware")
+const authMiddleware = require("../middlewares/authMiddleware");
+const { body } = require("express-validator");
+
+const validations = [
+  body("name").notEmpty().withMessage("El campo no puede estar vacio"),
+  body("description").notEmpty().withMessage("El campo no puede estar vacio"),
+  body("price").notEmpty().withMessage("El campo no puede estar vacio"),
+  body("marca").notEmpty().withMessage("El campo no puede estar vacio"),
+  body("modelo").notEmpty().withMessage("El campo no puede estar vacio"),
+  body("image").custom((value, {req})=>{
+    if(req.file){
+      let file = req.file.originalname
+
+      let acceptedExt = [".png", ".jpg", ".jpeg"]
+      let extension = (path.extname(file)).toLowerCase();
+      if(!acceptedExt.includes(extension))
+      throw new Error("este tipo de archivo no esta permitido");
+    }
+
+    
+    return true
+  })
+]
 
 
 router.get("/carrito", productController.carrito);
@@ -24,13 +46,13 @@ const storage = multer.diskStorage({
 
 
 router.get("/create", authMiddleware, productController.newProduct);
-router.post("/", upload.single("image"), productController.create);
+router.post("/", upload.single("image"), validations, productController.create);
 
 //---------------------------
 
 //EDITAR PRODUCTOS
 router.get("/:id/edit", authMiddleware, productController.edit);
-router.put("/:id",upload.single("image"), productController.update)
+router.put("/:id",upload.single("image"), validations, productController.update)
 //----------
 
 //ELIMINAR PRODUCTOS

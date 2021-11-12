@@ -65,6 +65,9 @@
                 <span>Añadi una nueva imagen</span>
             </label>
             <input type="file" name="image" id="AgregarImagen" value="<%= producto.image %>">
+            <% if (locals.errors && errors.image) { %>
+                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.image.msg %>  </p>
+                <% } %> 
     
             <h4>Titulo</h4>
             <p>Agrega un título para describir el artículo. Los títulos pueden tener hasta 150 caracteres, pero
@@ -72,12 +75,18 @@
             </p>
 
             <input type="text" name="name" id="Titulo" value="<%= producto.name %> " maxlength="150" class="formulario-txt">
+            <% if (locals.errors && errors.name) { %>
+                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.name.msg %>  </p>
+                <% } %> 
 
             <h4>Descripcion</h4>
             <p>Agrega detalles del artículo, incluidas las características que lo hacen único para que las personas
                 comprendan los beneficios que ofrece..</p>
 
             <textarea type="text" name="description" id="Titulo" maxlength="1500" class="Descripcion"><%=producto.description%></textarea>
+            <% if (locals.errors && errors.description) { %>
+                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.description.msg %>  </p>
+                <% } %> 
 
             <h4>Precio</h4>
             <p>Elige una divisa y agrega el precio completo del artículo.</p>
@@ -87,6 +96,9 @@
                     <option value="usd">USD- Dólar EstadoUnidense</option>
                 </select>
                 <input type="number" name="price" value="<%= producto.price%>" id="precio" placeholder="Precio" >
+                <% if (locals.errors && errors.price) { %>
+                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.price.msg %>  </p>
+                    <% } %> 
             </div>
 
 
@@ -103,9 +115,15 @@
 
             <h4>Marca</h4>
             <input type="text" name="marca" id="marca" value="<%= producto.marca %>" placeholder="Marca" class="formulario-txt">
+            <% if (locals.errors && errors.marca) { %>
+                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.marca.msg %>  </p>
+                <% } %> 
 
             <h4>Modelo</h4>
             <input type="text" name="modelo" id="marca" value="<%= producto.modelo %>" placeholder="Modelo" class="formulario-txt">
+            <% if (locals.errors && errors.modelo) { %>
+                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.modelo.msg %>  </p>
+                <% } %> 
 
             <h4>ID</h4>
             <p>Agrega un ID unico por producto para identificarlo</p>

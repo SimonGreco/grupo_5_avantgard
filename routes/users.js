@@ -7,6 +7,7 @@ const authMiddleware = require("../middlewares/authMiddleware")
 const { body } = require("express-validator");
 const multer = require("multer");
 const path = require("path")
+
 const validations = [
   body("first_name").notEmpty().withMessage("El campo no puede estar vacio"),
   body("last_name").notEmpty().withMessage("El campo no puede estar vacio"),
@@ -26,7 +27,19 @@ const validationsProfile = [
   body("email").notEmpty().withMessage("El campo no puede estar vacio").bail(),
   body("documento").notEmpty().withMessage("El campo no puede estar vacio").bail().isNumeric().withMessage("Debe ser un tipo de documento valido"),
   body("phone").notEmpty().withMessage("El campo no puede estar vacio").bail().isNumeric().withMessage("Debe ser un numero de telefono valido"),
-  body("adress").notEmpty().withMessage("El campo no puede estar vacio")
+  body("adress").notEmpty().withMessage("El campo no puede estar vacio"),
+  body("image").custom((value, {req})=>{
+    let file = req.file.originalname
+
+    let acceptedExt = [".png", ".jpg", ".jpeg"]
+    let extension = (path.extname(file)).toLowerCase();
+    if(!acceptedExt.includes(extension))
+    throw new Error("este tipo de archivo no esta permitido");
+    return true
+  })
+
+
+  
 ]
 
 
@@ -63,7 +76,7 @@ router.get("/control-panel", authMiddleware, usersController.controlPanel);
       cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
   });
   const upload = multer({ storage:storage });
-  router.put("/profile", upload.single("image"), validationsProfile, usersController.userEdit)
+  router.put("/profile", upload.single("image"), validations, validationsProfile, usersController.userEdit)
   router.get("/profile", authMiddleware,usersController.profile)
   
   

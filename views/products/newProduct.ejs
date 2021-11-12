@@ -58,6 +58,9 @@
                 <label for="AgregarImagen" class="addFile">
                     <span >Añadi una nueva imagen</span>
                 </label>
+                <% if (locals.errors && errors.image) { %>
+                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.image.msg %>  </p>
+                    <% } %> 
            
 
                 <h4>Titulo</h4>
@@ -65,13 +68,19 @@
                     recomendamos usar menos de 65.
                 </p>
 
-                <input type="text" name="name" id="Titulo" maxlength="150" class="formulario-txt">
+                <input type="text" name="name" id="Titulo" maxlength="150" class="formulario-txt" value="<%= locals.oldData ? oldData.name: null %>">
+                <% if (locals.errors && errors.name) { %>
+                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.name.msg %>  </p>
+                    <% } %> 
 
                 <h4>Descripcion</h4>
                 <p>Agrega detalles del artículo, incluidas las características que lo hacen único para que las personas
                     comprendan los beneficios que ofrece..</p>
 
-                <textarea type="text" name="description" id="Titulo" maxlength="1500" class="Descripcion"></textarea>
+                <textarea type="text" name="description" id="Titulo" maxlength="1500" class="Descripcion" value="<%= locals.oldData ? oldData.description: null %>"></textarea>
+                <% if (locals.errors && errors.description) { %>
+                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.description.msg %>  </p>
+                    <% } %> 
 
                 <h4>Precio</h4>
                 <p>Elige una divisa y agrega el precio completo del artículo tal como se muestra en tu sitio web.</p>
@@ -80,7 +89,10 @@
                         <option value="arg">ARS- Peso Argentino</option>
                         <option value="usd">USD- Dólar EstadoUnidense</option>
                     </select>
-                    <input type="number" name="price" id="precio" placeholder="Precio">
+                    <input type="number" name="price" id="precio" placeholder="Precio" value="<%= locals.oldData ? oldData.price: null %>">
+                    <% if (locals.errors && errors.price) { %>
+                        <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.price.msg %>  </p>
+                        <% } %> 
                 </div>
 
 
@@ -88,14 +100,20 @@
 
 
                 <h4>Marca</h4>
-            <input type="text" name="marca" id="marca"  placeholder="Marca" class="formulario-txt">
+            <input type="text" name="marca" id="marca"  placeholder="Marca" class="formulario-txt" value="<%= locals.oldData ? oldData.marca: null %>">
+            <% if (locals.errors && errors.marca) { %>
+                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.marca.msg %>  </p>
+                <% } %> 
 
             <h4>Modelo</h4>
-            <input type="text" name="modelo" id="marca"  placeholder="Modelo" class="formulario-txt">
+            <input type="text" name="modelo" id="marca"  placeholder="Modelo" class="formulario-txt" value="<%= locals.oldData ? oldData.modelo: null %>">
+            <% if (locals.errors && errors.modelo) { %>
+                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.modelo.msg %>  </p>
+                <% } %> 
 
                 <h4>ID</h4>
                 <p>Agrega un ID unico por producto para identificarlo</p>
-                <input type="text" name="localID" id="id" placeholder="ID" class="formulario-txt">
+                <input type="text" name="localID" id="id" placeholder="ID" class="formulario-txt" value="<%= locals.oldData ? oldData.localID: null %>">
 
 
                 <h4>Categoria</h4>
