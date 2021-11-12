@@ -9,25 +9,25 @@ const multer = require("multer");
 const path = require("path")
 
 const validations = [
-  body("first_name").notEmpty().withMessage("El campo no puede estar vacio"),
-  body("last_name").notEmpty().withMessage("El campo no puede estar vacio"),
-  body("email").notEmpty().withMessage("El campo no puede estar vacio").bail().isEmail().withMessage("Tenes que escribir un formato de correo valido"),
+  body("first_name").notEmpty().withMessage("El campo no puede estar vacio").escape(),
+  body("last_name").notEmpty().withMessage("El campo no puede estar vacio").escape(),
+  body("email").notEmpty().withMessage("El campo no puede estar vacio").bail().isEmail().withMessage("Tenes que escribir un formato de correo valido").trim().escape().normalizeEmail(),
   body("password").notEmpty().withMessage("El campo no puede estar vacio")
   .bail().isStrongPassword(
     { minLength: 8, minLowercase: 1, minUppercase: 0, minNumbers: 1, minSymbols: 0, returnScore: false, pointsPerUnique: 1, pointsPerRepeat: 0.5, pointsForContainingLower: 10, pointsForContainingUpper: 10, pointsForContainingNumber: 10, pointsForContainingSymbol: 10 }
 
 
   )
-  .withMessage("La contraseña debe tener al menos 8 caracteres y contener letras y numeros")
+  .withMessage("La contraseña debe tener al menos 8 caracteres y contener letras y numeros").escape().trim()
 
 ]
 const validationsProfile = [
-  body("first_name").notEmpty().withMessage("El campo no puede estar vacio"),
-  body("last_name").notEmpty().withMessage("El campo no puede estar vacio"),
-  body("email").notEmpty().withMessage("El campo no puede estar vacio").bail(),
-  body("documento").notEmpty().withMessage("El campo no puede estar vacio").bail().isNumeric().withMessage("Debe ser un tipo de documento valido"),
-  body("phone").notEmpty().withMessage("El campo no puede estar vacio").bail().isNumeric().withMessage("Debe ser un numero de telefono valido"),
-  body("adress").notEmpty().withMessage("El campo no puede estar vacio"),
+  body("first_name").notEmpty().withMessage("El campo no puede estar vacio").escape(),
+  body("last_name").notEmpty().withMessage("El campo no puede estar vacio").escape(),
+  body("email").notEmpty().withMessage("El campo no puede estar vacio").bail().trim().escape().normalizeEmail(),
+  body("documento").notEmpty().withMessage("El campo no puede estar vacio").bail().isNumeric().withMessage("Debe ser un tipo de documento valido").trim().escape(),
+  body("phone").notEmpty().withMessage("El campo no puede estar vacio").bail().isNumeric().withMessage("Debe ser un numero de telefono valido").trim().escape(),
+  body("adress").notEmpty().withMessage("El campo no puede estar vacio").escape(),
   body("image").custom((value, {req})=>{
     let file = req.file.originalname
 

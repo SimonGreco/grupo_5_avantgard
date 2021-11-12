@@ -7,11 +7,11 @@ const authMiddleware = require("../middlewares/authMiddleware");
 const { body } = require("express-validator");
 
 const validations = [
-  body("name").notEmpty().withMessage("El campo no puede estar vacio"),
-  body("description").notEmpty().withMessage("El campo no puede estar vacio"),
-  body("price").notEmpty().withMessage("El campo no puede estar vacio"),
-  body("marca").notEmpty().withMessage("El campo no puede estar vacio"),
-  body("modelo").notEmpty().withMessage("El campo no puede estar vacio"),
+  body("name").notEmpty().withMessage("El campo no puede estar vacio").escape(),
+  body("description").notEmpty().withMessage("El campo no puede estar vacio").escape(),
+  body("price").notEmpty().withMessage("El campo no puede estar vacio").isNumeric().trim().escape(),
+  body("marca").notEmpty().withMessage("El campo no puede estar vacio").escape(),
+  body("modelo").notEmpty().withMessage("El campo no puede estar vacio").escape(),
   body("image").custom((value, {req})=>{
     if(req.file){
       let file = req.file.originalname
