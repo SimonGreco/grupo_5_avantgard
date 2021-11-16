@@ -56,7 +56,7 @@
             <form action="/products" method="POST" enctype="multipart/form-data">
                 <span class="AgregarImagen"><input type="file" name="image" id="AgregarImagen" ></span>
                 <label for="AgregarImagen" class="addFile">
-                    <span >Añadi una nueva imagen</span>
+                    <span >Añadí una nueva imagen</span>
                 </label>
                 <% if (locals.errors && errors.image) { %>
                     <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.image.msg %>  </p>
@@ -75,7 +75,7 @@
 
                 <h4>Descripcion</h4>
                 <p>Agrega detalles del artículo, incluidas las características que lo hacen único para que las personas
-                    comprendan los beneficios que ofrece..</p>
+                    comprendan los beneficios que ofrece.</p>
 
                 <textarea type="text" name="description" id="Titulo" maxlength="1500" class="Descripcion" value="<%= locals.oldData ? oldData.description: null %>"></textarea>
                 <% if (locals.errors && errors.description) { %>
