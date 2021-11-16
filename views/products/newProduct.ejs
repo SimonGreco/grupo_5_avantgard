@@ -68,10 +68,12 @@
                     recomendamos usar menos de 65.
                 </p>
 
-                <input type="text" name="name" id="Titulo" maxlength="150" class="formulario-txt" value="<%= locals.oldData ? oldData.name: null %>">
+                <input class= "title" type="text" name="name" id="Titulo" maxlength="150" class="formulario-txt" value="<%= locals.oldData ? oldData.name: null %>">
                 <% if (locals.errors && errors.name) { %>
                     <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.name.msg %>  </p>
                     <% } %> 
+
+                <script src="/js/nameValidation.js"></script>
 
                 <h4>Descripcion</h4>
                 <p>Agrega detalles del artículo, incluidas las características que lo hacen único para que las personas
