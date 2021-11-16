@@ -3,7 +3,9 @@ window.addEventListener("load", function() {
     title.addEventListener("submit", function(e) {
         e.preventDefault;
         if (title.value == "") {
-            alert("Este campo es obligatorio y debe tener al menos 5 caracteres.")
+            alert("Este campo es obligatorio.")
+        } else if (title.value.length <= 5) {
+            alert("Este campo debe tener al menos 5 caracteres.")
         }
     });
 })
