@@ -3,8 +3,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    right: -4%;
-    bottom: 0;
-    z-index: -5;
     width: 110%;
+    height: auto;
+    z-index: -5;
+    place-items: center;    
+    top: 0;
+    content: cover;
   }
+  @media(max-width: 1000px){
+    #myVideo{
+      width: auto;
+      height: 100%;
+    }
+    
+  }
+  

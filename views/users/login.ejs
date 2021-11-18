@@ -6,16 +6,20 @@
     <title>login</title>
     <link href="/css/loginStyle.css" rel="stylesheet">
     <%- include("../partials/head") %>
+    <link rel="stylesheet" href="/css/video.css">
 </head>
 
 <body>
     <%- include("../partials/header") %>
 
     <div class="login-conteiner">
+        <video autoplay muted loop id="myVideo">
+            <source src="/img/pexels-ron-lach-7087627.mp4" type="video/mp4">
+          </video>
 
         <div class="main-login">
             <div class="login-logo">
-                <img src="/img/Logo Horizotal Fondo blanco.png" alt="logo">
+  
                 <div class="txt-conteiner">
                     <h2>Iniciá Sesión!</h2>
                     <a href="../user/register">
