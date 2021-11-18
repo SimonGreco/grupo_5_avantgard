@@ -1,6 +1,5 @@
 .login-conteiner{
    height: 91.8vh;
-    background-image: url("https://cdn.pixabay.com/photo/2019/02/18/17/00/studio-4004849_960_720.jpg");
     background-size: cover;
 }
    
@@ -208,10 +207,15 @@ form .formularios-sesion{
 }
 @media(max-width: 1200px){
     .main-login{
-        min-width: 80%;
-        max-width: 555px;
+        min-width: 50%;
+        max-width: 580;
         
         height: fit-content;
     }
     
+}
+@media(max-width: 780px){
+    .main-login{
+        min-width: 80%;
+    }
 }
