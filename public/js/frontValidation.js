@@ -1,5 +1,5 @@
 window.addEventListener("load", function() {
-    let formulario = document.querySelector("form.creationForm")
+    let formulario = document.querySelector("form.productsForm")
 
     formulario.addEventListener("submit", function(e) {
         e.preventDefault();
