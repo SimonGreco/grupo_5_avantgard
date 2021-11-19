@@ -1,8 +1,10 @@
 window.addEventListener("load", function() {
     let formulario = document.querySelector("form.productsForm")
 
+    
     formulario.addEventListener("submit", function(e) {
         e.preventDefault();
+
 
         let putImage = document.querySelector("input.addImage");
 
