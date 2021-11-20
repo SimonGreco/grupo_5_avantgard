@@ -40,7 +40,7 @@ let productController = {
             res.render("./products/editProduct", {
                 producto: producto, categorias: categorias, idS : idS
             })
-            console.log(categorias)
+            
         })
 
               

@@ -187,8 +187,8 @@ body{
 }
 .acciones p{
     display: flex;
-    justify-content: space-between;
-    width: 60%;
+    justify-content: space-around;
+    width: 50%;
     font-size: 20px;
 }
 .acciones form{
@@ -219,6 +219,17 @@ body{
     bottom: 0px;
     z-index: 10;
 }
+#delete-button{
+    background-color: transparent;
+    text-align: center;
+    color: #f4516c;
+     border:#f4516c solid 1.6px;
+     border-radius: 50%;
+      font-size: 20px;
+      padding: 5px 9px 5px 9px
+     
+}
+
 
 /*ANIMACIONES */
 
@@ -231,9 +242,13 @@ button:hover{
 .categoria a:hover{
     text-decoration-line: underline;
 }
-.acciones i:hover{
-    color:rgb(82, 82, 82);
+
+#delete-button:hover{
+    color: white;
+    background-color: #f4516c;
 }
+
+
 
 
 /*MEDIAS*/

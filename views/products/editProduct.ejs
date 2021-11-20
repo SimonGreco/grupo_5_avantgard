@@ -53,7 +53,7 @@
     <div class="misProductos">
         <h3>Editá tu producto</h3>
     </div>
-    <article class="productsList" style="margin-bottom: 15px;">
+    <article class="productsList" style="margin-bottom: 15px; padding-bottom: 15px; padding-top: 15px;">
         <div id="imagenPrincipal-txt">
             <p>Imagen Principal</p>
         </div>
@@ -67,7 +67,8 @@
             </label>
         </div>
         <p class="img-adicionales">imagenes adicionales</p>
-        <form action="/products/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="productsForm">
+        <form action="/products/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data"
+            class="productsForm">
             <label for="AgregarImagen" class="addFile">
                 <span>Añadi una nueva imagen</span>
             </label>
@@ -161,12 +162,12 @@
 
             <div class="buttons">
                 <button type="reset" class="reset-btn">Reset</button>
-                <button id="submit-btn" type="submit" >Guardar Cambios</button>
+                <button id="submit-btn" type="submit">Guardar Cambios</button>
 
 
             </div>
         </form>
-            <br>
+        <br>
 
     </article>
     <div class="footer-container">
@@ -177,8 +178,9 @@
 
 </body>
 
-    
-    <script src="/js/frontValidation.js"></script>
 
-</body>   
+<!-- <script src="/js/frontValidation.js"></script> -->
+
+</body>
+
 </html>

@@ -70,14 +70,21 @@
                     <p>Disponible</p>
                 </div>
                 <div class="categoria">
-                    <p><a href="/">Estudio</a>/<a href="/"><%= producto.categoria %></a></p>
+                    <p><a href="/">Estudio</a> > <a href="/"> 
+                        <% for(let i = 0; i<categorias.length; i++){%>
+                            <% if(categorias[i].id == producto.categoryId){ %>
+                                <%=  categorias[i].name %> 
+                            
+                        <% } %>
+                        <% } %>      
+                    </a></p>
                 </div>
                 <div class="acciones">
-                    <p><a href="../products/<%= producto.id %>/edit "><i class="far fa-edit"></i></a></p>
+                    <p id= "edit-button"><a href="../products/<%= producto.id %>/edit "><i class="far fa-edit"></i></a></p>
 
                         <form action="../products/<%= producto.id %>?_method=DELETE" method="POST">
                             
-                            <button id="delete-button" type="delete" style="background-color: transparent; border: transparent; font-size: 20px;"><i class="far fa-trash-alt"></i></button>
+                            <button id="delete-button" type="delete" ><i class="far fa-trash-alt"></i></button>
                             
                         </form>
                 </div>

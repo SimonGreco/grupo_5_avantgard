@@ -25,9 +25,13 @@ let usersController = {
         res.render("./users/register")
     },
     controlPanel: function (req, res) {
-        db.products.findAll()
-        .then(function(productos){
-            res.render("./users/admin-control-panel", { productos: productos })
+        let categorias = db.categories.findAll()
+        let productos = db.products.findAll()
+        
+
+        Promise.all([categorias, productos])
+        .then(function([categorias, productos]){
+            res.render("./users/admin-control-panel", { productos: productos, categorias: categorias })
         })
         
     },
