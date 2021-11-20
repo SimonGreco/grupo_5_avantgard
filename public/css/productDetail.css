@@ -4,12 +4,12 @@ body {
 }
 
 .container-one {
-    border: 3px solid white;
+    border: 1px solid #3b354d;
     margin: 0 auto;
     width: 90%;
     margin-top: 60px;
     margin-bottom: 50px;
-    
+    background-color: #0d1141;
     border-radius: 10px;
     position: relative;
     justify-content: space-between;
@@ -19,7 +19,7 @@ body {
 }  
 
 .container-two {
-    border: 3px white;
+    border: 1px #3b354d;
     width: 700px;
     height: 500px;
     margin-bottom: 30px;
@@ -33,16 +33,19 @@ body {
 
 }
 
+
+
 .container-three {
-    border: 3px solid white;
+    position: relative;
+    border: 0.5px solid #3b354d;
     width: 450px;
     height: 700px;
     margin: 70px; 
     margin-left: 20px; 
     border-radius: 10px;
     margin-top: 50px;
-    color: #121655;
-    background-color: rgba(255, 255, 255, 0.5);
+    color: #DBD8E3;
+    background-color: #0d1141;
 
     
    
@@ -57,7 +60,7 @@ body {
  }
 
 .boxes {
-    border: 3px solid white;
+    border: 1px solid #DBD8E3;
     width: 150px;
     height: 150px;
     float: inline-start;
@@ -69,7 +72,7 @@ body {
     position: absolute;
     left: 5px;
     top: -30px;
-    color: white;
+    color: #DBD8E3;
    
     
 }
@@ -162,9 +165,9 @@ h2 {
 } 
 .two{
     height: 100%;
-    object-fit: contain;
+    
     object-position: center center;
-    width: 100%;  
+    
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background-color: white;
@@ -181,17 +184,26 @@ h2 {
 
 
 .price {
-color: #121655;
+color: #DBD8E3;
+}
+.price h1{
+    font-weight: 300
+}
+.description{
+    font-weight: 300;
 }
 
 .carrito {
+    position: absolute;
+    right: 15%;
+    bottom: 50px;
     font-size: 20px;
     font-weight: bold;
     margin-left: 10px;
     text-align: center;
     border-radius: 10px;
     color: #121655 ;
-    border: white solid 1px;
+    border: #DBD8E3 solid 1px;
     height: 40px;
     width: 70%;
 }
@@ -300,9 +312,9 @@ color: #121655;
 
 
 .hr {
-      size: 12px;
-      color: white;
+      color: black;
       margin: 0px;
+      
       width: 70%;
      }
 
@@ -345,7 +357,7 @@ color: #121655;
 }
 
 .lista{
-    border: solid 2px #121655;
+    font-weight: 300;
     border-radius: 10px;
     width: 80%;
     color: white;
@@ -718,7 +730,7 @@ a{
 
 @media (min-width:1024px) 
 {
-    .img-product 
+   
 
 }
 

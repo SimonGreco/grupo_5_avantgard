@@ -18,6 +18,7 @@ a{
     color:white
 }
 
+
 .main-headder{
     height: 60px;
     display: flex;
@@ -36,14 +37,17 @@ a{
     text-align: center;
     margin: 15px;
 }
-
+#hipervinculoLogo{
+   max-width: fit-content;
+   margin-left: 5px;
+}
 
 header img{
     height: 70%;
-    margin: 5px 10px;
     padding: 1px;
     margin-top: 10px;
     
+ 
 }
 .options_box{
     position: absolute;

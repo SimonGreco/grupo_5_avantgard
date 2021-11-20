@@ -1,10 +1,7 @@
 body{
     height: auto;
-    margin-bottom: 101%;
     background-color: #121655;
-}
-.mainControlPanel{
-    height: 1260px;
+
 }
 #imagenPrincipal-txt{
     width: 20%;
@@ -114,6 +111,14 @@ form p{
     border: solid 1px lightgray;
     border-radius: 5px;
 }
+.buttons{
+    height: fit-content;
+    display: flex;
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
 
 .productsList button{
    width: 80%;
@@ -121,23 +126,17 @@ form p{
    margin-left: 10%;
    border-radius: 5px;
    border: solid 1px lightgray;
-   background-color: lightgray;
    font-size: 13px;
-   font-weight: bold;
+   font-weight: 400;
    font-family: montserrat;
-   color: rgb(70, 69, 69)
+   color: black
 }
-.productsList button:hover{
-    color: white
+#submit-btn{
+    background-color: #5867dd; 
+    color: #f0f1f5;
+    
 }
-.productsList .buttons{
-   display: flex;
-   margin-left: 65%;
-   margin-right:5% ;
-   margin-top: 10%;
-   margin-bottom: 10px;
 
-}
 
 .atrib-txt{
     font-size: 12px;
@@ -156,15 +155,16 @@ label:hover{
     text-decoration-line: underline;
 
 }
-.optionsConteiner{
-    position: fixed;
+.reset-btn:hover{
+    color: white
 }
+#submit-btn:hover{
+    background-color: #39459e;
+}
+
 
 /*MEDIAS*/
 @media(max-width: 1050px){
-    .mainControlPanel .optionsConteiner p, h4{
-        font-size: 70%;
-    }
     .productsList .buttons{
         margin: 0 15px;
         margin-top: 30px;
@@ -187,7 +187,7 @@ label:hover{
        
     }
     .productsList{
-        margin-bottom: 300px;
+        margin-bottom: 10px;
     }
     .oferta{
         margin: 20px 10px;

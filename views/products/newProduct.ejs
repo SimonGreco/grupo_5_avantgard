@@ -12,6 +12,13 @@
 
 <body>
     <%- include("../partials/header") %>
+    <div id="control-panel-cover">
+
+
+    </div>
+
+
+
         <article class="mainControlPanel" style="min-height: 100vw">
             <section class="optionsConteinerPhone">
                 <i class="fas fa-bars"></i>
@@ -46,7 +53,7 @@
         <div class="misProductos">
             <h3>Nuevo producto</h3>
         </div>
-        <article class="productsList">
+        <article class="productsList" style="margin-bottom: 15px; padding-bottom: 10px ; padding-top: 10px; padding-left: 5px;">
             <div id="imagenPrincipal-txt">
                 <p>Imagen Principal</p>
             </div>
@@ -131,12 +138,19 @@
                     </select>
                 </div>
 
-                <div class="buttons"><button type="reset">Reset</button>
-                    <button type="submit">Agregar producto</button>
+                <div class="buttons">
+                    <button type="reset" class="reset-btn">Reset</button>
+
+                    <button id="submit-btn" type="submit" >Agregar Producto</button>
+    
+    
                 </div>
             </form>
 
         </article>
+        <div class="footer-container">
+            <%- include("../partials/footer") %>
+        </div>
         
         <script src="/js/nameValidation.js"></script>
 

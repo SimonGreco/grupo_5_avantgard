@@ -12,7 +12,12 @@
 
 <body>
     <%- include("../partials/header") %>
-    <article class="mainControlPanel" style="min-height: 115vw">
+    <div id="control-panel-cover">
+
+
+    </div>
+
+    <article class="mainControlPanel">
         <section class="optionsConteinerPhone">
             <i class="fas fa-bars"></i>
             <br>
@@ -23,41 +28,43 @@
             <i class="fas fa-truck"></i>
             <br>
             <i class="fas fa-cart-arrow-down"></i>
-            <i class="fas fa-comments"></i> 
+            <i class="fas fa-comments"></i>
 
 
         </section>
         <section class="optionsConteiner">
             <h4><i class="fas fa-house-user"></i> Inicio</h4>
-                <h4>Mi tienda</h4>
-            
+            <h4>Mi tienda</h4>
+
             <p><i class="fas fa-cog"></i> Datos</p>
             <p id="productos"><i class="fas fa-box-open"></i> Productos</p>
             <p><i class="fas fa-piggy-bank"></i> Formas de pago</p>
             <p><i class="fas fa-truck"></i> Formas de envío</p>
 
             <h4>Mis ventas</h4>
-                <p><i class="fas fa-cart-arrow-down"></i> Ventas</p>
-                <p><i class="fas fa-comments"></i> Preguntas recibidas</p>
+            <p><i class="fas fa-cart-arrow-down"></i> Ventas</p>
+            <p><i class="fas fa-comments"></i> Preguntas recibidas</p>
 
         </section>
-        
+
     </article>
-    
+
 
     <div class="misProductos">
         <h3>Editá tu producto</h3>
     </div>
-    <article class="productsList">
+    <article class="productsList" style="margin-bottom: 15px;">
         <div id="imagenPrincipal-txt">
             <p>Imagen Principal</p>
         </div>
         <div id="imgDetail">
             <p>La imagen debe ser de almenos 500 x 500 píxeles</p>
         </div>
-        
+
         <div class="imagenMuestra"><img src="/img/Productos/<%= producto.image %>" alt="" />
-           <label for="AgregarImagen"><p>Reemplazar</p></label>
+            <label for="AgregarImagen">
+                <p>Reemplazar</p>
+            </label>
         </div>
         <p class="img-adicionales">imagenes adicionales</p>
         <form action="/products/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
@@ -66,45 +73,48 @@
             </label>
             <input type="file" name="image" id="AgregarImagen" value="<%= producto.image %>">
             <% if (locals.errors && errors.image) { %>
-                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.image.msg %>  </p>
-                <% } %> 
-    
+            <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;"><%= locals.errors.image.msg %> </p>
+            <% } %>
+
             <h4>Titulo</h4>
             <p>Agrega un título para describir el artículo. Los títulos pueden tener hasta 150 caracteres, pero
                 recomendamos usar menos de 65.
             </p>
 
-            <input type="text" name="name" id="Titulo" value="<%= producto.name %> " maxlength="150" class="formulario-txt">
+            <input type="text" name="name" id="Titulo" value="<%= producto.name %> " maxlength="150"
+                class="formulario-txt">
             <% if (locals.errors && errors.name) { %>
-                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.name.msg %>  </p>
-                <% } %> 
+            <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;"><%= locals.errors.name.msg %> </p>
+            <% } %>
 
             <h4>Descripcion</h4>
             <p>Agrega detalles del artículo, incluidas las características que lo hacen único para que las personas
                 comprendan los beneficios que ofrece..</p>
 
-            <textarea type="text" name="description" id="Titulo" maxlength="1500" class="Descripcion"><%=producto.description%></textarea>
+            <textarea type="text" name="description" id="Titulo" maxlength="1500"
+                class="Descripcion"><%=producto.description%></textarea>
             <% if (locals.errors && errors.description) { %>
-                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.description.msg %>  </p>
-                <% } %> 
+            <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;"><%= locals.errors.description.msg %>
+            </p>
+            <% } %>
 
             <h4>Precio</h4>
             <p>Elige una divisa y agrega el precio completo del artículo.</p>
             <div class="precios">
-                <select name="monedas" id="monedas" >
+                <select name="monedas" id="monedas">
                     <option value="arg">ARS- Peso Argentino</option>
                     <option value="usd">USD- Dólar EstadoUnidense</option>
                 </select>
-                <input type="number" name="price" value="<%= producto.price%>" id="precio" placeholder="Precio" >
+                <input type="number" name="price" value="<%= producto.price%>" id="precio" placeholder="Precio">
                 <% if (locals.errors && errors.price) { %>
-                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.price.msg %>  </p>
-                    <% } %> 
+                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;"><%= locals.errors.price.msg %>
+                </p>
+                <% } %>
             </div>
 
 
-            <input type="checkbox" name="Oferta" class="oferta" <% if (producto.oferta == true) { %>
-                checked
-                <% } %>><label for="Oferta" class="Oferta-txt" >Este articulo esta en oferta</label>
+            <input type="checkbox" name="Oferta" class="oferta" <% if (producto.oferta == true) { %> checked
+                <% } %>><label for="Oferta" class="Oferta-txt">Este articulo esta en oferta</label>
 
             <h4>Estado</h4>
             <select name="estado" id="estado" class="formulario-txt">
@@ -114,48 +124,57 @@
 
 
             <h4>Marca</h4>
-            <input type="text" name="marca" id="marca" value="<%= producto.marca %>" placeholder="Marca" class="formulario-txt">
+            <input type="text" name="marca" id="marca" value="<%= producto.marca %>" placeholder="Marca"
+                class="formulario-txt">
             <% if (locals.errors && errors.marca) { %>
-                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.marca.msg %>  </p>
-                <% } %> 
+            <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;"><%= locals.errors.marca.msg %> </p>
+            <% } %>
 
             <h4>Modelo</h4>
-            <input type="text" name="modelo" id="marca" value="<%= producto.modelo %>" placeholder="Modelo" class="formulario-txt">
+            <input type="text" name="modelo" id="marca" value="<%= producto.modelo %>" placeholder="Modelo"
+                class="formulario-txt">
             <% if (locals.errors && errors.modelo) { %>
-                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.modelo.msg %>  </p>
-                <% } %> 
+            <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;"><%= locals.errors.modelo.msg %> </p>
+            <% } %>
 
             <h4>ID</h4>
             <p>Agrega un ID unico por producto para identificarlo</p>
-            <input type="text" name="localID" value="<%= producto.localID %> " id="id" placeholder="ID" class="formulario-txt">
+            <input type="text" name="localID" value="<%= producto.localID %> " id="id" placeholder="ID"
+                class="formulario-txt">
 
 
             <h4>Categoria</h4>
             <p>Elegir la categoría o subcategoría más específica garantiza que los compradores vean la información más
                 relevante de tu artículo.</p>
             <div><select name="categoria" id="categoria" class="formulario-txt">
-                <% for(let i = 0; i < categorias.length; i++){ %> 
+                    <% for(let i = 0; i < categorias.length; i++){ %>
 
-                    <% if(categorias[i].id == producto.categoryId){ %> 
+                    <% if(categorias[i].id == producto.categoryId){ %>
                     <option value="<%= categorias[i].id %>" selected><%= categorias[i].name %></option>
-                    
-                    <% }else{ %> 
-                        <option value="<%= categorias[i].id %>" ><%= categorias[i].name %></option>
-                    <% } %> 
-                    <% } %> 
+
+                    <% }else{ %>
+                    <option value="<%= categorias[i].id %>"><%= categorias[i].name %></option>
+                    <% } %>
+                    <% } %>
                 </select>
             </div>
 
-            <div class="buttons"><button type="reset">Reset</button>
-            <button type="submit">Guardar Cambios</button>
+            <div class="buttons">
+                <button type="reset" class="reset-btn">Reset</button>
+                <button id="submit-btn" type="submit" >Guardar Cambios</button>
 
-            
-        </div>
+
+            </div>
         </form>
-        
-        
+            <br>
+
     </article>
-    
-    
-</body>   
+    <div class="footer-container">
+        <%- include("../partials/footer") %>
+    </div>
+
+
+
+</body>
+
 </html>

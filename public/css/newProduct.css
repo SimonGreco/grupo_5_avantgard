@@ -112,30 +112,29 @@ form p{
     border: solid 1px lightgray;
     border-radius: 5px;
 }
+.buttons{
+    height: fit-content;
+    display: flex;
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
 
 button{
-   width: 80%;
-   height: 40px;
-   margin-left: 10%;
-   border-radius: 5px;
-   border: solid 1px lightgray;
-   background-color: lightgray;
-   font-size: 13px;
-   font-weight: bold;
-   font-family: montserrat;
-   color: rgb(70, 69, 69)
+    width: 80%;
+    height: 40px;
+    margin-left: 10%;
+    border-radius: 5px;
+    border: solid 1px lightgray;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: montserrat;
+    color: black
 }
-button:hover{
-    color: white
-}
-.buttons{
-   display: flex;
-   margin-left: 65%;
-   margin-right:5% ;
-   margin-top: 10%;
-   margin-bottom: 10px;
 
-}
+
+
 
 
 /*ANIMACIONES*/ 
@@ -149,6 +148,17 @@ label:hover{
 }
 .optionsConteiner{
     position: fixed;
+}
+#submit-btn{
+    background-color: #5867dd; 
+    color: #f0f1f5;
+    
+}
+.reset-btn:hover{
+    color: white
+}
+#submit-btn:hover{
+    background-color: #39459e;
 }
 
 
