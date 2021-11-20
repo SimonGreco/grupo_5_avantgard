@@ -6,12 +6,18 @@ window.addEventListener("load", function() {
         e.preventDefault();
 
 
-        let putImage = document.querySelector("input.addImage");
+        /*let putImage = document.querySelector("input.addImage");
 
         if (putImage.file != JPG, JPEG, PNG, GIF) {
             alert("El formato del archivo debe ser válido (JPG, JPEG, PNG, GIF)");
-        }
+        }*/
 
+        
+        /*let acceptedExt = [".png", ".jpg", ".jpeg", ".gif"]
+        let extension = (path.extname(file)).toLowerCase();
+        if(!acceptedExt.includes(extension))
+        throw new Error("este tipo de archivo no esta permitido");*/
+        
         
         let putTitle = document.querySelector("input.formulario-txt");
 
