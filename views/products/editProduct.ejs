@@ -67,11 +67,11 @@
             </label>
         </div>
         <p class="img-adicionales">imagenes adicionales</p>
-        <form action="/products/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form action="/products/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="productsForm">
             <label for="AgregarImagen" class="addFile">
                 <span>Añadi una nueva imagen</span>
             </label>
-            <input type="file" name="image" id="AgregarImagen" value="<%= producto.image %>">
+            <input type="file" name="image" id="AgregarImagen" value="<%= producto.image %>" class="addImage">
             <% if (locals.errors && errors.image) { %>
             <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;"><%= locals.errors.image.msg %> </p>
             <% } %>
@@ -177,4 +177,8 @@
 
 </body>
 
+    
+    <script src="/js/frontValidation.js"></script>
+
+</body>   
 </html>
