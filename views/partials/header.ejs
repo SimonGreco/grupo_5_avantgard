@@ -12,7 +12,10 @@
            
        </span>
        <a href="/user/profile"><i class="fas fa-user"></i></a>
-       <a href="/user/control-panel"><i class="fas fa-store-alt"></i></a>
+       <% if (locals.userLogged && locals.userLogged.admin == true) { %>
+        <a href="/user/control-panel"><i class="fas fa-store-alt"></i></a>
+        <% } %> 
+       
        <a href="/products/carrito"><i class="fas fa-shopping-cart"></i></a>
     
     </div>
@@ -33,17 +36,25 @@
     
        
        <div class="iconos">
-           <a href="/user/control-panel">
-            <i class="fas fa-store-alt"></i>
-               Tienda
-           </a>
-           <a href="../user/profile"><i class="fas fa-user"></i>Hola <%= locals.userLogged.first_name %>! </a>
+           <% if (locals.userLogged && locals.userLogged.admin == true) { %>
+            <a href="/user/control-panel">
+                <i class="fas fa-store-alt"></i>
+                   Tienda
+               </a>
+           <% } %>
+           
+           <div class="user-options-conteiner">
+            <a href="../user/profile"><i class="fas fa-user"></i>Hola <%= locals.userLogged.first_name %>! </a>
            <div class="options_box">
                <div class="caja_separadora"></div>
                <div class="profile_option a" ><a href="../user/profile" class="po_txt" style="margin-left: 0px; width: 100%; font-size: 12px;color: black; display: inline-block; "><p>Perfil</p></a></div>
                 <hr style="width: 100%; height: 0.5px; margin: 0 0">
                <div class="profile_option b"><a href="../user/logout" class="po_txt" style="margin-left: 0px;width: 100%; font-size: 11px; color: black; display: inline-block;"><p>Cerrar Sesion</p></a></div>
            </div>
+
+
+           </div>
+           
 
            <div></div>
     

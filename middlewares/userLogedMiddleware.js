@@ -9,6 +9,7 @@ const db = require("../database/models");
          db.users.findOne({where: {email : UserEmailInCookie}}).then(function(user){
             if(user){
                req.session.userLoged = user
+              
             }
          })
       }

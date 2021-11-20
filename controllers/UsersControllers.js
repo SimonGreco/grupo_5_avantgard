@@ -53,7 +53,7 @@ let usersController = {
                         last_name: req.body.last_name ,
                         email: req.body.email ,
                         password: bcryptjs.hashSync(req.body.password, 10) ,
-                        admin: true,
+                        admin: false,
                         image: "Default.jpg",
                         documento: "",
                         phone: "",

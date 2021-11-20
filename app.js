@@ -5,11 +5,13 @@ const session = require("express-session")
 const userLoggedMiddleware = require("./middlewares/userLogedMiddleware");
 const cookies = require("cookie-parser");
 
+
 app.use(express.urlencoded({extended: false}));
 app.use(express.json())
 app.use(session({secret: "mensaje", resave : false, saveUninitialized: false}))
 app.use(cookies());
-app.use(userLoggedMiddleware);
+app.use(userLoggedMiddleware)
+
 
 
 //METHOD OVERRIDE

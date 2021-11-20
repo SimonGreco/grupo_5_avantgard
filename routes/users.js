@@ -7,6 +7,7 @@ const authMiddleware = require("../middlewares/authMiddleware")
 const { body } = require("express-validator");
 const multer = require("multer");
 const path = require("path")
+const adminAuthMiddleware = require("../middlewares/adminAuthMiddleware");
 
 const validations = [
   body("first_name").notEmpty().withMessage("El campo no puede estar vacio").escape(),
@@ -47,7 +48,7 @@ const validationsProfile = [
 
 
 
-router.get("/control-panel", authMiddleware, usersController.controlPanel);
+router.get("/control-panel", authMiddleware, adminAuthMiddleware, usersController.controlPanel);
 
 
  //Creacion de usuarios
@@ -79,7 +80,7 @@ router.get("/control-panel", authMiddleware, usersController.controlPanel);
   });
   const upload = multer({ storage:storage });
   router.put("/profile", upload.single("image"), validationsProfile, usersController.userEdit)
-  router.get("/profile", authMiddleware,usersController.profile)
+  router.get("/profile", authMiddleware, usersController.profile)
   
   
 

@@ -28,6 +28,7 @@ a{
     font-weight: bold;
     z-index: 100;
     position: relative;
+    
  
 }
 
@@ -40,6 +41,7 @@ a{
 #hipervinculoLogo{
    max-width: fit-content;
    margin-left: 5px;
+   width: 13.13%;
 }
 
 header img{

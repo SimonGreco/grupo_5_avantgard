@@ -5,6 +5,7 @@ const path = require("path");
 const multer = require("multer");
 const authMiddleware = require("../middlewares/authMiddleware");
 const { body } = require("express-validator");
+const adminAuthMiddleware = require("../middlewares/adminAuthMiddleware");
 
 const validations = [
   body("name").notEmpty().withMessage("El campo no puede estar vacio").escape(),
@@ -45,18 +46,18 @@ const storage = multer.diskStorage({
   const upload = multer({ storage:storage });
 
 
-router.get("/create", authMiddleware, productController.newProduct);
+router.get("/create", authMiddleware, adminAuthMiddleware, productController.newProduct);
 router.post("/", upload.single("image"), validations, productController.create);
 
 //---------------------------
 
 //EDITAR PRODUCTOS
-router.get("/:id/edit", authMiddleware, productController.edit);
+router.get("/:id/edit", authMiddleware, adminAuthMiddleware, productController.edit);
 router.put("/:id",upload.single("image"), validations, productController.update)
 //----------
 
 //ELIMINAR PRODUCTOS
-router.delete("/:id", authMiddleware, productController.delete)
+router.delete("/:id", authMiddleware, adminAuthMiddleware, productController.delete)
 
 
 router.get("/", productController.catalogo);
