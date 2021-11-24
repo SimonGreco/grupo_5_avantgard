@@ -26,8 +26,8 @@
             <hr>
             <p class="completarDatos">Completa tus datos!</p>
             <br>
-            <form action="/user" method="POST" >
-                <input type="text" name="first_name" placeholder="Nombre" class=" renglon" value="<%= locals.oldData ? oldData.first_name: null %>">   
+            <form action="/user" method="POST" class="formulario" id= "formulario" >
+                <input type="text" name="first_name" placeholder="Nombre" class=" renglon" id=" renglon" value="<%= locals.oldData ? oldData.first_name: null %>">   
                            
                 <br>
                 <% if (locals.errors && errors.first_name) { %>
@@ -64,6 +64,7 @@
         <br>
     </main>
     <%- include("../partials/footer") %>
+    <script src = "/public/js/registerValidation.js" > </script> 
 </body>
 
 </html>

@@ -38,8 +38,8 @@
                 <button class="Google-button" type="submit"><i class="fab fa-google"></i>Continuá con Google</button>
 
                 <p>O ingresá los datos de tu cuenta</p>
-                <form action="/user/login" method="POST" class="formularios2">
-                    <input class="formularios-sesion" type="email" name="email" placeholder="Correo Electronico">
+                <form action="/user/login" method="POST" class="formularios2" id="formularios2">
+                    <input class="formularios-sesion" type="email" name="email" id="email" placeholder="Correo Electronico">
                     <% if (locals.errors && errors.email) { %>
                         <div style="color: rgb(173, 2, 2); font-size: 13px; margin-right: 40%;"> <%= errors.email.msg %> </div>
                     <% } %>
@@ -61,7 +61,9 @@
         </div>
     </div>
 
-    <%- include("../partials/footer") %>
+    <!-- <%- include("../partials/footer") %> -->
+
+    <script src = "/public/js/loginValidation.js" > </script> 
 
 
 
