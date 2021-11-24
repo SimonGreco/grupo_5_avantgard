@@ -28,13 +28,13 @@ window.addEventListener("load", function () {
         let card = document.querySelector(`.field.${campo} p.error`);
         card.innerHTML = ""
         if (input.value == "") {
-           card.innerHTML = `el campo ${input.name} no puede estar vacio`
+           card.innerHTML = `El campo ${input.name} no puede estar vacio`
           card.style.margin = "revert"
            campos[campo] = false
             
         }
         else if (!expresion.test(input.value)){
-            card.innerHTML = `el campo ${input.name} ${validacion}`
+            card.innerHTML = `El campo ${input.name} ${validacion}`
             card.style.margin = "revert"
             campos[campo] = false
         } else {
