@@ -163,6 +163,18 @@ form .formularios-sesion{
     text-decoration-line: underline;
 }
 
+
+
+.field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.field .error {
+    margin: 0;
+}
+
 /*MEDIAS*/
 
 @media (max-width:768px){

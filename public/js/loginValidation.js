@@ -1,26 +1,88 @@
 window.addEventListener("load", function () {
     let formulario = document.querySelector("form.formularios2");
 
+    let inputs = document.querySelectorAll("form.formularios2 input");
+
+    const expresiones = {
+        password: /^.{4,12}$/, // 4 a 12 digitos.
+        correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    }
+
+    const campos = {
+        email: false,
+        psw: false
+    }
+
+    const validarFormulario = (e) => {
+        switch (e.target.name) {
+            case "email":
+                validarCampo(expresiones.correo, e.target, 'email', "debe ser valido");
+            break;
+            case "password":
+                validarCampo(expresiones.password, e.target, 'psw', "acepta de 4 a 12 caracteres");
+            break;
+        }
+    }
+
+    const validarCampo = (expresion, input, campo, validacion) => {
+        let card = document.querySelector(`.field.${campo} p.error`);
+        card.innerHTML = ""
+        if (input.value == "") {
+           card.innerHTML = `el campo ${input.name} no puede estar vacio`
+          card.style.margin = "revert"
+           campos[campo] = false
+            
+        }
+        else if (!expresion.test(input.value)){
+            card.innerHTML = `el campo ${input.name} ${validacion}`
+            card.style.margin = "revert"
+            campos[campo] = false
+        } else {
+            card.innerHTML = ""
+            card.style.margin = "0"
+            campos[campo] = true
+        }
+    }
+
+    inputs.forEach((input) => {
+        input.addEventListener('keyup', validarFormulario);
+        input.addEventListener('blur', validarFormulario);
+    });
+
     formulario.addEventListener("submit", function(e) {
-        e.preventDefault();
-
-        let campoEmail =  document.querySelector("input.email");
- 
-        if (campoEmail.value = "") {
-            alert("Debes insertar tu email")
-        } else if (campoEmail.value.lenght < 6) {
-            alert ("El email ingresado no es válido");
+        if ( !(campos.email == true && campos.psw == true) ) {
+            e.preventDefault()
         }
-
-        let campoPassword = document.querySelector("input.password");
-
-        if (campoPassword.value < 8 ) {
-            alert("La contraseña ingresada no es válida")
-
-        }
-
     });
 })
+
+
+
+
+
+// window.addEventListener("load", function () {
+//     let formulario = document.querySelector("form.formularios2");
+
+//     formulario.addEventListener("submit", function(e) {
+//         e.preventDefault();
+
+//         let campoEmail =  document.querySelector("input#email");
+ 
+//         if (campoEmail.value == "") {
+//             alert("Debes insertar tu email")
+//         } else if (campoEmail.value.lenght < 6) {
+//             alert ("El email ingresado no es válido");
+//         }
+
+//         let campoPassword = document.querySelector("input#password");
+
+//         if (campoPassword.value < 8 ) {
+//             alert("La contraseña ingresada no es válida")
+
+//         }
+
+//     });
+// })
 
 
 //  })
