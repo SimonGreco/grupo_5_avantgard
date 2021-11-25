@@ -1,106 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
+
     <link href="/css/userProfile.css" rel="stylesheet">
     <%- include("../partials/head") %>
 </head>
+
 <body>
     <%- include("../partials/header.ejs") %>
-    <br>
-    <div class="miCuenta">
-        <h3>Tu cuenta AvantGard!</h3>
-    </div>
-    
-    <br>
-    <div class="box">
-       
-        <label for="AgregarImagen" class="user_image_box"> 
-            
-            <img src="/img/users/<%= locals.userLogged.image  %> " class="user_image" >
-                
-            
-            
-            <div class="camera_container"><div class="camera" style="content:url('/img/users/icon-157351_960_720.png');">
-            
-            </div>
-            <p class="change_avatar">Cambia tu avatar</p></div>
-            <% if (locals.errors && errors.image) { %>
-                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%; margin: 0 auto;" ><%= locals.errors.image.msg %>  </p>
-                <% } %> 
+        <br>
+        <div class="miCuenta">
+            <h3>Tu cuenta AvantGard!</h3>
+        </div>
 
-        </label>
+        <br>
+        <div class="box">
 
-        
-        <article class="profileChanges">
-            <h2 class="edita_perfil">Editá tu perfil!</h2>
-        
-            <form action="/user/profile?_method=PUT" method="POST" class="formulario_cambio" enctype="multipart/form-data">
+            <label for="AgregarImagen" class="user_image_box">
 
-                <input type="file" name="image" id="AgregarImagen" value="<%= locals.userLogged.image %>" accept="image/jpeg,image/jpg,image/png">
-
-                
-
-                
-
-                <h4>Nombre</h4>
-                <p> </p>
-
-                <input type="text" name="first_name" id="name" maxlength="150" class="formulario-txt" value="<%= locals.userLogged.first_name  %>">
-                <% if (locals.errors && errors.first_name) { %>
-                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.first_name.msg %>  </p>
-                    <% } %> 
-                <h4>Apellido</h4>
-                <p> </p>
-
-                <input type="text" name="last_name" id="name" maxlength="150" class="formulario-txt" value="<%= locals.userLogged.last_name  %>">
-                <% if (locals.errors && errors.last_name) { %>
-                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.last_name.msg %>  </p>
-                    <% } %> 
-                <h4>E-mail</h4>
-                <p>
-                </p>
-                <input type="email" name="email" id="email" maxlength="150" class="formulario-txt" value="<%= locals.userLogged.email  %>">
-                <% if (locals.errors && errors.email) { %>
-                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.email.msg %>  </p>
-                    <% } %> 
+                <img src="/img/users/<%= locals.userLogged.image  %> " class="user_image">
 
 
-                <h4>Documento</h4>
-                <input type="number" name="documento" id="doc" maxlength="150" class="formulario-txt" value="<%= locals.userLogged.documento  %>" >
-                <% if (locals.errors && errors.documento) { %>
-                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.documento.msg %>  </p>
-                    <% } %> 
 
-                <h4>Teléfono</h4>
-                <p></p>
-                <input type="number" name="phone" id="tel" maxlength="150" class="formulario-txt" value="<%= locals.userLogged.phone  %>">
-                <% if (locals.errors && errors.phone) { %>
-                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.phone.msg %>  </p>
-                    <% } %> 
+                <div class="camera_container">
+                    <div class="camera" style="content:url('/img/users/icon-157351_960_720.png');">
 
-                <br>
-                
-             
-
-                <h4>Domicilio</h4>
-                <p></p>
-                <input type="text" name="adress" id="adress" maxlength="150" class="formulario-txt"  value="<%= locals.userLogged.addres  %>">
-                <% if (locals.errors && errors.adress) { %>
-                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;" ><%= locals.errors.adress.msg %>  </p>
-                    <% } %> 
-                
-
-                <div class="buttons"><button type="reset">Reset</button>
-                    <button type="submit">Guardar Cambios</button>
-
-
+                    </div>
+                    <p class="change_avatar">Cambia tu avatar</p>
                 </div>
-            </form>
+                <% if (locals.errors && errors.image) { %>
+                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%; margin: 0 auto;">
+                        <%= locals.errors.image.msg %>
+                    </p>
+                    <% } %>
 
-        </article>
-    </div>
-    <%- include("../partials/footer.ejs") %>
+            </label>
+
+
+            <article class="profileChanges">
+                <h2 class="edita_perfil">Editá tu perfil!</h2>
+
+                <form action="/user/profile?_method=PUT" method="POST" class="formulario_cambio"
+                    enctype="multipart/form-data">
+
+                    <input type="file" name="image" id="AgregarImagen" value="<%= locals.userLogged.image %>"
+                        accept="image/jpeg,image/jpg,image/png">
+
+
+
+
+
+                    <h4>Nombre</h4>
+                    <p> </p>
+
+                    <input type="text" name="first_name" id="name" maxlength="150" class="formulario-txt"
+                        value="<%= locals.userLogged.first_name  %>">
+                    <% if (locals.errors && errors.first_name) { %>
+                        <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                            <%= locals.errors.first_name.msg %>
+                        </p>
+                        <% } %>
+                            <h4>Apellido</h4>
+                            <p> </p>
+
+                            <input type="text" name="last_name" id="name" maxlength="150" class="formulario-txt"
+                                value="<%= locals.userLogged.last_name  %>">
+                            <% if (locals.errors && errors.last_name) { %>
+                                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                                    <%= locals.errors.last_name.msg %>
+                                </p>
+                                <% } %>
+                                    <h4>E-mail</h4>
+                                    <p>
+                                    </p>
+                                    <input type="email" name="email" id="email" maxlength="150" class="formulario-txt"
+                                        value="<%= locals.userLogged.email  %>">
+                                    <% if (locals.errors && errors.email) { %>
+                                        <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                                            <%= locals.errors.email.msg %>
+                                        </p>
+                                        <% } %>
+
+
+                                            <h4>Documento</h4>
+                                            <input type="number" name="documento" id="doc" maxlength="150"
+                                                class="formulario-txt" value="<%= locals.userLogged.documento  %>">
+                                            <% if (locals.errors && errors.documento) { %>
+                                                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                                                    <%= locals.errors.documento.msg %>
+                                                </p>
+                                                <% } %>
+
+                                                    <h4>Teléfono</h4>
+                                                    <p></p>
+                                                    <input type="number" name="phone" id="tel" maxlength="150"
+                                                        class="formulario-txt" value="<%= locals.userLogged.phone  %>">
+                                                    <% if (locals.errors && errors.phone) { %>
+                                                        <p
+                                                            style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                                                            <%= locals.errors.phone.msg %>
+                                                        </p>
+                                                        <% } %>
+
+                                                            <br>
+
+
+
+                                                            <h4>Domicilio</h4>
+                                                            <p></p>
+                                                            <input type="text" name="adress" id="adress" maxlength="150"
+                                                                class="formulario-txt"
+                                                                value="<%= locals.userLogged.addres  %>">
+                                                            <% if (locals.errors && errors.adress) { %>
+                                                                <p
+                                                                    style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                                                                    <%= locals.errors.adress.msg %>
+                                                                </p>
+                                                                <% } %>
+
+
+                                                                    <div class="buttons"><button
+                                                                            type="reset">Reset</button>
+                                                                        <button type="submit">Guardar Cambios</button>
+
+
+                                                                    </div>
+                </form>
+
+            </article>
+        </div>
+        <%- include("../partials/footer.ejs") %>
 </body>
 
 </html>

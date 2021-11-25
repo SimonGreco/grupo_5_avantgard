@@ -14,9 +14,9 @@ body {
     position: relative;
     justify-content: space-between;
     justify-content: center;
-    
+
     max-width: 1257px;
-}  
+}
 
 .container-two {
     border: 1px #3b354d;
@@ -28,8 +28,8 @@ body {
     justify-content: center;
     object-fit: contain;
     background-color: white;
-    
-    
+
+
 
 }
 
@@ -40,24 +40,24 @@ body {
     border: 0.5px solid #3b354d;
     width: 450px;
     height: 700px;
-    margin: 70px; 
-    margin-left: 20px; 
+    margin: 70px;
+    margin-left: 20px;
     border-radius: 10px;
     margin-top: 50px;
     color: #DBD8E3;
     background-color: #0d1141;
 
-    
-   
+
+
 }
 
 .box {
     display: flex;
-    position: relative; 
+    position: relative;
     justify-content: space-around;
     width: 700px;
-   
- }
+
+}
 
 .boxes {
     border: 1px solid #DBD8E3;
@@ -65,7 +65,7 @@ body {
     height: 150px;
     float: inline-start;
     border-radius: 10px;
-} 
+}
 
 .categories {
     padding: 0 5px;
@@ -73,8 +73,8 @@ body {
     left: 5px;
     top: -30px;
     color: #DBD8E3;
-   
-    
+
+
 }
 
 .textBox {
@@ -104,9 +104,10 @@ body {
 
 .bold {
     font-weight: bold;
-   
+
 }
-.text-products{
+
+.text-products {
     font-weight: bold;
 }
 
@@ -122,6 +123,7 @@ h1 {
 h2 {
     margin-bottom: 0px;
 }
+
 .categories-2 {
     font-weight: bold;
 }
@@ -139,7 +141,7 @@ h2 {
     justify-content: center;
     margin-top: 50px;
     margin-left: 50px;
-} 
+}
 
 
 
@@ -147,27 +149,29 @@ h2 {
     height: 100%;
     object-fit: contain;
     object-position: center center;
-    width: 100%;  
+    width: 100%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background-color: white;
     border-radius: 5px;
-} 
+}
+
 .img-box {
     height: 100%;
     object-fit: contain;
     object-position: center center;
-    width: 100%;  
+    width: 100%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background-color: white;
     border-radius: 5px;
-} 
-.two{
+}
+
+.two {
     height: 100%;
-    
+
     object-position: center center;
-    
+
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background-color: white;
@@ -177,19 +181,21 @@ h2 {
 
 
 
- 
+
 
 
 
 
 
 .price {
-color: #DBD8E3;
+    color: #DBD8E3;
 }
-.price h1{
+
+.price h1 {
     font-weight: 300
 }
-.description{
+
+.description {
     font-weight: 300;
 }
 
@@ -202,7 +208,7 @@ color: #DBD8E3;
     margin-left: 10px;
     text-align: center;
     border-radius: 10px;
-    color: #121655 ;
+    color: #121655;
     border: #DBD8E3 solid 1px;
     height: 40px;
     width: 70%;
@@ -233,10 +239,10 @@ color: #DBD8E3;
     color: #121655;
 }
 
-.color-text { 
+.color-text {
     margin-left: 20px;
     font-weight: bold;
-  
+
 }
 
 .color-product {
@@ -244,7 +250,7 @@ color: #DBD8E3;
 
 }
 
-.seccion-productos{
+.seccion-productos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -253,11 +259,11 @@ color: #DBD8E3;
     margin: 0 auto;
     align-items: center;
     margin-top: 30px;
-    
-    
+
+
 }
 
-.seccion-productos{
+.seccion-productos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -266,44 +272,50 @@ color: #DBD8E3;
     margin: 0 auto;
     align-items: center;
     margin-top: 30px;
-    
-    
+
+
 }
-.producto{
+
+.producto {
     width: 20%;
-    object-fit:cover;
+    object-fit: cover;
     height: 400px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    
+
 }
-.producto img{
-    width: 100%;  
+
+.producto img {
+    width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.product-txt-conteiner{
+
+.product-txt-conteiner {
     background-color: white;
     padding: 15px;
     height: 100px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-.descripcion{
+
+.descripcion {
     font-size: 15px;
     margin: 5px 4px;
     opacity: 0;
     color: black;
     font-weight: 300;
 }
-.Precio{
+
+.Precio {
     font-size: 20px;
     margin-top: 1px;
     font-weight: 600;
     color: rgb(82, 82, 82);
 }
-.producto hr{
+
+.producto hr {
     margin: 0px;
     size: 10px;
     width: 100%;
@@ -312,11 +324,11 @@ color: #DBD8E3;
 
 
 .hr {
-      color: black;
-      margin: 0px;
-      
-      width: 70%;
-     }
+    color: black;
+    margin: 0px;
+
+    width: 70%;
+}
 
 
 
@@ -353,10 +365,10 @@ color: #DBD8E3;
     color: white;
     size: 30%;
 
-   
+
 }
 
-.lista{
+.lista {
     font-weight: 300;
     border-radius: 10px;
     width: 80%;
@@ -365,9 +377,9 @@ color: #DBD8E3;
 }
 
 
-a{
+a {
     text-decoration: none;
-    color:white
+    color: white
 }
 
 
@@ -377,40 +389,45 @@ a{
 
 /* ANIMACIONES Y TRANSICIONES */
 
-.boxes:hover{
+.boxes:hover {
     box-shadow:
-      inset 0 -3em 3em rgba(0,0,0,0),
-            0 0  0 2px rgb(255, 255, 255),
-            0.3em 0.3em 1em rgba(0,0,0,0.3);
-            background-color: rgb(255, 255, 255);
-  }
+        inset 0 -3em 3em rgba(0, 0, 0, 0),
+        0 0 0 2px rgb(255, 255, 255),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255);
+}
 
-  .boxes:hover{
+.boxes:hover {
     transition: all 100ms;
-  }
-  .descripcion:hover{
+}
+
+.descripcion:hover {
     opacity: 1;
 }
-.descripcion{
+
+.descripcion {
     transition: all 100ms;
 }
 
 
-.producto:hover{
+.producto:hover {
     box-shadow:
-      inset 0 -3em 3em rgba(0,0,0,0),
-            0 0  0 2px rgb(255, 255, 255),
-            0.3em 0.3em 1em rgba(0,0,0,0.3);
-            background-color: rgb(255, 255, 255);
-  }
-  .producto{
-      transition: all 100ms;
-  } 
-.carrito:hover{
+        inset 0 -3em 3em rgba(0, 0, 0, 0),
+        0 0 0 2px rgb(255, 255, 255),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255);
+}
+
+.producto {
+    transition: all 100ms;
+}
+
+.carrito:hover {
     background-color: lightgrey;
     border: lightgray solid 1px
 }
-.carrito{
+
+.carrito {
     transition: all 100ms;
 }
 
@@ -424,25 +441,26 @@ a{
 /* MEDIAS Y RESPONSIVE */
 
 @media (max-width:480px) {
-     .container-one {
+    .container-one {
         width: 100%;
         justify-content: center;
         display: flex;
         flex-direction: column;
         justify-self: center;
         border: 0px;
-        
+
     }
-     .top {
+
+    .top {
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-       
-    } 
 
-     .img-product {
-        width: 100% ;
+    }
+
+    .img-product {
+        width: 100%;
         height: 100%;
         justify-self: center;
         justify-content: center;
@@ -452,33 +470,37 @@ a{
         flex-direction: column;
         position: relative;
         left: -11%;
-        
-    } 
+
+    }
 
     .two {
         height: 300px;
         width: 300px;
     }
-     
-    .boxes{
+
+    .boxes {
         display: none;
     }
+
     .box {
         display: none;
-    } 
+    }
+
     .container-two {
         width: 400px;
         height: 400px;
     }
 
 
-     .all {
+    .all {
         display: flex;
         flex-direction: column;
     }
+
     .body {
         width: 100%;
     }
+
     .container-three {
         width: 100%;
         justify-self: center;
@@ -489,23 +511,28 @@ a{
         margin: 0px;
         padding: 0px;
     }
-    .marca{
+
+    .marca {
         width: 100%;
     }
-    .modelo{
+
+    .modelo {
         width: 100%;
         text-align: left;
     }
-    .marcaModelo{
+
+    .marcaModelo {
         margin: 0px;
         margin-right: 30px;
     }
-    .producto{
+
+    .producto {
         width: 70%;
         height: 70%;
         margin-top: 10px;
-       
+
     }
+
     .productos {
         width: 80%;
         display: flex;
@@ -514,15 +541,18 @@ a{
         margin: 0px;
         padding: 0px;
     }
+
     .middle {
         margin: 0px;
         padding: 0px;
         position: relative;
         right: 4%;
     }
+
     .carrito {
         width: 93%;
     }
+
     .bottom {
         justify-self: center;
         width: 100%;
@@ -531,32 +561,36 @@ a{
         margin-left: 20px;
     }
 
-    .list{
+    .list {
         width: 100%;
         size: 30px;
         margin: 0px;
         padding: 0%;
         font-size: 10px;
     }
+
     .bold {
         display: flex;
         position: relative;
         justify-content: left;
     }
+
     .text-products {
         position: relative;
         text-align: center;
-       
+
     }
+
     .categories {
         font-size: 0px;
-     
+
     }
+
     .categories-2 {
         font-size: 0px;
     }
-   
-}  
+
+}
 
 
 
@@ -583,17 +617,18 @@ a{
         flex-direction: column;
         justify-self: center;
         border: 0px;
-        
+
     }
 
     .top {
         width: 100%;
         display: flex;
         flex-direction: column;
-       
+
     }
+
     .img-product {
-        width: 60% ;
+        width: 60%;
         height: 60%;
         justify-self: center;
         justify-content: center;
@@ -601,11 +636,11 @@ a{
         margin-top: 0px;
         position: relative;
         right: 3%;
-    
-   
+
+
     }
 
-    .boxes{
+    .boxes {
         width: 100%;
         height: 80px;
         object-fit: contain;
@@ -616,6 +651,7 @@ a{
         border-radius: 5px;
         margin-right: 5%;
     }
+
     .box {
         width: 600px;
         justify-self: center;
@@ -623,15 +659,18 @@ a{
         position: relative;
         left: 8%;
         margin-bottom: 0px;
-    
+
     }
+
     .all {
         display: flex;
         flex-direction: column;
     }
+
     .body {
         width: 100%;
     }
+
     .container-two {
         justify-self: center;
         width: 100%;
@@ -639,6 +678,7 @@ a{
         position: relative;
         left: 20%;
     }
+
     .container-three {
         width: 78%;
         justify-self: center;
@@ -646,16 +686,19 @@ a{
         margin-top: 10%;
         position: relative;
         left: 4%;
-    
+
     }
-    .marca{
+
+    .marca {
         width: 100%;
     }
-    .modelo{
+
+    .modelo {
         width: 100%;
         text-align: left;
     }
-    .marcaModelo{
+
+    .marcaModelo {
         width: 100%;
         margin-left: 5px;
         margin-right: 5px;
@@ -663,39 +706,46 @@ a{
         left: 7%;
         margin: 0px;
     }
-    .producto{
+
+    .producto {
         width: 70%;
         height: 70%;
         margin-top: 10px;
-     
-        
+
+
     }
+
     .productos {
         width: 80%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         position: relative;
-        left: 16%; 
+        left: 16%;
     }
+
     .middle {
         margin: 0px;
     }
+
     .carrito {
         width: 93%;
     }
+
     .bottom {
         justify-self: left;
         width: 70%;
     }
-    .list{
+
+    .list {
         width: 100%;
         size: 30px;
         margin: 0px;
         padding: 0%;
         font-size: 15px;
-         
+
     }
+
     .bold {
         display: flex;
         position: relative;
@@ -704,6 +754,7 @@ a{
 
 
     }
+
     h6 {
         color: #121655;
 
@@ -718,30 +769,16 @@ a{
         position: relative;
         left: 13%;
     }
+
     .categories {
         font-size: 0px;
-     
+
     }
+
     .categories-2 {
         font-size: 0px;
     }
 }
 
 
-@media (min-width:1024px) 
-{
-   
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
+@media (min-width:1024px) {}

@@ -1,93 +1,107 @@
-body{
+body {
     height: auto;
     margin-bottom: 101%;
     background-color: #121655;
     font-family: montserrat;
 }
+
 .box {
     width: 90%;
     padding: 1%;
-    margin: 2% ;
+    margin: 2%;
     margin-left: 4%;
     display: flex;
     justify-content: space-between;
- 
-    
+
+
 }
-.user_image_box{
+
+.user_image_box {
     width: 16%;
     height: max-content;
     border-radius: 25px;
-    text-align: center ;
+    text-align: center;
     position: relative;
 }
-.user_image:hover{
+
+.user_image:hover {
     filter: blur(1.5px);
     z-index: 14;
 }
-.user_image{
-width: 100%;
-border-radius: 10%;
-background-size: contain;
-z-index: 16;
-display:block;
+
+.user_image {
+    width: 100%;
+    border-radius: 10%;
+    background-size: contain;
+    z-index: 16;
+    display: block;
 
 
 }
 
-.camera{
+.camera {
     font-size: 50px;
     width: 27%;
     position: absolute;
     bottom: 40%;
     left: 37%;
-    
-    
-   
-     
-}
-.camera_container{
- width: 100%;
- height: 100%;
- opacity: 0;
+
+
+
 
 }
-.camera_container p{
+
+.camera_container {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+}
+
+.camera_container p {
     position: absolute;
     bottom: 0px;
     margin-left: 24%;
     color: black;
 }
-.camera_container:hover{
+
+.camera_container:hover {
     opacity: 1;
 }
 
-.profileChanges{
+.profileChanges {
     width: 70%;
-   
+
 }
-.formulario_cambio{
+
+.formulario_cambio {
     width: 100%;
 }
-.edita_perfil{
+
+.edita_perfil {
     color: white;
     font-size: 20px;
     margin-top: 1px;
 }
+
 .miCuenta {
     margin-left: 2.5%;
     color: white;
 }
-.box p{
+
+.box p {
     color: rgb(226, 226, 226);
 }
-.user_image_box{
+
+.user_image_box {
     color: black;
 }
-.mainControlPanel{
+
+.mainControlPanel {
     height: 1260px;
 }
-#imagenPrincipal-txt{
+
+#imagenPrincipal-txt {
     width: 20%;
     font-size: 15px;
     color: rgb(83, 83, 83);
@@ -95,79 +109,90 @@ display:block;
     margin-left: 15px;
     margin-bottom: 2px;
 }
-#imgDetail{
+
+#imgDetail {
     font-size: 12px;
     color: rgb(83, 83, 83);
     font-weight: lighter;
     margin-left: 15px;
     margin-top: 0px;
 }
-.img-adicionales{
+
+.img-adicionales {
     font-size: 15px;
     color: rgb(83, 83, 83);
     font-weight: bold;
     margin-left: 15px;
     margin-bottom: 2px;
 }
-.addFile{
+
+.addFile {
     font-size: 10px;
     font-weight: 600;
     color: black;
     background-color: lightgray;
     display: inline-block;
-    padding: 15px 40px ;
+    padding: 15px 40px;
     width: fit-content;
     text-align: center;
     border: solid 1px lightgray;
     border-radius: 5px;
     margin-left: 15px;
 }
-#AgregarImagen{
- width: 0.1px;
- height: 0.1px;
- opacity: 0;
- overflow: hidden;
- position: absolute;
- z-index: -1
+
+#AgregarImagen {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1
 }
-.imagenMuestra{
+
+.imagenMuestra {
     width: 10%;
     display: flex;
     font-size: 13px;
     align-items: center;
 
 }
-.imagenMuestra img{
-    width:100%;
+
+.imagenMuestra img {
+    width: 100%;
     margin-left: 15px;
 }
-.imagenMuestra p{
+
+.imagenMuestra p {
     margin-left: 20px;
-    color:darkblue
+    color: darkblue
 }
-.formulario-txt{
+
+.formulario-txt {
     width: 70%;
     margin: 0 2%;
     height: 30px;
     border: solid 1px rgb(211, 211, 211);
     border-radius: 5px;
-    background-color:rgb(211, 211, 211)  ;
+    background-color: rgb(211, 211, 211);
 }
-.Descripcion{
+
+.Descripcion {
     width: 80%;
     margin: 0 2%;
     height: 100px;
     border: solid 1px lightgray;
     border-radius: 5px;
 }
-.profileChanges h4{
+
+.profileChanges h4 {
     font-size: 15px;
     color: rgb(226, 226, 226);
     font-weight: 300;
     margin-left: 15px;
     margin-bottom: 2px;
 }
-form p{
+
+form p {
     font-size: 12px;
     color: rgb(226, 226, 226);
     font-weight: lighter;
@@ -175,90 +200,106 @@ form p{
     margin-top: 0px;
 }
 
-.profileChanges button{
-   width: 20%;
-   height: 40px;
-   margin-left: 10%;
-   border-radius: 5px;
-   border: solid 1px lightgray;
-   background-color: lightgray;
-   font-size: 13px;
-   font-weight: bold;
-   font-family: montserrat;
-   color: rgb(70, 69, 69)
+.profileChanges button {
+    width: 20%;
+    height: 40px;
+    margin-left: 10%;
+    border-radius: 5px;
+    border: solid 1px lightgray;
+    background-color: lightgray;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: montserrat;
+    color: rgb(70, 69, 69)
 }
-.profileChanges button:hover{
+
+.profileChanges button:hover {
     color: white
 }
-.profileChanges .buttons{
-   display: flex;
-   align-items: center;
-   
-   margin-top: 10%;
-   margin-bottom: 10px;
+
+.profileChanges .buttons {
+    display: flex;
+    align-items: center;
+
+    margin-top: 10%;
+    margin-bottom: 10px;
 
 }
 
-.atrib-txt{
+.atrib-txt {
     font-size: 12px;
 }
-.atrib{
+
+.atrib {
     margin-left: 10%;
     margin-top: 40px;
 }
 
-/*ANIMACIONES*/ 
-label:hover{
+/*ANIMACIONES*/
+label:hover {
     background-color: lightgray;
     color: black;
 }
-.imagenMuestra p:hover{
+
+.imagenMuestra p:hover {
     text-decoration-line: underline;
 
 }
-.optionsConteiner{
+
+.optionsConteiner {
     position: fixed;
 }
 
 /*MEDIAS*/
-@media(max-width: 1050px){
-    .mainControlPanel .optionsConteiner p, h4{
+@media(max-width: 1050px) {
+
+    .mainControlPanel .optionsConteiner p,
+    h4 {
         font-size: 70%;
     }
-    .profileChanges .buttons{
+
+    .profileChanges .buttons {
         margin: 0 15px;
         margin-top: 30px;
         display: flex;
         justify-content: space-between;
-        
+
     }
-    .profileChanges button{
+
+    .profileChanges button {
         font-size: 10px;
         height: 30px;
     }
-    .profileChanges p{
+
+    .profileChanges p {
         font-size: 60%;
     }
-    .profileChangesh4{
+
+    .profileChangesh4 {
         font-size: 60%;
     }
-    .profileChanges .Oferta-txt{
+
+    .profileChanges .Oferta-txt {
         font-size: 12px;
-       
+
     }
-    .profileChanges{
+
+    .profileChanges {
         margin-bottom: 300px;
     }
-    .oferta{
+
+    .oferta {
         margin: 20px 10px;
     }
-    .imagenMuestra img{
+
+    .imagenMuestra img {
         width: 200%;
     }
- 
+
 }
-@media(max-width: 600px){
-    .box{
+
+@media(max-width: 600px) {
+    .box {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;

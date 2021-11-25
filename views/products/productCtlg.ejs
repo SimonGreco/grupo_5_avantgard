@@ -71,39 +71,39 @@
 
         <div class="seccion-productos">
 
-            <% var contadorDeOfertas = 0; %> 
-            
+            <% var contadorDeOfertas=0; %>
+
                 <% for(let i=productos.length -1 ; i>0; i--){ %>
-                    <% if(contadorDeOfertas < 4){ %> 
-                    <% producto=productos[i] %>
-                        <% if(producto.oferta !=undefined){ %>
-                            
-                            <% contadorDeOfertas = contadorDeOfertas + 1 %> 
-                               <a href="/products/<%= producto.id %> " class="producto">
+                    <% if(contadorDeOfertas < 4){ %>
+                        <% producto=productos[i] %>
+                            <% if(producto.oferta !=undefined){ %>
 
-                                    <img src="/img/Productos/<%=producto.image%>" alt="Imagen de producto">
+                                <% contadorDeOfertas=contadorDeOfertas + 1 %>
+                                    <a href="/products/<%= producto.id %> " class="producto">
 
-                                    <hr>
-                                    <div class="product-txt-conteiner">
-                                        <p class="Precio">$<%=producto.price%>
-                                        </p>
-                                        <p class="descripcion">
-                                            <%=producto.name%>
-                                        </p>
-                                    </div>
+                                        <img src="/img/Productos/<%=producto.image%>" alt="Imagen de producto">
 
-                                </a>
-                                
-                            
-                        <% } %>
-                    
-                        
-                <% } %>
-                
-            <% } %>
+                                        <hr>
+                                        <div class="product-txt-conteiner">
+                                            <p class="Precio">$<%=producto.price%>
+                                            </p>
+                                            <p class="descripcion">
+                                                <%=producto.name%>
+                                            </p>
+                                        </div>
+
+                                    </a>
+
+
+                                    <% } %>
+
+
+                                        <% } %>
+
+                                            <% } %>
 
         </div>
-        
+
         <br>
         <h2 class="cat-txt">Mas buscados</h2>
 

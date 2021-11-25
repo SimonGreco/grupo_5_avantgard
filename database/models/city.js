@@ -19,7 +19,7 @@ module.exports = function (sequelize, dataTypes) {
     }
 
     const City = sequelize.define(alias, cols, config);
-    
+
 
     return City
 }

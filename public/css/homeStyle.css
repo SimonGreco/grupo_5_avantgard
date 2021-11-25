@@ -1,58 +1,63 @@
 /*SLIDER*/
 
-body{
+body {
     background-color: #121655;
 }
 
-.slider{
+.slider {
     width: 100%;
     height: auto;
     position: relative;
-    
-    
+
+
 }
 
 
-.slider img{
-   
+.slider img {
+
     width: 100%;
-   
-    
+
+
 }
-.imagen_slider{
+
+.imagen_slider {
     content: url("/img/Slider.gif");
     width: 100%;
     transition: all 2000ms;
-    
+
 
 }
 
 
-.slider-txt{
+.slider-txt {
     position: absolute;
     z-index: 10;
     top: 20px;
     margin: 0px 30px;
     color: white
 }
-.slider-txt h2{
+
+.slider-txt h2 {
     font-weight: bolder;
     font-size: 40px;
     margin-bottom: 10px;
 }
-.slider-txt p{
+
+.slider-txt p {
     font-weight: bolder;
     font-size: 20px;
     margin-top: 0px;
 }
-.slider form{
+
+.slider form {
     position: absolute;
     z-index: 10px;
     width: 10%;
     bottom: 4%;
     right: 15%;
 }
-.slider button{
+
+.slider button {
     width: 210%;
     height: 60px;
     border-radius: 20px;
@@ -63,7 +68,8 @@ body{
     font-size: 20px;
     font-weight: bold;
 }
-.slider .fas{
+
+.slider .fas {
     font-size: 70px;
     position: absolute;
     z-index: 10;
@@ -71,94 +77,105 @@ body{
     bottom: 1%;
     color: white;
     margin: 0px
-    
 }
 
 /*BODY*/
-hr{
+hr {
     size: 12px;
     color: black;
     width: 40%;
 
 }
-.seccion-productos-contenedor{
+
+.seccion-productos-contenedor {
     width: 100%;
     max-width: 1380px;
     margin: 0 auto;
     height: 500px;
-    
+
 }
-.product-catg{
-    display:flex;
+
+.product-catg {
+    display: flex;
     font-size: 20px;
     margin: 0px 15px;
     justify-content: center;
     color: white;
 }
-.product-catg p{
+
+.product-catg p {
     margin: 0px 20px
 }
-.product-catg .Mas-vistos{
+
+.product-catg .Mas-vistos {
     font-weight: bold;
     text-decoration-line: underline;
 }
-.seccion-productos{
+
+.seccion-productos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
     align-items: center;
     margin-top: 30px;
-    
+
 }
-.producto{
+
+.producto {
     width: 20%;
-    object-fit:cover;
+    object-fit: cover;
     height: 400px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    
+
 }
-.producto img{
-    width: 100%;  
+
+.producto img {
+    width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.product-txt-conteiner{
+
+.product-txt-conteiner {
     background-color: white;
     padding: 15px;
     height: 100px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-.descripcion{
+
+.descripcion {
     font-size: 15px;
     margin: 5px 4px;
     opacity: 0;
     color: black;
     font-weight: 300;
 }
-.Precio{
+
+.Precio {
     font-size: 20px;
     margin-top: 1px;
     font-weight: 600;
     color: rgb(82, 82, 82);
 }
-.producto hr{
+
+.producto hr {
     margin: -1px;
     size: 10px;
     width: 100%;
 }
 
 /*CATEGORIAS*/
-.cat-txt{
+.cat-txt {
     color: white;
     width: 80%;
     max-width: 1200px;
     margin: 20px auto;
 }
-.main-categories{
+
+.main-categories {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -169,7 +186,8 @@ hr{
     margin: auto auto;
 
 }
-.categories-conteiner{
+
+.categories-conteiner {
     height: 90%;
     width: 50%;
     margin: 2% auto;
@@ -177,7 +195,8 @@ hr{
     display: flex;
     flex-direction: column;
 }
-.categoria-grande{
+
+.categoria-grande {
     height: 48%;
     width: 100%;
     background-color: black;
@@ -185,7 +204,8 @@ hr{
     margin-bottom: 3%;
     position: relative;
 }
-.categoria-chica{
+
+.categoria-chica {
     height: 23%;
     width: 100%;
     background-color: black;
@@ -193,7 +213,8 @@ hr{
     margin-top: 2%;
     position: relative;
 }
-.categoria-chica1{
+
+.categoria-chica1 {
     height: 23%;
     width: 100%;
     background-color: black;
@@ -202,7 +223,8 @@ hr{
     position: relative;
 
 }
-.categoria-grande1{
+
+.categoria-grande1 {
     height: 48%;
     width: 100%;
     background-color: black;
@@ -211,24 +233,26 @@ hr{
     position: relative;
 }
 
-.main-categories .ctg-txt-conteiner{
+.main-categories .ctg-txt-conteiner {
     position: absolute;
     bottom: 0px;
     height: 60px;
-    background-color: rgba(121, 121, 121,0.4);
+    background-color: rgba(121, 121, 121, 0.4);
     width: 100%;
-    border-bottom-left-radius: 15px ;
+    border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     text-align: center;
     color: white;
 }
-.ctg-img{
+
+.ctg-img {
     width: 100%;
     height: auto;
     border-radius: 15px;
 }
-@supports (object-fit: cover){
-    .ctg-img{
+
+@supports (object-fit: cover) {
+    .ctg-img {
         height: 100%;
         object-fit: cover;
         object-position: center center;
@@ -237,26 +261,28 @@ hr{
 
 /*ICONOS*/
 
-.iconos-conteiner{
+.iconos-conteiner {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
 }
-.icono{
+
+.icono {
     margin-right: 80px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color:black
-
+    color: black
 }
-.icono i{
+
+.icono i {
     font-size: 60px;
     color: rgba(255, 255, 255, 0.87)
 }
-.icono p{
+
+.icono p {
     color: white;
     margin-top: 20px;
 }
@@ -265,182 +291,209 @@ hr{
 /*ANIMACIONES*/
 
 
-button:hover{
-    background-color:grey;
+button:hover {
+    background-color: grey;
     text-decoration-line: underline;
 }
-button{
+
+button {
     transition: all 300ms;
 }
-.producto:hover{
-  box-shadow:
-    inset 0 -3em 3em rgba(0,0,0,0),
-          0 0  0 2px rgb(255, 255, 255),
-          0.3em 0.3em 1em rgba(0,0,0,0.3);
-          background-color: rgb(255, 255, 255);
+
+.producto:hover {
+    box-shadow:
+        inset 0 -3em 3em rgba(0, 0, 0, 0),
+        0 0 0 2px rgb(255, 255, 255),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255);
 }
-.producto{
+
+.producto {
     transition: all 100ms;
 }
-.descripcion:hover{
+
+.descripcion:hover {
     opacity: 1;
 }
-.descripcion{
+
+.descripcion {
     transition: all 100ms;
 }
+
 /*Eventualmente usar Js para hacer que la descripcion aparezca cuando se hace hover sobre el elemento producto*/
 
-.categoria-chica:hover{
+.categoria-chica:hover {
     box-shadow:
-    inset 0 -3em 3em rgba(0,0,0,0),
-          0 0  0 2px rgb(151, 151, 151),
-          0.3em 0.3em 1em rgba(0,0,0,0.3);
-          background-color: rgb(126, 126, 126);
+        inset 0 -3em 3em rgba(0, 0, 0, 0),
+        0 0 0 2px rgb(151, 151, 151),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    background-color: rgb(126, 126, 126);
 }
-.categoria-chica1:hover{
+
+.categoria-chica1:hover {
     box-shadow:
-    inset 0 -3em 3em rgba(0,0,0,0),
-          0 0  0 2px rgb(151, 151, 151),
-          0.3em 0.3em 1em rgba(0,0,0,0.3);
-          background-color: rgb(126, 126, 126);
+        inset 0 -3em 3em rgba(0, 0, 0, 0),
+        0 0 0 2px rgb(151, 151, 151),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    background-color: rgb(126, 126, 126);
 }
-.categoria-grande:hover{
+
+.categoria-grande:hover {
     box-shadow:
-    inset 0 -3em 3em rgba(0,0,0,0),
-          0 0  0 2px rgb(151, 151, 151),
-          0.3em 0.3em 1em rgba(0,0,0,0.3);
-          background-color: rgb(126, 126, 126);
+        inset 0 -3em 3em rgba(0, 0, 0, 0),
+        0 0 0 2px rgb(151, 151, 151),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    background-color: rgb(126, 126, 126);
 }
-.categoria-grande1:hover{
+
+.categoria-grande1:hover {
     box-shadow:
-    inset 0 -3em 3em rgba(0,0,0,0),
-          0 0  0 2px rgb(151, 151, 151),
-          0.3em 0.3em 1em rgba(0,0,0,0.3);
-          background-color: rgb(126, 126, 126);
+        inset 0 -3em 3em rgba(0, 0, 0, 0),
+        0 0 0 2px rgb(151, 151, 151),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    background-color: rgb(126, 126, 126);
 }
-.icono i:hover{
-    color:rgb(77, 76, 76)
+
+.icono i:hover {
+    color: rgb(77, 76, 76)
 }
-.icono i{
+
+.icono i {
     transition: all 100ms;
 }
 
 
 /*MEDIAS*/
-@media (max-width:480px){
+@media (max-width:480px) {
+
     /*Slider*/
-    .slider form{
+    .slider form {
         display: none;
     }
-    .slider i{
+
+    .slider i {
         display: none
     }
-    
-    .product-catg{
+
+    .product-catg {
         font-size: 15px;
     }
-    .cat-txt{
+
+    .cat-txt {
         font-size: 15px;
     }
-    .iconos-conteiner p{
+
+    .iconos-conteiner p {
         font-size: 15px;
     }
 
 
     /*body*/
-    
-    hr{
+
+    hr {
         width: 60%;
     }
-    .seccion-productos-contenedor{
+
+    .seccion-productos-contenedor {
         margin-bottom: 325%;
     }
-    .seccion-productos i{
+
+    .seccion-productos i {
         display: none;
     }
-    .producto{
+
+    .producto {
         width: 80%;
         height: auto;
         margin-bottom: 10px;
         align-self: center;
     }
-    .product-txt-conteiner{
+
+    .product-txt-conteiner {
         padding: 2px;
     }
-    .product-txt-conteiner p{
-        font-size:70%;
+
+    .product-txt-conteiner p {
+        font-size: 70%;
 
     }
-    .categories-conteiner div{
+
+    .categories-conteiner div {
         height: 40%;
         width: auto;
         margin-top: 6%;
         margin-bottom: auto;
     }
-    .ctg-txt-conteiner h2{
+
+    .ctg-txt-conteiner h2 {
         font-size: 11px;
     }
 
-    .iconos-conteiner{
+    .iconos-conteiner {
         width: 80%;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 90px auto;
     }
-    .icono{
+
+    .icono {
         margin: 0 auto;
         margin-top: 10%;
     }
-    .iconos-conteiner i{
+
+    .iconos-conteiner i {
         font-size: 40px;
     }
-    .iconos-conteiner p{
+
+    .iconos-conteiner p {
         font-size: 70%;
     }
 }
 
-@media (max-width:768px){
-    .slider i{
+@media (max-width:768px) {
+    .slider i {
         display: none;
     }
-    .slider button{
+
+    .slider button {
         height: auto;
     }
-    .slider-txt h2{
+
+    .slider-txt h2 {
         font-size: 15px
     }
-    .slider-txt p{
+
+    .slider-txt p {
         font-size: 10px
     }
-    .producto{
+
+    .producto {
         width: 40%;
         margin-bottom: 20px;
     }
-    .seccion-productos i{
+
+    .seccion-productos i {
         display: none;
     }
-    .seccion-productos-contenedor{
+
+    .seccion-productos-contenedor {
         margin-bottom: 50%;
     }
-    .ctg-txt-conteiner{
+
+    .ctg-txt-conteiner {
         font-size: 10px;
     }
 
 }
 
-@media (max-width:1200px){
-    .slider button{
+@media (max-width:1200px) {
+    .slider button {
         height: 70px;
     }
-    .slider i{
+
+    .slider i {
         display: none;
-    } 
+    }
 
 }
-
-
-
-
-
-

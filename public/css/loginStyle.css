@@ -1,16 +1,16 @@
-.login-conteiner{
-   height: 91.8vh;
+.login-conteiner {
+    height: 91.8vh;
     background-size: cover;
 }
-   
-.login-conteiner{
+
+.login-conteiner {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 700px;
 }
 
-.main-login{
+.main-login {
     width: 37%;
     max-width: 480px;
     position: absolute;
@@ -22,14 +22,16 @@
     align-items: center;
     justify-content: center;
 }
-.login-logo{
+
+.login-logo {
     height: 20%;
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     position: relative;
 }
-.formularios1{
+
+.formularios1 {
     height: 80%;
     width: 100%;
     border-bottom-left-radius: 10px;
@@ -39,62 +41,72 @@
     align-items: center;
 
 }
-.login-logo img{
+
+.login-logo img {
     width: 40%;
     margin-top: 20px;
     margin-left: 30%;
     display: block;
 }
-.txt-conteiner{
+
+.txt-conteiner {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.login-logo h2{
+
+.login-logo h2 {
     margin-left: 14px;
     font-weight: 900;
     font-size: 20px;
 }
-.login-logo p{
+
+.login-logo p {
     margin-right: 12px;
     color: blue;
     font-size: 15px;
 }
-hr{
+
+hr {
     width: 100%;
     size: 10px;
     margin-top: -17px;
 }
-.formularios2{
+
+.formularios2 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 100%;
 }
-.Facebook-button{
+
+.Facebook-button {
     width: 90%;
     height: 50px;
-    border: solid 1px 	#4267B2;
-    color: 	#4267B2;
+    border: solid 1px #4267B2;
+    color: #4267B2;
     font-family: montserrat;
     font-size: 16px;
     border-radius: 10px;
 }
-.formularios1 i{
+
+.formularios1 i {
     margin: 0 10px;
 }
-.Google-button{
+
+.Google-button {
     width: 90%;
     height: 50px;
-    border: solid 1px 	#DB4437;
-    color: 	#DB4437;
+    border: solid 1px #DB4437;
+    color: #DB4437;
     font-family: montserrat;
     font-size: 16px;
     border-radius: 10px;
     margin-top: 1%;
 }
-form .formularios-sesion{
+
+form .formularios-sesion {
     width: 90%;
     height: 40px;
     font-family: montserrat;
@@ -105,17 +117,20 @@ form .formularios-sesion{
     padding: 5px;
 
 }
-.checkbox{
+
+.checkbox {
     font-size: 15px;
 }
-.login-button{
+
+.login-button {
     display: flex;
     justify-content: space-between;
     width: 100%;
     background-color: transparent;
     margin: 10px 10px;
 }
-.login-button button{
+
+.login-button button {
     background-color: white;
     width: 30%;
     height: 40px;
@@ -126,7 +141,8 @@ form .formularios-sesion{
     font-family: montserrat;
     margin-left: 5%;
 }
-.login-button p{
+
+.login-button p {
     margin-right: 5%;
     color: blue;
     font-size: 15px;
@@ -135,31 +151,38 @@ form .formularios-sesion{
 /*ANIMACIONES*/
 
 
-.txt-conteiner p:hover{
+.txt-conteiner p:hover {
     text-decoration-line: underline;
 }
-.Google-button:hover{
-    background-color:#DB4437 ;
+
+.Google-button:hover {
+    background-color: #DB4437;
     color: white;
 }
-.Google-button{
+
+.Google-button {
     transition: all 300ms;
 }
-.Facebook-button:hover{
-    background-color:#4267B2 ;
-    color:white
+
+.Facebook-button:hover {
+    background-color: #4267B2;
+    color: white
 }
-.Facebook-button{
+
+.Facebook-button {
     transition: all 300ms;
 }
-.acceder:hover{
+
+.acceder:hover {
     background-color: grey;
     color: white;
 }
-.acceder{
+
+.acceder {
     transition: all 100ms;
 }
-.Recuperacion-contraseña:hover{
+
+.Recuperacion-contraseña:hover {
     text-decoration-line: underline;
 }
 
@@ -171,63 +194,74 @@ form .formularios-sesion{
     flex-direction: column;
     align-items: center;
 }
+
 .field .error {
     margin: 0;
 }
 
 /*MEDIAS*/
 
-@media (max-width:768px){
-    .main-login{
+@media (max-width:768px) {
+    .main-login {
         min-width: 90%;
         max-height: 576px;
-        
+
     }
-    .login-logo{
+
+    .login-logo {
         height: 15%;
     }
-    .txt-conteiner h2{
+
+    .txt-conteiner h2 {
         font-size: 15px;
-        
+
     }
-    .txt-conteiner p{
+
+    .txt-conteiner p {
         font-size: 10px;
     }
-   .Google-button, .Facebook-button{
+
+    .Google-button,
+    .Facebook-button {
         font-size: 14px;
         height: 40px;
         width: 70%;
-   }
- 
-   .formularios2 input{
+    }
+
+    .formularios2 input {
         height: 100%;
         font-size: 13px;
         width: 70%;
     }
-    .formularios1 p{
+
+    .formularios1 p {
         font-size: 10px;
     }
-    .login-button{
+
+    .login-button {
         font-size: 12px;
-      
+
     }
-    .login-button button{
+
+    .login-button button {
         font-size: 12px;
     }
-    
-    
+
+
 }
-@media(max-width: 1200px){
-    .main-login{
+
+@media(max-width: 1200px) {
+    .main-login {
         min-width: 50%;
         max-width: 580;
-        
+
         height: fit-content;
     }
-    
+
 }
-@media(max-width: 780px){
-    .main-login{
+
+@media(max-width: 780px) {
+    .main-login {
         min-width: 80%;
     }
 }

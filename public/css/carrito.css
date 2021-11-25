@@ -8,7 +8,7 @@ main {
     width: 100%;
     padding-bottom: 60px;
 }
-  
+
 
 .sitio {
     display: flex;
@@ -160,7 +160,7 @@ hr {
     font-size: 15px;
 }
 
-.inicio:hover{
+.inicio:hover {
     text-decoration-line: underline;
 }
 
@@ -169,28 +169,31 @@ hr {
     color: black;
     border: 1px solid black;
 }
-.menosMas i{
+
+.menosMas i {
     font-size: 14px;
 }
 
 /*animaciones*/
 
-.footer-text p:hover{
+.footer-text p:hover {
     text-decoration-line: underline;
 }
-.txt:hover{
+
+.txt:hover {
     margin: 0 40px;
-    width: 30vh;   
+    width: 30vh;
     height: 10vh;
     background-color: black;
     text-align: center;
     border-radius: 10px;
 }
-.txt{
+
+.txt {
     transition: all 400ms;
 }
 
-.menosMas i:hover{
+.menosMas i:hover {
     font-size: 16px;
     color: black;
 }
@@ -202,6 +205,7 @@ hr {
         display: flex;
         justify-content: center;
     }
+
     .botonContinuar {
         font-size: 10px;
         min-width: 40%;
@@ -213,15 +217,19 @@ hr {
         font-size: 12px;
         width: 15%;
     }
+
     .image {
         margin-left: 0;
     }
+
     .precio {
         margin-right: 0;
     }
+
     .detallesDeEnvio {
         margin-right: 0;
     }
+
     .precioTotal {
         margin-right: 0;
     }

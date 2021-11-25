@@ -21,13 +21,13 @@ window.addEventListener("load", function () {
         switch (e.target.name) {
             case "email":
                 validarCampo(expresiones.email, e.target, 'email', "debe ser valido");
-            break;
+                break;
             case "password":
                 validarCampo(expresiones.password, e.target, 'password', "acepta de 4 a 12 caracteres");
-            break;
+                break;
             case "first_name":
                 validarCampo(expresiones.first_name, e.target, "first_name", "El nombre no es válido");
-            break;
+                break;
             case "last_name":
                 validarCampo(expresiones.last_name, e.target, "last_name", "El apellido no es válido")
         }
@@ -37,12 +37,11 @@ window.addEventListener("load", function () {
         let card = document.querySelector(`.field.${campo} p.error`);
         card.innerHTML = ""
         if (input.value == "") {
-           card.innerHTML = `El campo ${input.name} no puede estar vacio`
-          card.style.margin = "revert"
-           campos[campo] = false
-            
-        }
-        else if (!expresion.test(input.value)){
+            card.innerHTML = `El campo ${input.name} no puede estar vacio`
+            card.style.margin = "revert"
+            campos[campo] = false
+
+        } else if (!expresion.test(input.value)) {
             card.innerHTML = `El campo ${input.name} ${validacion}`
             card.style.margin = "revert"
             campos[campo] = false
@@ -58,8 +57,8 @@ window.addEventListener("load", function () {
         input.addEventListener('blur', validarFormulario);
     });
 
-    formulario.addEventListener("submit", function(e) {
-        if ( !(campos.email == true && campos.password == true && campos.last_name == true && campos.first_name == true) ) {
+    formulario.addEventListener("submit", function (e) {
+        if (!(campos.email == true && campos.password == true && campos.last_name == true && campos.first_name == true)) {
             e.preventDefault()
         }
     });
@@ -96,7 +95,7 @@ window.addEventListener("load", function () {
 //         }
 
 //         let campoEmail =  document.querySelector("input.email");
- 
+
 //         if (campoEmail.value = "") {
 //             alert("Debes insertar tu email")
 //         } else if (campoEmail.value.lenght < 6) {

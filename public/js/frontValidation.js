@@ -1,8 +1,8 @@
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
     let formulario = document.querySelector("form.productsForm")
 
-    
-    formulario.addEventListener("submit", function(e) {
+
+    formulario.addEventListener("submit", function (e) {
         e.preventDefault();
 
 
@@ -11,8 +11,8 @@ window.addEventListener("load", function() {
         // let acceptedExt = [".png", ".jpg", ".jpeg", ".gif"]
         // let extension = (path.extname(file)).toLowerCase();
         // if(!acceptedExt.includes(extension))
-        
-        
+
+
         let putTitle = document.querySelector("input.formulario-txt");
 
         if (putTitle.value == "") {
@@ -22,10 +22,10 @@ window.addEventListener("load", function() {
         }
 
 
-        let  putDescription = document.querySelector("textarea.Descripcion");
+        let putDescription = document.querySelector("textarea.Descripcion");
 
         if (putDescription.value.length < 20) {
             alert("La descripción debe tener al menos 20 caracteres");
         }
     });
-});      
+});

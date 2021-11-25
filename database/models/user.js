@@ -1,51 +1,51 @@
-module.exports = function(sequelize, dataTypes){
+module.exports = function (sequelize, dataTypes) {
     let alias = "users"
     let cols = {
         id: {
-            type : dataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
             unique: true
         },
-        first_name:{
-            type : dataTypes.STRING,
+        first_name: {
+            type: dataTypes.STRING,
 
         },
-        last_name:{
-            type : dataTypes.STRING,
+        last_name: {
+            type: dataTypes.STRING,
 
         },
         email: {
-            type : dataTypes.STRING,
+            type: dataTypes.STRING,
             unique: true
         },
         password: {
-            type : dataTypes.STRING,
+            type: dataTypes.STRING,
 
         },
         admin: {
-            type : dataTypes.BOOLEAN,
+            type: dataTypes.BOOLEAN,
 
         },
         image: {
-            type : dataTypes.STRING,
+            type: dataTypes.STRING,
 
         },
         documento: {
-            type : dataTypes.INTEGER,
+            type: dataTypes.INTEGER,
 
         },
         phone: {
-            type : dataTypes.INTEGER,
+            type: dataTypes.INTEGER,
 
         },
         addres: {
-            type : dataTypes.STRING,
+            type: dataTypes.STRING,
 
         },
         cityId: {
-            type : dataTypes.INTEGER,
-             
+            type: dataTypes.INTEGER,
+
 
         },
     };
@@ -56,7 +56,7 @@ module.exports = function(sequelize, dataTypes){
     }
 
     const User = sequelize.define(alias, cols, config);
-    
-   
+
+
     return User
 }

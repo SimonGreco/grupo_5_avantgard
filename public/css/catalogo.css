@@ -1,40 +1,43 @@
-body{
+body {
     background-color: #121655;
 }
-.contenedor-de-texto{
+
+.contenedor-de-texto {
     width: 100%;
 }
 
-.catg{
+.catg {
     margin: 0 auto;
     color: white;
     max-width: 1250px;
 
 }
 
-hr{
+hr {
     size: 12px;
     color: black;
     width: 40%;
 
 }
 
-.product-catg{
-    display:flex;
+.product-catg {
+    display: flex;
     font-size: 20px;
     margin: 0px 15px;
     justify-content: center;
     color: white;
 }
-.product-catg p{
+
+.product-catg p {
     margin: 0px 20px
 }
-.product-catg .Mas-vistos{
+
+.product-catg .Mas-vistos {
     font-weight: bold;
     text-decoration-line: underline;
 }
 
-.seccion-productos{
+.seccion-productos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -43,58 +46,66 @@ hr{
     margin: 0 auto;
     align-items: center;
     margin-top: 30px;
-    
-    
+
+
 }
-.producto{
+
+.producto {
     width: 20%;
-    object-fit:cover;
+    object-fit: cover;
     height: 400px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    
+
 }
-.producto img{
-    width: 100%;  
+
+.producto img {
+    width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.product-txt-conteiner{
+
+.product-txt-conteiner {
     background-color: white;
     padding: 15px;
     height: 100px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-.descripcion{
+
+.descripcion {
     font-size: 15px;
     margin: 5px 4px;
     opacity: 0;
     color: black;
     font-weight: 300;
 }
-.Precio{
+
+.Precio {
     font-size: 20px;
     margin-top: 1px;
     font-weight: 600;
     color: rgb(82, 82, 82);
 }
-.producto hr{
+
+.producto hr {
     margin: 0px;
     size: 10px;
     width: 100%;
 }
-.fa-chevron-left{
+
+.fa-chevron-left {
     color: white;
 }
-.fa-chevron-right{
+
+.fa-chevron-right {
     color: white;
 }
 
 /* categorias */
 
-.cat-txt{
+.cat-txt {
     color: white;
     width: 95%;
     max-width: 1300px;
@@ -102,7 +113,7 @@ hr{
     font-size: 18px;
 }
 
-.main-categories{
+.main-categories {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -114,7 +125,7 @@ hr{
 
 }
 
-.categories-conteiner{
+.categories-conteiner {
     height: 90%;
     width: 50%;
     margin: 2% auto;
@@ -122,7 +133,8 @@ hr{
     display: flex;
     flex-direction: column;
 }
-.categoria-grande{
+
+.categoria-grande {
     height: 48%;
     width: 100%;
     background-color: black;
@@ -130,7 +142,8 @@ hr{
     margin-bottom: 3%;
     position: relative;
 }
-.categoria-chica{
+
+.categoria-chica {
     height: 23%;
     width: 100%;
     background-color: black;
@@ -138,7 +151,8 @@ hr{
     margin-top: 2%;
     position: relative;
 }
-.categoria-chica1{
+
+.categoria-chica1 {
     height: 23%;
     width: 100%;
     background-color: black;
@@ -147,7 +161,8 @@ hr{
     position: relative;
 
 }
-.categoria-grande1{
+
+.categoria-grande1 {
     height: 48%;
     width: 100%;
     background-color: black;
@@ -156,24 +171,26 @@ hr{
     position: relative;
 }
 
-.main-categories .ctg-txt-conteiner{
+.main-categories .ctg-txt-conteiner {
     position: absolute;
     bottom: 0px;
     height: 60px;
-    background-color: rgba(121, 121, 121,0.4);
+    background-color: rgba(121, 121, 121, 0.4);
     width: 100%;
-    border-bottom-left-radius: 15px ;
+    border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     text-align: center;
     color: white;
 }
-.ctg-img{
+
+.ctg-img {
     width: 100%;
     height: auto;
     border-radius: 15px;
 }
-@supports (object-fit: cover){
-    .ctg-img{
+
+@supports (object-fit: cover) {
+    .ctg-img {
         height: 100%;
         object-fit: cover;
         object-position: center center;
@@ -182,128 +199,150 @@ hr{
 
 /* animaciones */
 
-.producto:hover{
+.producto:hover {
     box-shadow:
-      inset 0 -3em 3em rgba(0,0,0,0),
-            0 0  0 2px rgb(255, 255, 255),
-            0.3em 0.3em 1em rgba(0,0,0,0.3);
-            background-color: rgb(255, 255, 255);
-  }
-  .producto{
-      transition: all 100ms;
-  }
-  .descripcion:hover{
-      opacity: 1;
-  }
-  .descripcion{
-      transition: all 100ms;
-  }
-  .categoria-chica:hover{
-      box-shadow:
-      inset 0 -3em 3em rgba(0,0,0,0),
-            0 0  0 2px rgb(151, 151, 151),
-            0.3em 0.3em 1em rgba(0,0,0,0.3);
-            background-color: rgb(126, 126, 126);
-  }
-  .categoria-chica1:hover{
-      box-shadow:
-      inset 0 -3em 3em rgba(0,0,0,0),
-            0 0  0 2px rgb(151, 151, 151),
-            0.3em 0.3em 1em rgba(0,0,0,0.3);
-            background-color: rgb(126, 126, 126);
-  }
-  .categoria-grande:hover{
-      box-shadow:
-      inset 0 -3em 3em rgba(0,0,0,0),
-            0 0  0 2px rgb(151, 151, 151),
-            0.3em 0.3em 1em rgba(0,0,0,0.3);
-            background-color: rgb(126, 126, 126);
-  }
-  .categoria-grande1:hover{
-      box-shadow:
-      inset 0 -3em 3em rgba(0,0,0,0),
-            0 0  0 2px rgb(151, 151, 151),
-            0.3em 0.3em 1em rgba(0,0,0,0.3);
-            background-color: rgb(126, 126, 126);
-  }
-  .icono i:hover{
-      color:rgb(77, 76, 76)
-  }
-  .icono i{
-      transition: all 100ms;
-  }
+        inset 0 -3em 3em rgba(0, 0, 0, 0),
+        0 0 0 2px rgb(255, 255, 255),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255);
+}
+
+.producto {
+    transition: all 100ms;
+}
+
+.descripcion:hover {
+    opacity: 1;
+}
+
+.descripcion {
+    transition: all 100ms;
+}
+
+.categoria-chica:hover {
+    box-shadow:
+        inset 0 -3em 3em rgba(0, 0, 0, 0),
+        0 0 0 2px rgb(151, 151, 151),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    background-color: rgb(126, 126, 126);
+}
+
+.categoria-chica1:hover {
+    box-shadow:
+        inset 0 -3em 3em rgba(0, 0, 0, 0),
+        0 0 0 2px rgb(151, 151, 151),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    background-color: rgb(126, 126, 126);
+}
+
+.categoria-grande:hover {
+    box-shadow:
+        inset 0 -3em 3em rgba(0, 0, 0, 0),
+        0 0 0 2px rgb(151, 151, 151),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    background-color: rgb(126, 126, 126);
+}
+
+.categoria-grande1:hover {
+    box-shadow:
+        inset 0 -3em 3em rgba(0, 0, 0, 0),
+        0 0 0 2px rgb(151, 151, 151),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    background-color: rgb(126, 126, 126);
+}
+
+.icono i:hover {
+    color: rgb(77, 76, 76)
+}
+
+.icono i {
+    transition: all 100ms;
+}
 
 /*medias*/
 
-@media (max-width:480px){
-    .catg{
+@media (max-width:480px) {
+    .catg {
         text-align: center;
         margin: 0 auto;
     }
-    h2{
+
+    h2 {
         text-align: center;
     }
-    hr{
+
+    hr {
         width: 60%;
     }
-    
-    .seccion-productos-contenedor{
+
+    .seccion-productos-contenedor {
         margin-bottom: 325%;
     }
-    .seccion-productos i{
+
+    .seccion-productos i {
         display: none;
     }
-    .producto{
+
+    .producto {
         width: 80%;
         height: auto;
         margin-bottom: 10px;
         align-self: center;
-        
+
     }
-    .categories-conteiner div{
+
+    .categories-conteiner div {
         height: 40%;
         width: auto;
         margin-top: 6%;
         margin-bottom: auto;
     }
-    .cat-txt{
+
+    .cat-txt {
         font-size: 15px;
     }
 
-    .iconos-conteiner{
+    .iconos-conteiner {
         width: 80%;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 90px auto;
     }
-    .icono{
+
+    .icono {
         margin: 0 auto;
         margin-top: 10%;
     }
-    footer{
+
+    footer {
         margin-top: 25%;
     }
-    .product-txt-conteiner p{
+
+    .product-txt-conteiner p {
         font-size: 15px;
     }
-    .product-txt-conteiner .descripcion{
+
+    .product-txt-conteiner .descripcion {
         font-size: 10px;
     }
 }
 
-@media (max-width:768px){
-    .producto{
+@media (max-width:768px) {
+    .producto {
         width: 40%;
         margin-bottom: 20px;
     }
-    .seccion-productos i{
+
+    .seccion-productos i {
         display: none;
     }
-    .seccion-productos-contenedor{
+
+    .seccion-productos-contenedor {
         margin-bottom: 50%;
     }
-    .ctg-txt-conteiner{
+
+    .ctg-txt-conteiner {
         font-size: 10px;
     }
 }

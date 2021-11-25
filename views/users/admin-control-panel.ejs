@@ -3,116 +3,134 @@
 
 <head>
     <%- include("../partials/head") %>
-    <title>Mi tienda</title>
-    <link href="/css/controlPanel.css" rel="stylesheet">
+        <title>Mi tienda</title>
+        <link href="/css/controlPanel.css" rel="stylesheet">
 </head>
 
 <body>
     <%- include("../partials/header") %>
 
-    <main>
-        <div id= "control-panel-cover">
+        <main>
+            <div id="control-panel-cover">
 
-            
-        </div>
-        
-        <article class="mainControlPanel">
-            
-            <section class="optionsConteiner">
-                <h4><i class="fas fa-house-user"></i> Inicio</h3>
-                    <h5>Mi tienda</h5>
-                </h4>
-                <p><i class="fas fa-cog"></i> Datos</p>
-                <p id="productos"><i class="fas fa-box-open"></i> Productos</p>
-                <p><i class="fas fa-piggy-bank"></i> Formas de pago</p>
-                <p><i class="fas fa-truck"></i> Formas de envío</p>
-
-                <h5>Mis ventas</h4>
-                    <p><i class="fas fa-cart-arrow-down"></i> Ventas</p>
-                    <p><i class="fas fa-comments"></i> Preguntas recibidas</p>
-
-            </section>
-        
-        </article>
-        
-        <div class="misProductos"><h3>Mis Productos</h3></div>
-        <article class="productsList">
-            <p class="ListadoDeProductos"> Listado de productos</p>
-            <form class="search-product-bar" method="GET" action="../products/create">
-                <div class="search-bar1">
-                    <input type="text" name="search-product"
-                        placeholder="Buscá entre tus productos"></div>
-                <button type="submit"> <i class="fas fa-plus"></i> Agregar nuevo</button>
-            </form>
-            <hr width="100%">
-            <div class="ids">
-                <div id="id"><p>#</p></div>
-                <div id="imagen"><p>Imagen</p></div>
-                <div id="nombre"><p>Nombre</p></div>
-                <div id="estado"><p>Estado</p></div>
-                <div id="categoria"><p>Categoria</p></div>
-                <div id="acciones"><p>Acciones</p></div>
 
             </div>
-            <% for(let i = productos.length-1; i>productos.length -5; i--){ %> 
-                <% let producto = productos[i] %> 
-            <div class="product-view">
-                <div class="id">
-                    <p><%= producto.id %> </p>
+
+            <article class="mainControlPanel">
+
+                <section class="optionsConteiner">
+                    <h4><i class="fas fa-house-user"></i> Inicio</h3>
+                        <h5>Mi tienda</h5>
+                    </h4>
+                    <p><i class="fas fa-cog"></i> Datos</p>
+                    <p id="productos"><i class="fas fa-box-open"></i> Productos</p>
+                    <p><i class="fas fa-piggy-bank"></i> Formas de pago</p>
+                    <p><i class="fas fa-truck"></i> Formas de envío</p>
+
+                    <h5>Mis ventas</h4>
+                        <p><i class="fas fa-cart-arrow-down"></i> Ventas</p>
+                        <p><i class="fas fa-comments"></i> Preguntas recibidas</p>
+
+                </section>
+
+            </article>
+
+            <div class="misProductos">
+                <h3>Mis Productos</h3>
+            </div>
+            <article class="productsList">
+                <p class="ListadoDeProductos"> Listado de productos</p>
+                <form class="search-product-bar" method="GET" action="../products/create">
+                    <div class="search-bar1">
+                        <input type="text" name="search-product" placeholder="Buscá entre tus productos">
+                    </div>
+                    <button type="submit"> <i class="fas fa-plus"></i> Agregar nuevo</button>
+                </form>
+                <hr width="100%">
+                <div class="ids">
+                    <div id="id">
+                        <p>#</p>
+                    </div>
+                    <div id="imagen">
+                        <p>Imagen</p>
+                    </div>
+                    <div id="nombre">
+                        <p>Nombre</p>
+                    </div>
+                    <div id="estado">
+                        <p>Estado</p>
+                    </div>
+                    <div id="categoria">
+                        <p>Categoria</p>
+                    </div>
+                    <div id="acciones">
+                        <p>Acciones</p>
+                    </div>
+
                 </div>
-                <div class="imagen" style="background-image: url('/img/Productos/<%= producto.image%>');" >
-                </div>
-                <div class="nombre">
-                    <p> <%= producto.name %>
-                    </p>
-                </div>
-                <div class="estado">
-                    <p>Disponible</p>
-                </div>
-                <div class="categoria">
-                    <p><a href="/">Estudio</a> > <a href="/"> 
-                        <% for(let i = 0; i<categorias.length; i++){%>
-                            <% if(categorias[i].id == producto.categoryId){ %>
-                                <%=  categorias[i].name %> 
-                            
+                <% for(let i=productos.length-1; i>productos.length -5; i--){ %>
+                    <% let producto=productos[i] %>
+                        <div class="product-view">
+                            <div class="id">
+                                <p>
+                                    <%= producto.id %>
+                                </p>
+                            </div>
+                            <div class="imagen" style="background-image: url('/img/Productos/<%= producto.image%>');">
+                            </div>
+                            <div class="nombre">
+                                <p>
+                                    <%= producto.name %>
+                                </p>
+                            </div>
+                            <div class="estado">
+                                <p>Disponible</p>
+                            </div>
+                            <div class="categoria">
+                                <p><a href="/">Estudio</a> > <a href="/">
+                                        <% for(let i=0; i<categorias.length; i++){%>
+                                            <% if(categorias[i].id==producto.categoryId){ %>
+                                                <%= categorias[i].name %>
+
+                                                    <% } %>
+                                                        <% } %>
+                                    </a></p>
+                            </div>
+                            <div class="acciones">
+                                <p id="edit-button"><a href="../products/<%= producto.id %>/edit "><i
+                                            class="far fa-edit"></i></a></p>
+
+                                <form action="../products/<%= producto.id %>?_method=DELETE" method="POST">
+
+                                    <button id="delete-button" type="delete"><i class="far fa-trash-alt"></i></button>
+
+                                </form>
+                            </div>
+                        </div>
                         <% } %>
-                        <% } %>      
-                    </a></p>
-                </div>
-                <div class="acciones">
-                    <p id= "edit-button"><a href="../products/<%= producto.id %>/edit "><i class="far fa-edit"></i></a></p>
-
-                        <form action="../products/<%= producto.id %>?_method=DELETE" method="POST">
-                            
-                            <button id="delete-button" type="delete" ><i class="far fa-trash-alt"></i></button>
-                            
-                        </form>
-                </div>
-            </div>
-            <% } %> 
-            
-            
-            <div class="next-page">
-                <p>Siguiente página</p>
-            </div>
-            
-           
-        </article>
-        
-
-     
-        
-    </main>
-    <div class="footer-container">
-        <%- include("../partials/footer") %>
-    </div>
-        
-
-    
 
 
-   
-   
+                            <div class="next-page">
+                                <p>Siguiente página</p>
+                            </div>
+
+
+            </article>
+
+
+
+
+        </main>
+        <div class="footer-container">
+            <%- include("../partials/footer") %>
+        </div>
+
+
+
+
+
+
+
 
 </body>
 

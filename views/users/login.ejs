@@ -2,97 +2,85 @@
 <html lang="en">
 
 <head>
-    
+
     <title>login</title>
     <link href="/css/loginStyle.css" rel="stylesheet">
     <%- include("../partials/head") %>
-    <link rel="stylesheet" href="/css/video.css">
+        <link rel="stylesheet" href="/css/video.css">
 </head>
 
 <body>
     <%- include("../partials/header") %>
 
-    <div class="login-conteiner">
-        <video autoplay muted loop id="myVideo">
-            <source src="/img/pexels-ron-lach-7087627.mp4" type="video/mp4">
-          </video>
+        <div class="login-conteiner">
+            <video autoplay muted loop id="myVideo">
+                <source src="/img/pexels-ron-lach-7087627.mp4" type="video/mp4">
+            </video>
 
-        <div class="main-login">
-            <div class="login-logo">
-  
-                <div class="txt-conteiner">
-                    <h2>Iniciá Sesión!</h2>
-                    <a href="../user/register">
-                        <p>¿Aún no estas registrado?</p>
-                    </a>
+            <div class="main-login">
+                <div class="login-logo">
+
+                    <div class="txt-conteiner">
+                        <h2>Iniciá Sesión!</h2>
+                        <a href="../user/register">
+                            <p>¿Aún no estas registrado?</p>
+                        </a>
+
+                    </div>
+                    <hr>
+
 
                 </div>
-                <hr>
+                <div class="formularios1">
+                    <p>Iniciá sesión a través de tus redes sociales</p>
+                    <button class="Facebook-button" type="submit" name="facebook"><i
+                            class="fab fa-facebook-f"></i>Continuá
+                        con Facebook</button>
+                    <button class="Google-button" type="submit"><i class="fab fa-google"></i>Continuá con
+                        Google</button>
+
+                    <p>O ingresá los datos de tu cuenta</p>
+
+                    <form action="/user/login" method="POST" class="formularios2" id="formularios2">
+                        <div class="field email">
+                            <input class="formularios-sesion" name="email" id="email" placeholder="Correo Electronico">
+                            <% if (locals.errors && errors.email) { %>
+                                <div style="color: rgb(173, 2, 2); font-size: 13px; margin-right: 40%;">
+                                    <%= errors.email.msg %>
+                                </div>
+                                <% } %>
+                                    <p class="error"></p>
+                        </div>
+                        <div class="field psw">
+                            <input class="formularios-sesion" type="password" name="password" id="password"
+                                placeholder="Contraseña">
+                            <% if (locals.errors && errors.password) { %>
+                                <div style="color: rgb(173, 2, 2); font-size: 13px; margin-right: 40%;">
+                                    <%= errors.password.msg %>
+                                </div>
+                                <% } %>
+                                    <p class="error"></p>
+                        </div>
 
 
-            </div>
-            <div class="formularios1">
-                <p>Iniciá sesión a través de tus redes sociales</p>
-                <button class="Facebook-button" type="submit" name="facebook"><i class="fab fa-facebook-f"></i>Continuá
-                    con Facebook</button>
-                <button class="Google-button" type="submit"><i class="fab fa-google"></i>Continuá con Google</button>
+                        <br>
+                        <div class="checkbox"><input type="checkbox" name="recuerdame" id="recuerdame">Recuérdame</div>
+                        <br>
+                        <div class="login-button">
+                            <button type="submit" class="acceder">Acceder</button>
+                            <p class="Recuperacion-contraseña">¿Olvidaste tu contraseña?</p>
+                        </div>
 
-                <p>O ingresá los datos de tu cuenta</p>
+                    </form>
 
-                <form action="/user/login" method="POST" class="formularios2" id="formularios2">
-                    <div class="field email">
-                        <input class="formularios-sesion"  name="email" id="email" placeholder="Correo Electronico">
-                        <% if (locals.errors && errors.email) { %>
-                            <div style="color: rgb(173, 2, 2); font-size: 13px; margin-right: 40%;"> <%= errors.email.msg %> </div>
-                        <% } %>
-                        <p class="error"></p>
-                    </div>
-                    <div class="field psw">
-                        <input class="formularios-sesion" type="password" name="password" id="password"
-                        placeholder="Contraseña">
-                        <% if (locals.errors && errors.password) { %>
-                            <div style="color: rgb(173, 2, 2); font-size: 13px; margin-right: 40%;"> <%= errors.password.msg %> </div>
-                        <% } %>
-                        <p class="error"></p>
-                    </div>
-                  
-                   
-                    <br>
-                    <div class="checkbox"><input type="checkbox" name="recuerdame" id="recuerdame">Recuérdame</div>
-                    <br>
-                    <div class="login-button">
-                        <button type="submit" class="acceder" >Acceder</button>
-                        <p class="Recuperacion-contraseña">¿Olvidaste tu contraseña?</p>
-                    </div>
 
-                </form>
-                
-                <!-- <form action="/user/login" method="POST" class="formularios2" id="formularios2">
-                    <input class="formularios-sesion" type="email" name="email" id="email" placeholder="Correo Electronico">
-                    <% if (locals.errors && errors.email) { %>
-                        <div style="color: rgb(173, 2, 2); font-size: 13px; margin-right: 40%;"> <%= errors.email.msg %> </div>
-                    <% } %>
-                    <input class="formularios-sesion" type="password" name="password" id="password"
-                        placeholder="Contraseña">
-                        <% if (locals.errors && errors.password) { %>
-                            <div style="color: rgb(173, 2, 2); font-size: 13px; margin-right: 40%;"> <%= errors.password.msg %> </div>
-                        <% } %>
-                    <br>
-                    <div class="checkbox"><input type="checkbox" name="recuerdame" id="recuerdame">Recuérdame</div>
-                    <br>
-                    <div class="login-button">
-                        <button type="submit" class="acceder" >Acceder</button>
-                        <p class="Recuperacion-contraseña">¿Olvidaste tu contraseña?</p>
-                    </div>
-
-                </form> -->
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- <%- include("../partials/footer") %> -->
+        <%- include("../partials/footer") %>
 
-    <script src = "/js/loginValidation.js" > </script>
+            <script src="/js/loginValidation.js"> </script>
 
 
 
@@ -100,4 +88,3 @@
 </body>
 
 </html>
-

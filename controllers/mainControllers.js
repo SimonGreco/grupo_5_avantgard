@@ -6,13 +6,16 @@ const session = require("express-session");
 const db = require("../database/models");
 
 let mainController = {
-    index: function(req, res){
+    index: function (req, res) {
 
         db.products.findAll()
-        .then(function(e){
-            res.render("./index", {productos: e, session : session})
-        })
-        
+            .then(function (e) {
+                res.render("./index", {
+                    productos: e,
+                    session: session
+                })
+            })
+
     },
 }
 

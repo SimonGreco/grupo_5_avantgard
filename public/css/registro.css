@@ -77,22 +77,24 @@ hr {
 
 /*animaciones*/
 
-.footer-text p:hover{
+.footer-text p:hover {
     text-decoration-line: underline;
 }
-.txt:hover{
+
+.txt:hover {
     margin: 0 40px;
-    width: 30vh;   
+    width: 30vh;
     height: 10vh;
     background-color: black;
     text-align: center;
     border-radius: 10px;
 }
-.txt{
+
+.txt {
     transition: all 400ms;
 }
 
-.menosMas i:hover{
+.menosMas i:hover {
     font-size: 16px;
     color: black;
 }
@@ -103,6 +105,7 @@ hr {
     flex-direction: column;
     align-items: center;
 }
+
 .field .error {
     margin: 0;
 }

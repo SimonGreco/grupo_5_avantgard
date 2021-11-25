@@ -10,133 +10,136 @@
 <body>
     <%- include("./partials/header") %>
 
-    <div class="slider">
-    
-        <div class="imagen_slider"></div>
+        <div class="slider">
 
-        <div class="slider-txt">
-            <h2> Create instinctively</h2>
-            <p>Perform inmediately </p>
+            <div class="imagen_slider"></div>
 
-        </div>
-
-        <form action="/" method="POST">
-            <button><a href="../products/"> Descubrí mas</a></button>
-        </form>
-        <i class="fas fa-ellipsis-h"></i>
-
-    </div>
-    <br><br>
-    <hr>
-    <div class="seccion-productos-contenedor">
-        <div class="product-catg">
-            <p class="Mas-vistos">Mas Vistos</p>
-            <p class="Recomendados">Recomendados</p>
-        </div>
-
-        <div class="seccion-productos">
-            <i class="fas fa-chevron-left"></i>
-
-            
-            <% for(let i = productos.length-1 ; i> productos.length -5; i--){ %> 
-                
-                <% producto = productos[i] %> 
-                
-                <a href="/products/<%= producto.id %>" class="producto">
-                    <img src="/img/Productos/<%=producto.image%>" alt="Imagen de producto">
-                
-                    <hr>
-                    <div class="product-txt-conteiner">
-                    <p class="Precio">$<%=producto.price%></p>
-                    <p class="descripcion"><%=producto.name%></p>
-                     </div>
-                    </a>
-                   
-                
-        
-            <% } %> 
-
-        
-
-            <i class="fas fa-chevron-right"></i>
-        </div>
-
-
-    </div>
-    <br>
-    <hr>
-    <h2 class="cat-txt">Buscá por categorias</h2>
-    <div class="main-categories" id="Categoriass">
-
-        <div class="categories-conteiner">
-            <div class="categoria-grande">
-                <div class="ctg-txt-conteiner">
-                    <h2>Auriculares</h2>
-
-                </div>
-                <a href="/"><img src="/img/AURICULARES.webp" alt="" class="ctg-img"></a>
+            <div class="slider-txt">
+                <h2> Create instinctively</h2>
+                <p>Perform inmediately </p>
 
             </div>
 
+            <form action="/" method="POST">
+                <button><a href="../products/"> Descubrí mas</a></button>
+            </form>
+            <i class="fas fa-ellipsis-h"></i>
 
-            <div class="categoria-chica">
-                <div class="ctg-txt-conteiner">
-                    <h2>Amplificadores y parlantes</h2>
-                </div>
-                <a href="/"><img src="/img/AMPLIFICADOR.jpg" alt="" class="ctg-img"></a>
-            </div>
-            <div class="categoria-chica">
-                <div class="ctg-txt-conteiner">
-                    <h2>Teclados</h2>
-                </div>
-                <a href="/"><img src="/img/SINTETIZADORES.jpg" alt="" class="ctg-img"></a>
-            </div>
         </div>
-        <div class="categories-conteiner">
-            <div class="categoria-chica1">
-                <div class="ctg-txt-conteiner">
-                    <h2>Sintetizadores</h2>
-                </div>
-                <a href="/"> <img src="/img/SINTETIZADORjpg.jpg" alt="" class="ctg-img"></a>
-
+        <br><br>
+        <hr>
+        <div class="seccion-productos-contenedor">
+            <div class="product-catg">
+                <p class="Mas-vistos">Mas Vistos</p>
+                <p class="Recomendados">Recomendados</p>
             </div>
-            <div class="categoria-chica1">
-                <div class="ctg-txt-conteiner">
-                    <h2>Micrófonos</h2>
-                </div>
-                <a href="/"> <img src="/img/MIC.jpg" alt="" class="ctg-img"> </a>
+
+            <div class="seccion-productos">
+                <i class="fas fa-chevron-left"></i>
+
+
+                <% for(let i=productos.length-1 ; i> productos.length -5; i--){ %>
+
+                    <% producto=productos[i] %>
+
+                        <a href="/products/<%= producto.id %>" class="producto">
+                            <img src="/img/Productos/<%=producto.image%>" alt="Imagen de producto">
+
+                            <hr>
+                            <div class="product-txt-conteiner">
+                                <p class="Precio">$<%=producto.price%>
+                                </p>
+                                <p class="descripcion">
+                                    <%=producto.name%>
+                                </p>
+                            </div>
+                        </a>
+
+
+
+                        <% } %>
+
+
+
+                            <i class="fas fa-chevron-right"></i>
             </div>
-            <div class="categoria-grande1">
-                <div class="ctg-txt-conteiner">
-                    <h2>Controladores MIDI</h2>
+
+
+        </div>
+        <br>
+        <hr>
+        <h2 class="cat-txt">Buscá por categorias</h2>
+        <div class="main-categories" id="Categoriass">
+
+            <div class="categories-conteiner">
+                <div class="categoria-grande">
+                    <div class="ctg-txt-conteiner">
+                        <h2>Auriculares</h2>
+
+                    </div>
+                    <a href="/"><img src="/img/AURICULARES.webp" alt="" class="ctg-img"></a>
+
                 </div>
-                <a href="/"> <img src="/img/MIDI.jpg" alt="" class="ctg-img"></a>
 
+
+                <div class="categoria-chica">
+                    <div class="ctg-txt-conteiner">
+                        <h2>Amplificadores y parlantes</h2>
+                    </div>
+                    <a href="/"><img src="/img/AMPLIFICADOR.jpg" alt="" class="ctg-img"></a>
+                </div>
+                <div class="categoria-chica">
+                    <div class="ctg-txt-conteiner">
+                        <h2>Teclados</h2>
+                    </div>
+                    <a href="/"><img src="/img/SINTETIZADORES.jpg" alt="" class="ctg-img"></a>
+                </div>
             </div>
+            <div class="categories-conteiner">
+                <div class="categoria-chica1">
+                    <div class="ctg-txt-conteiner">
+                        <h2>Sintetizadores</h2>
+                    </div>
+                    <a href="/"> <img src="/img/SINTETIZADORjpg.jpg" alt="" class="ctg-img"></a>
+
+                </div>
+                <div class="categoria-chica1">
+                    <div class="ctg-txt-conteiner">
+                        <h2>Micrófonos</h2>
+                    </div>
+                    <a href="/"> <img src="/img/MIC.jpg" alt="" class="ctg-img"> </a>
+                </div>
+                <div class="categoria-grande1">
+                    <div class="ctg-txt-conteiner">
+                        <h2>Controladores MIDI</h2>
+                    </div>
+                    <a href="/"> <img src="/img/MIDI.jpg" alt="" class="ctg-img"></a>
+
+                </div>
+            </div>
+
         </div>
+        <br><br><br><br>
+        <div class="iconos-conteiner">
+            <div class="icono">
+                <i class="fas fa-credit-card"></i>
+                <p>Pagá con tarjeta o en efectivo</p>
+            </div>
 
-    </div>
-    <br><br><br><br>
-    <div class="iconos-conteiner">
-        <div class="icono">
-            <i class="fas fa-credit-card"></i>
-            <p>Pagá con tarjeta o en efectivo</p>
+            <div class="icono">
+                <i class="fas fa-truck"></i>
+                <p>Envío rapido y seguro</p>
+            </div>
+
+            <div class="icono">
+                <i class="fas fa-user-shield"></i>
+                <p>Compra protegida</p>
+            </div>
+
+
         </div>
-
-        <div class="icono">
-            <i class="fas fa-truck"></i>
-            <p>Envío rapido y seguro</p>
-        </div>
-
-        <div class="icono">
-            <i class="fas fa-user-shield"></i>
-            <p>Compra protegida</p>
-        </div>
-
-
-    </div>
-    <br><br><br><br><br>
-    <%- include("./partials/footer") %>
+        <br><br><br><br><br>
+        <%- include("./partials/footer") %>
 
 </body>
 

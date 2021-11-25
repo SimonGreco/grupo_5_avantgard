@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    
+
     <title>Detalle del producto</title>
     <link href="/css/productDetail.css" rel="stylesheet">
     <%- include("../partials/head") %>
@@ -11,180 +11,204 @@
 
 <body>
     <%- include("../partials/header") %>
-   
-
-    <main>
-        
-        <div class="container-one">
-
-            <span class="categories">
-                volver al listado 
-            </span>
-                <% for(let i = 0; i< producto.length; i++){ %> 
-                    <% if (producto[i].id == idS) { %>
-                     
-                    
-                    <div class="top">
-                        <div class="img-product">
 
 
-                            <div class="container-two">
-                                <img class = "two" src="/img/Productos/<%=producto[i].image%>" alt="Imagen de producto">
+        <main>
 
-                            </div>
+            <div class="container-one">
 
-                            <div class="box">
-                                <% for(let i = 0;i<4; i++ ){ %> 
-                                <div class="boxes">
-                                    
-                                        <img class = "img-box" src="/img/Productos/Default.png">
-                                         
+                <span class="categories">
+                    volver al listado
+                </span>
+                <% for(let i=0; i< producto.length; i++){ %>
+                    <% if (producto[i].id==idS) { %>
+
+
+                        <div class="top">
+                            <div class="img-product">
+
+
+                                <div class="container-two">
+                                    <img class="two" src="/img/Productos/<%=producto[i].image%>"
+                                        alt="Imagen de producto">
+
                                 </div>
-                                <% } %>
 
-                                
+                                <div class="box">
+                                    <% for(let i=0;i<4; i++ ){ %>
+                                        <div class="boxes">
+
+                                            <img class="img-box" src="/img/Productos/Default.png">
+
+                                        </div>
+                                        <% } %>
+
+
+
+                                </div>
 
                             </div>
 
+
+                            <div class="container-three">
+                                <div class="textBox">
+                                    <h1>
+                                        <%= producto[i].name%>
+                                    </h1>
+                                    <br>
+                                    <h6>
+                                        <% for(let i=0; i < categoria.length; i++){ %>
+                                            <% if (categoria[i].id==producto[i].categoryId) { %>
+                                                <%= categoria[i].name %>
+                                                    <% } %>
+                                                        <% } %>
+
+
+                                    </h6>
+
+                                    <div class=price>
+                                        <h1> $<%= producto[i].price%>
+                                        </h1>
+
+                                    </div>
+
+                                    <h5 class="description">
+                                        <%= producto[i].description%>
+                                    </h5>
+
+
+
+                                    <br>
+                                </div>
+
+
+
+                                <div class="color-product">
+
+                                    <div class="color-text"> COLORES: </div>
+
+                                    <br>
+
+
+
+                                    <select class="color">
+                                        <option value="Negro">Negro</option>
+                                        <option value="Plateado">Plateado</option>
+                                    </select>
+
+                                </div>
+                                <br>
+                                <br>
+
+
+                                <div class="carrito1">
+                                    <!-- <a>  Agregar al carrito </a> <i class="fas fa-shopping-cart"></i> -->
+                                    <button type="submit" class="carrito" name="carrito"> Agregar al carrito <i
+                                            class="fas fa-shopping-cart"> </i> </button>
+
+                                </div>
+
+
+
+                            </div>
                         </div>
 
+                        <hr>
 
-                        <div class="container-three">
-                            <div class="textBox">
-                                <h1> <%= producto[i].name%> </h1>
-                                <br>
-                                <h6> <% for(let i = 0; i < categoria.length; i++){ %> 
-                                <% if (categoria[i].id == producto[i].categoryId) { %>
-                                    <%= categoria[i].name  %> 
-                                <% } %>
-                                <% } %> 
-                                
-                                
-                                </h6>
-                           
-                                <div class=price>
-                                    <h1> $<%= producto[i].price%> </h1>
-                                    
+                        <br>
+                        <br>
+
+
+
+                        <div class="bottom">
+                            <a class="bold"> CARACTERÍSTICAS PRINCIPALES </a>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="marcaModelo">
+                                <div class="marca"> Marca </div>
+                                <div class="modelo">
+                                    <%= producto[i].marca%>
                                 </div>
-                           
-                                <h5 class="description"> <%= producto[i].description%> </h5>
-
-
-
-                                <br>
                             </div>
-
-                         
-
-                            <div class="color-product">
-
-                                <div class="color-text"> COLORES: </div>
-
-                                <br>
-
-
-
-                                <select class="color">
-                                    <option value="Negro">Negro</option>
-                                    <option value="Plateado">Plateado</option>
-                                </select>
-                                
+                            <br>
+                            <div class="marcaModelo">
+                                <div class="marca"> Modelo </div>
+                                <div class="modelo">
+                                    <%= producto[i].modelo%>
+                                </div>
                             </div>
                             <br>
                             <br>
-                          
-
-                            <div class="carrito1">
-                                <!-- <a>  Agregar al carrito </a> <i class="fas fa-shopping-cart"></i> -->
-                                <button type="submit" class="carrito" name="carrito"> Agregar al carrito <i
-                                        class="fas fa-shopping-cart"> </i> </button>
-
+                            <br>
+                            <a class="bold"> OTRAS CARACTERÍSTICAS </a>
+                            <br>
+                            <br>
+                            <div class="lista">
+                                <%= producto[i].description%>
                             </div>
-
-                            
+                            <br>
+                            <br>
 
                         </div>
-                    </div>
 
-                    <hr>
-
-                    <br>
-                    <br>
-
-
-
-                    <div class="bottom">
-                        <a class="bold"> CARACTERÍSTICAS PRINCIPALES </a>
-                        <br>
-                        <br>
-                        <br>
-                        <div class="marcaModelo">
-                            <div class="marca"> Marca </div>
-                            <div class="modelo"> <%= producto[i].marca%></div>
-                        </div>
-                        <br>
-                        <div class="marcaModelo">
-                            <div class="marca"> Modelo </div>
-                            <div class="modelo"> <%= producto[i].modelo%> </div>
-                        </div>
-                        <br>
-                        <br>
-                        <br>
-                        <a class="bold"> OTRAS CARACTERÍSTICAS </a>
-                        <br>
-                        <br>
-                        <div class="lista">
-                            <%= producto[i].description%>
-                        </div>
-                        <br>
-                        <br>
-
-                    </div>
-
-                   <% } %>
-                   <% } %>
-                    <hr>
-                    <br>
-                    <br>
-               
-
-
-
-            <div class="middle">
-                <a class="text-products"> OTROS PRODUCTOS SIMILARES </a>
-                <br>
-                <br>
-                <br>
-                <div class="seccion-productos">
-
-                    <% for(let i=8 ; i<12; i++){ %>
-        
-                        
-                            <a href="../products/<%= producto[i].id %> " class="producto">
-        
-                                <img src="/img/Productos/<%=producto[i].image%>" alt="Imagen de producto">
-        
-                                <hr>
-                                <div class="product-txt-conteiner">
-                                    <p class="Precio">$<%=producto[i].price%>
-                                    </p>
-                                    <p class="descripcion">
-                                        <%=producto[i].name%>
-                                    </p>
-                                </div>
-        
-                            </a>
-        
+                        <% } %>
                             <% } %>
-        
-        
-                </div>
+                                <hr>
+                                <br>
+                                <br>
 
-                <br>
-                <br>
+
+
+
+                                <div class="middle">
+                                    <a class="text-products"> OTROS PRODUCTOS SIMILARES </a>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div class="seccion-productos">
+
+                                        <% for(let i=8 ; i<12; i++){ %>
+
+
+                                            <a href="../products/<%= producto[i].id %> " class="producto">
+
+                                                <img src="/img/Productos/<%=producto[i].image%>"
+                                                    alt="Imagen de producto">
+
+                                                <hr>
+                                                <div class="product-txt-conteiner">
+                                                    <p class="Precio">$<%=producto[i].price%>
+                                                    </p>
+                                                    <p class="descripcion">
+                                                        <%=producto[i].name%>
+                                                    </p>
+                                                </div>
+
+                                            </a>
+
+                                            <% } %>
+
+
+                                    </div>
+
+                                    <br>
+                                    <br>
+
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
 
             </div>
-            
 
 
 
@@ -193,22 +217,10 @@
 
 
 
+        </main>
 
+        <%- include("../partials/footer") %>
 
-
-        </div>
-         
-
-
-
-
-
-
-
-    </main>
-
-    <%- include("../partials/footer") %>
-    
 
 
 </body>

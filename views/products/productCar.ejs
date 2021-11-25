@@ -1,60 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Carrito de compras</title>
     <link href="/css/carrito.css" rel="stylesheet">
     <%- include("../partials/head") %>
 </head>
+
 <body>
     <%- include("../partials/header") %>
 
 
 
-    <main style="background-image: url('https://cdn.pixabay.com/photo/2015/03/30/12/37/pioneer-698515_960_720.jpg');" class="background">
-        <div class="sitio">
-            <a href="/"><p class="inicio">Inicio /</p></a> <!--- Indica en dónde se encuentra el usuario --->
-            <p class="ubicacion">carrito</p> <!--- Indica en dónde se encuentra el usuario --->
-        </div>
-        <div class="cajaPadre"> <!--- Caja padre --->
-            <div class="cajaHija1">
-                <h3 class="carrito">Carrito</h3>
-                <h3 class="favoritos">Favoritos (0 productos)</h3>
+        <main
+            style="background-image: url('https://cdn.pixabay.com/photo/2015/03/30/12/37/pioneer-698515_960_720.jpg');"
+            class="background">
+            <div class="sitio">
+                <a href="/">
+                    <p class="inicio">Inicio /</p>
+                </a>
+                <!--- Indica en dónde se encuentra el usuario --->
+                <p class="ubicacion">carrito</p>
+                <!--- Indica en dónde se encuentra el usuario --->
             </div>
-            <hr>
-            <div class="cajaHija2">
-                <div class="productBox">
-                    <img src="/img/Productos/launchpad.jpg" alt="Launchpad Mini Novation" class="image">
-                    <p class="producto">Launchpad Mini Novation</p>
-                    <div class="cantidad">
-                        <p class="menosMas"><i class="fas fa-minus"></i></i> 1 <i class="fas fa-plus"></i></p>
-                        <p class="eliminar">Eliminar</p>
+            <div class="cajaPadre">
+                <!--- Caja padre --->
+                <div class="cajaHija1">
+                    <h3 class="carrito">Carrito</h3>
+                    <h3 class="favoritos">Favoritos (0 productos)</h3>
+                </div>
+                <hr>
+                <div class="cajaHija2">
+                    <div class="productBox">
+                        <img src="/img/Productos/launchpad.jpg" alt="Launchpad Mini Novation" class="image">
+                        <p class="producto">Launchpad Mini Novation</p>
+                        <div class="cantidad">
+                            <p class="menosMas"><i class="fas fa-minus"></i></i> 1 <i class="fas fa-plus"></i></p>
+                            <p class="eliminar">Eliminar</p>
+                        </div>
+                        <p class="precio">$20.000</p>
                     </div>
-                    <p class="precio">$20.000</p>
-                </div>
-                <div class="productBox">
-                    <img src="/img/Productos/auricular.png" alt="Launchpad Mini Novation" class="image">
-                    <p class="producto">Auricular Sennheiser Hd 650 Hifi</p>
-                    <div class="cantidad">
-                        <p class="menosMas"><i class="fas fa-minus"></i></i> 1 <i class="fas fa-plus"></i></p>
-                        <p class="eliminar">Eliminar</p>
+                    <div class="productBox">
+                        <img src="/img/Productos/auricular.png" alt="Launchpad Mini Novation" class="image">
+                        <p class="producto">Auricular Sennheiser Hd 650 Hifi</p>
+                        <div class="cantidad">
+                            <p class="menosMas"><i class="fas fa-minus"></i></i> 1 <i class="fas fa-plus"></i></p>
+                            <p class="eliminar">Eliminar</p>
+                        </div>
+                        <p class="precio">$70.400</p>
                     </div>
-                    <p class="precio">$70.400</p>
+                    <div class="cajaHija3">
+                        <p class="detalles">Detalles de envío</p>
+                        <div class="detallesDeEnvio">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="cajaHija4">
+                        <p>Total con envío</p>
+                        <p class="precioTotal">$92.000</p>
+                    </div>
+                    <div class="ubicacionBoton">
+                        <button class="botonContinuar">Continuar</button>
+                    </div>
                 </div>
-            <div class="cajaHija3">
-                <p class="detalles">Detalles de envío</p>
-                <div class="detallesDeEnvio">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-            <div class="cajaHija4">
-                <p>Total con envío</p>
-                <p class="precioTotal">$92.000</p>
-            </div>
-            <div class="ubicacionBoton">
-                <button class="botonContinuar">Continuar</button>
-            </div>           
-        </div>
-    </main>
-    <%- include("../partials/footer") %>
+        </main>
+        <%- include("../partials/footer") %>
 </body>
+
 </html>

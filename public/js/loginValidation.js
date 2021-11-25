@@ -17,10 +17,10 @@ window.addEventListener("load", function () {
         switch (e.target.name) {
             case "email":
                 validarCampo(expresiones.correo, e.target, 'email', "debe ser valido");
-            break;
+                break;
             case "password":
                 validarCampo(expresiones.password, e.target, 'psw', "acepta de 4 a 12 caracteres");
-            break;
+                break;
         }
     }
 
@@ -28,12 +28,11 @@ window.addEventListener("load", function () {
         let card = document.querySelector(`.field.${campo} p.error`);
         card.innerHTML = ""
         if (input.value == "") {
-           card.innerHTML = `El campo ${input.name} no puede estar vacio`
-          card.style.margin = "revert"
-           campos[campo] = false
-            
-        }
-        else if (!expresion.test(input.value)){
+            card.innerHTML = `El campo ${input.name} no puede estar vacio`
+            card.style.margin = "revert"
+            campos[campo] = false
+
+        } else if (!expresion.test(input.value)) {
             card.innerHTML = `El campo ${input.name} ${validacion}`
             card.style.margin = "revert"
             campos[campo] = false
@@ -49,8 +48,8 @@ window.addEventListener("load", function () {
         input.addEventListener('blur', validarFormulario);
     });
 
-    formulario.addEventListener("submit", function(e) {
-        if ( !(campos.email == true && campos.psw == true) ) {
+    formulario.addEventListener("submit", function (e) {
+        if (!(campos.email == true && campos.psw == true)) {
             e.preventDefault()
         }
     });
@@ -67,7 +66,7 @@ window.addEventListener("load", function () {
 //         e.preventDefault();
 
 //         let campoEmail =  document.querySelector("input#email");
- 
+
 //         if (campoEmail.value == "") {
 //             alert("Debes insertar tu email")
 //         } else if (campoEmail.value.lenght < 6) {
@@ -102,5 +101,3 @@ window.addEventListener("load", function () {
 //     }
 // })
 // })
-
-  

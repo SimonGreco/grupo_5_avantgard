@@ -1,10 +1,10 @@
-
-body{
+body {
     height: auto;
     margin-bottom: 101%;
     background-color: #121655;
 }
-#imagenPrincipal-txt{
+
+#imagenPrincipal-txt {
     width: 20%;
     font-size: 15px;
     color: rgb(83, 83, 83);
@@ -12,91 +12,104 @@ body{
     margin-left: 15px;
     margin-bottom: 2px;
 }
-#imgDetail{
+
+#imgDetail {
     font-size: 12px;
     color: rgb(83, 83, 83);
     font-weight: lighter;
     margin-left: 15px;
     margin-top: 0px;
 }
-.img-adicionales{
+
+.img-adicionales {
     font-size: 15px;
     color: rgb(83, 83, 83);
     font-weight: bold;
     margin-left: 15px;
     margin-bottom: 2px;
 }
-.addFile{
+
+.addFile {
     font-size: 10px;
     font-weight: 600;
     color: grey;
     background-color: white;
     display: inline-block;
-    padding: 15px 40px ;
+    padding: 15px 40px;
     width: fit-content;
     text-align: center;
     border: solid 1px lightgray;
     border-radius: 5px;
     margin-left: 15px;
 }
-#AgregarImagen{
- width: 0.1px;
- height: 0.1px;
- opacity: 0;
- overflow: hidden;
- position: absolute;
- z-index: -1
+
+#AgregarImagen {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1
 }
-.imagenMuestra{
+
+.imagenMuestra {
     width: 10%;
     display: flex;
     font-size: 13px;
     align-items: center;
 
 }
-.imagenMuestra img{
-    width:100%;
+
+.imagenMuestra img {
+    width: 100%;
     margin-left: 15px;
 }
-.imagenMuestra p{
+
+.imagenMuestra p {
     margin-left: 20px;
-    color:darkblue
+    color: darkblue
 }
-.formulario-txt{
+
+.formulario-txt {
     min-width: 80%;
     margin: 0 2%;
     height: 30px;
     border: solid 1px lightgray;
     border-radius: 5px;
 }
-.Descripcion{
+
+.Descripcion {
     width: 80%;
     margin: 0 2%;
     height: 100px;
     border: solid 1px lightgray;
     border-radius: 5px;
 }
-h4{
+
+h4 {
     font-size: 15px;
     color: rgb(83, 83, 83);
     font-weight: bold;
     margin-left: 15px;
     margin-bottom: 2px;
 }
-form p{
+
+form p {
     font-size: 12px;
     color: rgb(83, 83, 83);
     font-weight: lighter;
     margin-left: 15px;
     margin-top: 0px;
 }
-.oferta{
+
+.oferta {
     font-size: 15px;
     color: rgb(83, 83, 83);
     font-weight: bold;
     margin-left: 15px;
 }
-#monedas{
+
+#monedas {
     min-width: 50%;
     margin: 0 2%;
     height: 30px;
@@ -104,7 +117,8 @@ form p{
     border-radius: 5px;
     margin-bottom: 15px;
 }
-#precio{
+
+#precio {
     min-width: 20%;
     margin: 0 2%;
 
@@ -112,7 +126,8 @@ form p{
     border: solid 1px lightgray;
     border-radius: 5px;
 }
-.buttons{
+
+.buttons {
     height: fit-content;
     display: flex;
     width: 40%;
@@ -121,7 +136,7 @@ form p{
 
 }
 
-button{
+button {
     width: 80%;
     height: 40px;
     margin-left: 10%;
@@ -137,27 +152,32 @@ button{
 
 
 
-/*ANIMACIONES*/ 
-label:hover{
+/*ANIMACIONES*/
+label:hover {
     background-color: lightgray;
     color: black;
 }
-.imagenMuestra p:hover{
+
+.imagenMuestra p:hover {
     text-decoration-line: underline;
 
 }
-.optionsConteiner{
+
+.optionsConteiner {
     position: fixed;
 }
-#submit-btn{
-    background-color: #5867dd; 
+
+#submit-btn {
+    background-color: #5867dd;
     color: #f0f1f5;
-    
+
 }
-.reset-btn:hover{
+
+.reset-btn:hover {
     color: white
 }
-#submit-btn:hover{
+
+#submit-btn:hover {
     background-color: #39459e;
 }
 
@@ -339,4 +359,4 @@ main{
         font-size: 25px;
     }
 
-} */ 
+} */

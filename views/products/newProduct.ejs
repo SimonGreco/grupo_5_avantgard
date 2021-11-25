@@ -3,168 +3,191 @@
 
 <head>
     <%- include("../partials/head") %>
-    <link href="/css/controlPanel.css" rel="stylesheet">
-    <link href="/css/edit.css" rel="stylesheet">
+        <link href="/css/controlPanel.css" rel="stylesheet">
+        <link href="/css/edit.css" rel="stylesheet">
 
-    <title>AvantGard</title>
+        <title>AvantGard</title>
 
 </head>
 
 <body>
     <%- include("../partials/header") %>
-    <div id="control-panel-cover">
+        <div id="control-panel-cover">
 
 
-    </div>
-
-
-
-    <article class="mainControlPanel" style="min-height: 100vw">
-        <section class="optionsConteinerPhone">
-            <i class="fas fa-bars"></i>
-            <br>
-            <i class="fas fa-house-user"></i>
-            <i class="fas fa-cog"></i>
-            <i class="fas fa-box-open"></i>
-            <i class="fas fa-piggy-bank"></i>
-            <i class="fas fa-truck"></i>
-            <br>
-            <i class="fas fa-cart-arrow-down"></i>
-            <i class="fas fa-comments"></i>
-
-
-        </section>
-        <section class="optionsConteiner">
-            <h4><i class="fas fa-house-user"></i> Inicio</h3>
-                <h5>Mi tienda</h5>
-            </h4>
-            <p><i class="fas fa-cog"></i> Datos</p>
-            <p id="productos"><i class="fas fa-box-open"></i> Productos</p>
-            <p><i class="fas fa-piggy-bank"></i> Formas de pago</p>
-            <p><i class="fas fa-truck"></i> Formas de envío</p>
-
-            <h5>Mis ventas</h4>
-                <p><i class="fas fa-cart-arrow-down"></i> Ventas</p>
-                <p><i class="fas fa-comments"></i> Preguntas recibidas</p>
-
-        </section>
-    </article>
-
-    <div class="misProductos">
-        <h3>Nuevo producto</h3>
-    </div>
-    <article class="productsList"
-        style="margin-bottom: 15px; padding-bottom: 10px ; padding-top: 10px; padding-left: 5px;">
-        <div id="imagenPrincipal-txt">
-            <p>Imagen Principal</p>
         </div>
-        <div id="imgDetail">
-            <p>La imagen debe ser de almenos 500 x 500 píxeles</p>
+
+
+
+        <article class="mainControlPanel" style="min-height: 100vw">
+            <section class="optionsConteinerPhone">
+                <i class="fas fa-bars"></i>
+                <br>
+                <i class="fas fa-house-user"></i>
+                <i class="fas fa-cog"></i>
+                <i class="fas fa-box-open"></i>
+                <i class="fas fa-piggy-bank"></i>
+                <i class="fas fa-truck"></i>
+                <br>
+                <i class="fas fa-cart-arrow-down"></i>
+                <i class="fas fa-comments"></i>
+
+
+            </section>
+            <section class="optionsConteiner">
+                <h4><i class="fas fa-house-user"></i> Inicio</h3>
+                    <h5>Mi tienda</h5>
+                </h4>
+                <p><i class="fas fa-cog"></i> Datos</p>
+                <p id="productos"><i class="fas fa-box-open"></i> Productos</p>
+                <p><i class="fas fa-piggy-bank"></i> Formas de pago</p>
+                <p><i class="fas fa-truck"></i> Formas de envío</p>
+
+                <h5>Mis ventas</h4>
+                    <p><i class="fas fa-cart-arrow-down"></i> Ventas</p>
+                    <p><i class="fas fa-comments"></i> Preguntas recibidas</p>
+
+            </section>
+        </article>
+
+        <div class="misProductos">
+            <h3>Nuevo producto</h3>
         </div>
-        <form action="/products" method="POST" enctype="multipart/form-data" class="productsForm">
-            <span class="AgregarImagen"><input type="file" name="image" id="AgregarImagen" class="addImage"></span>
-            <label for="AgregarImagen" class="addFile">
-                <span>Añadí una nueva imagen</span>
-            </label>
-            <% if (locals.errors && errors.image) { %>
-            <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;"><%= locals.errors.image.msg %> </p>
-            <% } %>
-
-
-            <h4>Titulo</h4>
-            <p>Agrega un título para describir el artículo. Los títulos pueden tener hasta 150 caracteres, pero
-                recomendamos usar menos de 65.
-            </p>
-
-            <input type="text" name="name" id="Titulo" maxlength="150" class="formulario-txt"
-                value="<%= locals.oldData ? oldData.name: null %>">
-            <% if (locals.errors && errors.name) { %>
-            <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;"><%= locals.errors.name.msg %> </p>
-            <% } %>
-
-
-            <h4>Descripcion</h4>
-            <p>Agrega detalles del artículo, incluidas las características que lo hacen único para que las personas
-                comprendan los beneficios que ofrece.</p>
-
-            <textarea type="text" name="description" id="Titulo" maxlength="1500" class="Descripcion"
-                value="<%= locals.oldData ? oldData.description: null %>"></textarea>
-            <% if (locals.errors && errors.description) { %>
-            <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;"><%= locals.errors.description.msg %>
-            </p>
-            <% } %>
-
-            <h4>Precio</h4>
-            <p>Elige una divisa y agrega el precio completo del artículo tal como se muestra en tu sitio web.</p>
-            <div class="precios">
-                <select name="monedas" id="monedas">
-                    <option value="arg">ARS- Peso Argentino</option>
-                    <option value="usd">USD- Dólar EstadoUnidense</option>
-                </select>
-                <input type="number" name="price" id="precio" placeholder="Precio"
-                    value="<%= locals.oldData ? oldData.price: null %>">
-                <% if (locals.errors && errors.price) { %>
-                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;"><%= locals.errors.price.msg %>
-                </p>
-                <% } %>
+        <article class="productsList"
+            style="margin-bottom: 15px; padding-bottom: 10px ; padding-top: 10px; padding-left: 5px;">
+            <div id="imagenPrincipal-txt">
+                <p>Imagen Principal</p>
             </div>
-
-
-            <input type="checkbox" name="oferta" value="true" class="oferta">Este articulo esta en oferta
-
-
-            <h4>Marca</h4>
-            <input type="text" name="marca" id="marca" placeholder="Marca" class="formulario-txt"
-                value="<%= locals.oldData ? oldData.marca: null %>">
-            <% if (locals.errors && errors.marca) { %>
-            <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;"><%= locals.errors.marca.msg %> </p>
-            <% } %>
-
-            <h4>Modelo</h4>
-            <input type="text" name="modelo" id="marca" placeholder="Modelo" class="formulario-txt"
-                value="<%= locals.oldData ? oldData.modelo: null %>">
-            <% if (locals.errors && errors.modelo) { %>
-            <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;"><%= locals.errors.modelo.msg %> </p>
-            <% } %>
-
-            <h4>ID</h4>
-            <p>Agrega un ID unico por producto para identificarlo</p>
-            <input type="text" name="localID" id="id" placeholder="ID" class="formulario-txt"
-                value="<%= locals.oldData ? oldData.localID: null %>">
-
-
-            <h4>Categoria</h4>
-            <p>Elegir la categoría o subcategoría más específica garantiza que los compradores vean la información
-                más
-                relevante de tu artículo.</p>
-            <div>
-                <select name="categoria" id="categoria" class="formulario-txt">
-                    <% for(let i = 0; i < categorias.length; i++){ %>
-                    <option value="<%= categorias[i].id  %>"> <%= categorias[i].name %> </option>
+            <div id="imgDetail">
+                <p>La imagen debe ser de almenos 500 x 500 píxeles</p>
+            </div>
+            <form action="/products" method="POST" enctype="multipart/form-data" class="productsForm">
+                <span class="AgregarImagen"><input type="file" name="image" id="AgregarImagen" class="addImage"></span>
+                <label for="AgregarImagen" class="addFile">
+                    <span>Añadí una nueva imagen</span>
+                </label>
+                <% if (locals.errors && errors.image) { %>
+                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                        <%= locals.errors.image.msg %>
+                    </p>
                     <% } %>
 
 
-                </select>
-            </div>
+                        <h4>Titulo</h4>
+                        <p>Agrega un título para describir el artículo. Los títulos pueden tener hasta 150 caracteres,
+                            pero
+                            recomendamos usar menos de 65.
+                        </p>
 
-            <div class="buttons">
+                        <input type="text" name="name" id="Titulo" maxlength="150" class="formulario-txt"
+                            value="<%= locals.oldData ? oldData.name: null %>">
+                        <% if (locals.errors && errors.name) { %>
+                            <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                                <%= locals.errors.name.msg %>
+                            </p>
+                            <% } %>
 
 
-                <button type="reset" class="reset-btn">Reset</button>
-                <button id="submit-btn" type="submit"> Agregar Producto </button>
+                                <h4>Descripcion</h4>
+                                <p>Agrega detalles del artículo, incluidas las características que lo hacen único para
+                                    que las personas
+                                    comprendan los beneficios que ofrece.</p>
+
+                                <textarea type="text" name="description" id="Titulo" maxlength="1500"
+                                    class="Descripcion"
+                                    value="<%= locals.oldData ? oldData.description: null %>"></textarea>
+                                <% if (locals.errors && errors.description) { %>
+                                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                                        <%= locals.errors.description.msg %>
+                                    </p>
+                                    <% } %>
+
+                                        <h4>Precio</h4>
+                                        <p>Elige una divisa y agrega el precio completo del artículo tal como se muestra
+                                            en tu sitio web.</p>
+                                        <div class="precios">
+                                            <select name="monedas" id="monedas">
+                                                <option value="arg">ARS- Peso Argentino</option>
+                                                <option value="usd">USD- Dólar EstadoUnidense</option>
+                                            </select>
+                                            <input type="number" name="price" id="precio" placeholder="Precio"
+                                                value="<%= locals.oldData ? oldData.price: null %>">
+                                            <% if (locals.errors && errors.price) { %>
+                                                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                                                    <%= locals.errors.price.msg %>
+                                                </p>
+                                                <% } %>
+                                        </div>
+
+
+                                        <input type="checkbox" name="oferta" value="true" class="oferta">Este articulo
+                                        esta en oferta
+
+
+                                        <h4>Marca</h4>
+                                        <input type="text" name="marca" id="marca" placeholder="Marca"
+                                            class="formulario-txt" value="<%= locals.oldData ? oldData.marca: null %>">
+                                        <% if (locals.errors && errors.marca) { %>
+                                            <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                                                <%= locals.errors.marca.msg %>
+                                            </p>
+                                            <% } %>
+
+                                                <h4>Modelo</h4>
+                                                <input type="text" name="modelo" id="marca" placeholder="Modelo"
+                                                    class="formulario-txt"
+                                                    value="<%= locals.oldData ? oldData.modelo: null %>">
+                                                <% if (locals.errors && errors.modelo) { %>
+                                                    <p
+                                                        style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                                                        <%= locals.errors.modelo.msg %>
+                                                    </p>
+                                                    <% } %>
+
+                                                        <h4>ID</h4>
+                                                        <p>Agrega un ID unico por producto para identificarlo</p>
+                                                        <input type="text" name="localID" id="id" placeholder="ID"
+                                                            class="formulario-txt"
+                                                            value="<%= locals.oldData ? oldData.localID: null %>">
+
+
+                                                        <h4>Categoria</h4>
+                                                        <p>Elegir la categoría o subcategoría más específica garantiza
+                                                            que los compradores vean la información
+                                                            más
+                                                            relevante de tu artículo.</p>
+                                                        <div>
+                                                            <select name="categoria" id="categoria"
+                                                                class="formulario-txt">
+                                                                <% for(let i=0; i < categorias.length; i++){ %>
+                                                                    <option value="<%= categorias[i].id  %>">
+                                                                        <%= categorias[i].name %>
+                                                                    </option>
+                                                                    <% } %>
+
+
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="buttons">
+
+
+                                                            <button type="reset" class="reset-btn">Reset</button>
+                                                            <button id="submit-btn" type="submit"> Agregar Producto
+                                                            </button>
 
 
 
-            </div>
+                                                        </div>
 
-        </form>
+            </form>
 
-    </article>
-    <div class="footer-container">
-        <%- include("../partials/footer") %>
-    </div>
+        </article>
+        <div class="footer-container">
+            <%- include("../partials/footer") %>
+        </div>
 
-    <!-- <script src="/js/frontValidation.js"></script> -->
+        <!-- <script src="/js/frontValidation.js"></script> -->
 
 </body>
 

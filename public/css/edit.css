@@ -1,9 +1,10 @@
-body{
+body {
     height: auto;
     background-color: #121655;
 
 }
-#imagenPrincipal-txt{
+
+#imagenPrincipal-txt {
     width: 20%;
     font-size: 15px;
     color: rgb(83, 83, 83);
@@ -11,91 +12,104 @@ body{
     margin-left: 15px;
     margin-bottom: 2px;
 }
-#imgDetail{
+
+#imgDetail {
     font-size: 12px;
     color: rgb(83, 83, 83);
     font-weight: lighter;
     margin-left: 15px;
     margin-top: 0px;
 }
-.img-adicionales{
+
+.img-adicionales {
     font-size: 15px;
     color: rgb(83, 83, 83);
     font-weight: bold;
     margin-left: 15px;
     margin-bottom: 2px;
 }
-.addFile{
+
+.addFile {
     font-size: 10px;
     font-weight: 600;
     color: grey;
     background-color: white;
     display: inline-block;
-    padding: 15px 40px ;
+    padding: 15px 40px;
     width: fit-content;
     text-align: center;
     border: solid 1px lightgray;
     border-radius: 5px;
     margin-left: 15px;
 }
-#AgregarImagen{
- width: 0.1px;
- height: 0.1px;
- opacity: 0;
- overflow: hidden;
- position: absolute;
- z-index: -1
+
+#AgregarImagen {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1
 }
-.imagenMuestra{
+
+.imagenMuestra {
     width: 10%;
     display: flex;
     font-size: 13px;
     align-items: center;
 
 }
-.imagenMuestra img{
-    width:100%;
+
+.imagenMuestra img {
+    width: 100%;
     margin-left: 15px;
 }
-.imagenMuestra p{
+
+.imagenMuestra p {
     margin-left: 20px;
-    color:darkblue
+    color: darkblue
 }
-.formulario-txt{
+
+.formulario-txt {
     min-width: 80%;
     margin: 0 2%;
     height: 30px;
     border: solid 1px lightgray;
     border-radius: 5px;
 }
-.Descripcion{
+
+.Descripcion {
     width: 80%;
     margin: 0 2%;
     height: 100px;
     border: solid 1px lightgray;
     border-radius: 5px;
 }
-.productsList h4{
+
+.productsList h4 {
     font-size: 15px;
     color: rgb(83, 83, 83);
     font-weight: bold;
     margin-left: 15px;
     margin-bottom: 2px;
 }
-form p{
+
+form p {
     font-size: 12px;
     color: rgb(83, 83, 83);
     font-weight: lighter;
     margin-left: 15px;
     margin-top: 0px;
 }
-.oferta{
+
+.oferta {
     font-size: 15px;
     color: rgb(83, 83, 83);
     font-weight: bold;
     margin-left: 15px;
 }
-#monedas{
+
+#monedas {
     min-width: 50%;
     margin: 0 2%;
     height: 30px;
@@ -103,7 +117,8 @@ form p{
     border-radius: 5px;
     margin-bottom: 15px;
 }
-#precio{
+
+#precio {
     width: 20%;
     margin: 0 2%;
 
@@ -111,7 +126,8 @@ form p{
     border: solid 1px lightgray;
     border-radius: 5px;
 }
-.buttons{
+
+.buttons {
     height: fit-content;
     display: flex;
     width: 40%;
@@ -120,82 +136,95 @@ form p{
 
 }
 
-.productsList button{
-   width: 80%;
-   height: 40px;
-   margin-left: 10%;
-   border-radius: 5px;
-   border: solid 1px lightgray;
-   font-size: 13px;
-   font-weight: 400;
-   font-family: montserrat;
-   color: black
+.productsList button {
+    width: 80%;
+    height: 40px;
+    margin-left: 10%;
+    border-radius: 5px;
+    border: solid 1px lightgray;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: montserrat;
+    color: black
 }
-#submit-btn{
-    background-color: #5867dd; 
+
+#submit-btn {
+    background-color: #5867dd;
     color: #f0f1f5;
-    
+
 }
 
 
-.atrib-txt{
+.atrib-txt {
     font-size: 12px;
 }
-.atrib{
+
+.atrib {
     margin-left: 10%;
     margin-top: 40px;
 }
 
-/*ANIMACIONES*/ 
-label:hover{
+/*ANIMACIONES*/
+label:hover {
     background-color: lightgray;
     color: black;
 }
-.imagenMuestra p:hover{
+
+.imagenMuestra p:hover {
     text-decoration-line: underline;
 
 }
-.reset-btn:hover{
+
+.reset-btn:hover {
     color: white
 }
-#submit-btn:hover{
+
+#submit-btn:hover {
     background-color: #39459e;
 }
 
 
 /*MEDIAS*/
-@media(max-width: 1050px){
-    .productsList .buttons{
+@media(max-width: 1050px) {
+    .productsList .buttons {
         margin: 0 15px;
         margin-top: 30px;
         display: flex;
         justify-content: space-between;
-        
+
     }
-    .productsList button{
+
+    .productsList button {
         font-size: 10px;
         height: 30px;
     }
-    .productsList p{
+
+    .productsList p {
         font-size: 60%;
     }
-    .productsList h4{
+
+    .productsList h4 {
         font-size: 60%;
     }
-    .productsList .Oferta-txt{
+
+    .productsList .Oferta-txt {
         font-size: 12px;
-       
+
     }
-    .productsList{
+
+    .productsList {
         margin-bottom: 10px;
     }
-    .oferta{
+
+    .oferta {
         margin: 20px 10px;
     }
-    .imagenMuestra img{
+
+    .imagenMuestra img {
         width: 200%;
     }
-    .precios #monedas{
+
+    .precios #monedas {
         font-size: 10px;
         font-family: montserrat;
     }
