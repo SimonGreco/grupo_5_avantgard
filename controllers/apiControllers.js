@@ -75,10 +75,37 @@ let apiControllers = {
                             return producto
                         }
                     })).length
-                }
+                },
+                products: productos.map(function(producto){
+                    return {
+                        id: producto.id,
+                        name: producto.name,
+                        description: producto.description,
+                        detail: "api/products/" + producto.id
+                    }
+                }),
+
             })
         })
 
+    },
+    productDetail: function(req, res){
+        db.products.findByPk(req.params.id)
+        .then(function(producto){
+            res.json({
+                id: producto.id,
+                name: producto.name,
+                price: producto.price,
+                estado: producto.estado,
+                marca:producto.marca,
+                modelo:producto.modelo,
+                description:producto.description,
+                image: "http://localhost:3000/img/Productos/" + producto.image,
+                oferta: producto.oferta,
+                categoryId: producto.categoryId,
+                userId: producto.userId
+            })
+        })
     }
 
 

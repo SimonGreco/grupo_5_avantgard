@@ -5,7 +5,7 @@ const apiControllers = require("../controllers/apiControllers")
 router.get("/users", apiControllers.userList);
 router.get("/users/:id", apiControllers.userDetail);
 router.get("/products", apiControllers.productsList)
-
+router.get("/products/:id", apiControllers.productDetail)
 
 
 
