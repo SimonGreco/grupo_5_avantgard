@@ -53,6 +53,7 @@ app.listen(3000, servidorExterno(process.argv[2]), function () {
 const productRoutes = require("./routes/products");
 const userRoutes = require("./routes/users");
 const mainRoutes = require("./routes/main");
+const apiRoutes = require("./routes/apis")
 const {
     urlencoded
 } = require("express");
@@ -60,9 +61,11 @@ const {
 app.use("/products", productRoutes);
 app.use("/", mainRoutes);
 app.use("/user", userRoutes);
+app.use("/api", apiRoutes);
 app.use(function (req, res, next) {
     res.status(404).render("404.ejs")
     next()
 })
+
 
 //------------------------
