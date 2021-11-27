@@ -3,6 +3,8 @@ import {Grid} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles'
 import Navbar from '../components/Navbar' 
 import 'fontsource-montserrat'
+import Header from '../components/Header'
+import LeftSideBar from "../components/LeftSideBar";
 
 
 const useStyles = makeStyles (()=>({
@@ -15,13 +17,8 @@ function Dashboard(props){
     const classes = useStyles()
     return(
         <div className={classes.root}>
-           <Grid container spacing={3}>
-           
-            <Grid item xs={12}>
-            <Navbar/>
-            </Grid>
-
-           </Grid>
+           <Header />
+           <LeftSideBar />
         </div>
     );
 }
