@@ -1,6 +1,8 @@
 import React from "react";
 import '../assets/css/HeadderFooter.css'
 import logo from '../assets/img/Logo Horizontal  .png'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faUser, faStoreAlt, faShoppingCart, faSearch} from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -23,6 +25,8 @@ function Header(props){
 
                     </span>
                     <a href="/user/profile">  </a>
+
+                    
                 
                   
 
@@ -43,13 +47,13 @@ function Header(props){
                 </div><div className="iconos">
 
                     <a href="/user/control-panel">
-                        <i className="fas fa-store-alt"></i>
+                    <FontAwesomeIcon icon={faStoreAlt} className="fas fa-store-alt"/>
                         Tienda
                     </a>
 
 
                     <div className="user-options-conteiner">
-                        <a href="../user/profile"><i className="fas fa-user"></i>Hola!
+                        <a href="../user/profile"><FontAwesomeIcon icon={faUser} className="fas fa-user"/>Hola!
                         </a>
                         <div className="options_box">
                             <div className="caja_separadora"></div>
@@ -70,16 +74,16 @@ function Header(props){
 
                     <div></div>
 
-                    <a href="../products/carrito"><i className="fas fa-shopping-cart"></i>Carrito</a>
+                    <a href="../products/carrito"><FontAwesomeIcon icon={faShoppingCart} className="fas fa-shopping-cart"/>Carrito</a>
 
-                    <a href="/"><i className="fas fa-search"></i></a>
+                    <a href="/"><FontAwesomeIcon icon={faSearch} className="fas fa-search"/></a>
 
 
-
+                    
 
                 </div>
                 
-              
+                
             </header>
 
                                         )

@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 import 'fontsource-montserrat'
 import Header from '../components/Header'
 import LeftSideBar from "../components/LeftSideBar";
+import 'font-awesome/css/font-awesome.min.css';
 
 
 const useStyles = makeStyles (()=>({
