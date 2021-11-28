@@ -2,22 +2,23 @@ import React from 'react';
 import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core';
 import {withStyles} from '@material-ui/core/styles' 
 import 'fontsource-montserrat'
+import '../assets/css/Tabla.css'
 
 const StyledTableCell= withStyles(()=>({
     head:{
-        color: 'white',
-        background: 'black',
+        color: 'black',
+        background: 'white',
         textAlign: 'center'
     },
    body:{
         fontSize: 14,
-    },
+    }
     }))(TableCell);
 
 function TablaProductos(props){
     return(
         <TableContainer>
-            <Table>
+            <Table className='Tabla'>
             <TableHead>
             <TableRow>
                <StyledTableCell>Vídeo</StyledTableCell> 
