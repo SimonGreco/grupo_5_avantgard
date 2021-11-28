@@ -1,7 +1,6 @@
 import React from "react";
 import {Grid} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles'
-import Navbar from '../components/Navbar' 
 import 'fontsource-montserrat'
 import Header from '../components/Header'
 import LeftSideBar from "../components/LeftSideBar";
@@ -13,9 +12,18 @@ import TablaProductos from "../components/TablaProductos";
 import Footer from "../components/Footer";
 
 
+
+
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import CategoryIcon from '@material-ui/icons/Category';
 import ViewListIcon from '@material-ui/icons/ViewList';
+
+
+
+
+import imagen1 from '../assets/img/Productos/SintB.png'
+import imagen2 from '../assets/img/Productos/1.webp'
+import imagen3 from '../assets/img/Productos/D_NQ_NP_2X_656031-MLA41372451261_042020-F.webp'
 
 
 
@@ -28,15 +36,17 @@ const useStyles = makeStyles (()=>({
     },
     SeparacionDeGrid:{
         marginLeft:"17%",
-        width: '83%'
+        width: '82%'
     },
     container:{
         paddingTop: '40px',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginLeft: '30px',
+        marginRight: '-50px'
     },
     containerGrafica: {
         marginTop:'40px',
-        backgroundColor:'rgb(73,155,234,1)'
+        backgroundColor:'#d9eef2'
         
     },
     containerTabla:{
@@ -48,26 +58,26 @@ const data = [
     {
       id:1,
       video:
-        "Como Hacer un Split en React JS || React Split Pane || Tutorial en Español (2020)",
+        "Controlador Midi Novation Launchpad",
       fecha: "6 de sep. 2020",
       visualizaciones: 32,
-      imagen: '',
+      imagen: imagen1,
     },
     {
       id:2,
         video:
-          "Cómo Solucionar Error al Crear Applicación de React JS",
+          "Novation Peak Sintetizador Polifónico",
         fecha: "5 de sep. 2020",
         visualizaciones: 31,
-        imagen: '',
+        imagen: imagen2,
       },
       {
       id:3,
         video:
-          "Cómo Utilizar Forever en Node JS || Ejecutar Node JS en Segundo Plano || Background Node JS",
+          "Procesador Sampler De Efectos Dinámicos Korg",
         fecha: "4 de sep. 2020",
         visualizaciones: 21,
-        imagen: '',
+        imagen: imagen3,
       },
   ];
 

@@ -15,6 +15,7 @@
     "chart.js": "^3.6.0",
     "font-awesome": "^4.7.0",
     "fontsource-montserrat": "^4.0.0",
+    "node-fetch": "^3.1.0",
     "react": "^17.0.2",
     "react-chartjs-2": "^4.0.0",
     "react-dom": "^17.0.2",
@@ -45,5 +46,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "start": "set PORT = 3030 && react-scripts start"
 }

@@ -21,6 +21,7 @@ function TablaProductos(props){
             <Table className='Tabla'>
             <TableHead>
             <TableRow>
+            <StyledTableCell>Imagen</StyledTableCell> 
                <StyledTableCell>Vídeo</StyledTableCell> 
                <StyledTableCell>Fecha de Publicación</StyledTableCell> 
                <StyledTableCell>Número de Visualizaciones</StyledTableCell> 
@@ -29,7 +30,9 @@ function TablaProductos(props){
             <TableBody>
                 {props.data.map(elemento=>(
                     <TableRow key={elemento.id}>
-                        <TableCell><img src={elemento.imagen} width="35px" height="25px"/>{"  "}{elemento.video}</TableCell>
+                        <TableCell align='center'><img  src={elemento.imagen}  width="80px"/></TableCell>
+                        
+                        <TableCell align='center' >{"  "}{elemento.video}</TableCell>
                         <TableCell align="center">{elemento.fecha}</TableCell>
                         <TableCell align="center">{elemento.visualizaciones}</TableCell>
                     </TableRow>
