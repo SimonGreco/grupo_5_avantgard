@@ -3,43 +3,38 @@ import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from 
 import {withStyles} from '@material-ui/core/styles' 
 import 'fontsource-montserrat'
 
-const StyledTableCell = withStyles (()=>({
-    head : {
+const StyledTableCell= withStyles(()=>({
+    head:{
         color: 'white',
-        background : 'black',
+        background: 'black',
         textAlign: 'center'
-       
     },
-    body: {
-        fontSize: 14
-    }
-    
-})(TableCell))
+   body:{
+        fontSize: 14,
+    },
+    }))(TableCell);
 
 function TablaProductos(props){
     return(
         <TableContainer>
             <Table>
-                <TableHead>
-                    <TableRow>
-                        <StyledTableCell> HOLA</StyledTableCell>
-                        <StyledTableCell> HOLA</StyledTableCell>
-                        <StyledTableCell> HOLA</StyledTableCell>
+            <TableHead>
+            <TableRow>
+               <StyledTableCell>Vídeo</StyledTableCell> 
+               <StyledTableCell>Fecha de Publicación</StyledTableCell> 
+               <StyledTableCell>Número de Visualizaciones</StyledTableCell> 
+            </TableRow>
+            </TableHead>
+            <TableBody>
+                {props.data.map(elemento=>(
+                    <TableRow key={elemento.id}>
+                        <TableCell><img src={elemento.imagen} width="35px" height="25px"/>{"  "}{elemento.video}</TableCell>
+                        <TableCell align="center">{elemento.fecha}</TableCell>
+                        <TableCell align="center">{elemento.visualizaciones}</TableCell>
                     </TableRow>
-                </TableHead>
-                <TableBody>
-                   
-                        <TableRow >
-                               <TableCell>
-                                   <h1>Hola</h1>
-                                   </TableCell> 
-                                   <TableCell align='center'> HOOLA</TableCell>
-                                   <TableCell align='center'>HOOOOOLA</TableCell>
-                        </TableRow>
-                   
-                </TableBody>
-                </Table>
-
+                ))}
+            </TableBody>
+            </Table>
         </TableContainer>
     )
 }

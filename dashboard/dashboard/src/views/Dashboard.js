@@ -43,6 +43,39 @@ const useStyles = makeStyles (()=>({
     }
 }))
 
+const data = [
+    {
+      id:1,
+      video:
+        "Como Hacer un Split en React JS || React Split Pane || Tutorial en Español (2020)",
+      fecha: "6 de sep. 2020",
+      visualizaciones: 32,
+      imagen: '',
+    },
+    {
+      id:2,
+        video:
+          "Cómo Solucionar Error al Crear Applicación de React JS",
+        fecha: "5 de sep. 2020",
+        visualizaciones: 31,
+        imagen: '',
+      },
+      {
+      id:3,
+        video:
+          "Cómo Utilizar Forever en Node JS || Ejecutar Node JS en Segundo Plano || Background Node JS",
+        fecha: "4 de sep. 2020",
+        visualizaciones: 21,
+        imagen: '',
+      },
+  ];
+
+
+
+
+
+
+
 function Dashboard(props){
     const classes = useStyles()
     return(
@@ -100,10 +133,8 @@ function Dashboard(props){
 
 
             <Grid item xs={12} className={classes.containerTabla}>
-                
-                
-            </Grid>
-
+                    <TablaProductos data={data}/>
+                    </Grid>
 
 
 
