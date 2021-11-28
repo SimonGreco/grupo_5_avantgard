@@ -53,17 +53,16 @@ function Header(props){
 
 
                     <div className="user-options-conteiner">
-                        <a href="../user/profile"><FontAwesomeIcon icon={faUser} className="fas fa-user"/>Hola!
+                        <a href="../user/profile"><FontAwesomeIcon icon={faUser} className="fas fa-user"/>Hola Simon!
                         </a>
                         <div className="options_box">
                             <div className="caja_separadora"></div>
-                            <div className="profile_option a"><a href="../user/profile" className="po_txt"
-                                marginLeft="0px" width="100%" fontSize="12px" color="black" display="inline-block">
+                            <div className="profile_option a"><a href="../user/profile" className="po_txt perfilConteiner">
                                 <p>Perfil</p>
                             </a></div>
-                            <hr width="100%" height="0.5px" margin="0 0" />
-                            <div className="profile_option b"><a href="../user/logout" className="po_txt"
-                                marginLeft="0px" width="100%" fontSize="11px" color="black" display="inline-block">
+                            <hr  className="hrPerfil" />
+                            <div className="profile_option b"><a href="../user/logout" className="po_txt CerrarSesionContainer"
+                               >
                                 <p>Cerrar Sesion</p>
                             </a></div>
                         </div>
