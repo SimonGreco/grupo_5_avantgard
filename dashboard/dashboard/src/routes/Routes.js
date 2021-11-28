@@ -6,7 +6,7 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-      <Route path="/" component={Dashboard} />
+      <Route path="/control-panel" component={Dashboard} />
 
 
       </Switch>

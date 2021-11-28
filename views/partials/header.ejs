@@ -14,7 +14,7 @@
             </span>
             <a href="/user/profile"><i class="fas fa-user"></i></a>
             <% if (locals.userLogged && locals.userLogged.admin==true) { %>
-                <a href="/user/control-panel"><i class="fas fa-store-alt"></i></a>
+                <a href="http://localhost:3030/control-panel"><i class="fas fa-store-alt"></i></a>
                 <% } %>
 
                     <a href="/products/carrito"><i class="fas fa-shopping-cart"></i></a>
@@ -38,7 +38,7 @@
 
         <div class="iconos">
             <% if (locals.userLogged && locals.userLogged.admin==true) { %>
-                <a href="/user/control-panel">
+                <a href="http://localhost:3030/control-panel" >
                     <i class="fas fa-store-alt"></i>
                     Tienda
                 </a>

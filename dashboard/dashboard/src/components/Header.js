@@ -12,7 +12,7 @@ function Header(props){
                 
 
         <header className="main-headder">
-                <a href="/" id="hipervinculoLogo"><img src={logo} id="LGOG" /></a>
+                <a href="http://localhost:3000/" id="hipervinculoLogo"><img src={logo} id="LGOG" /></a>
 
 
                 <div className="phone-menu">
@@ -37,31 +37,31 @@ function Header(props){
 
                 </div>
                 <div className="txt">
-                    <p><a href="/#Categoriass">Categorías</a></p>
+                    <p><a href="http://localhost:3000/#Categoriass">Categorías</a></p>
                 </div><div className="txt">
-                    <p><a href="/products/#Ofertass">Ofertas</a></p>
+                    <p><a href="http://localhost:3000/products/#Ofertass">Ofertas</a></p>
                 </div><div className="txt">
                     <p>Historial</p>
                 </div><div className="txt">
-                    <p><a href="/products">Explorar</a></p>
+                    <p><a href="http://localhost:3000/products">Explorar</a></p>
                 </div><div className="iconos">
 
-                    <a href="/user/control-panel">
+                    <a href="/control-panel">
                     <FontAwesomeIcon icon={faStoreAlt} className="fas fa-store-alt"/>
                         Tienda
                     </a>
 
 
                     <div className="user-options-conteiner">
-                        <a href="../user/profile"><FontAwesomeIcon icon={faUser} className="fas fa-user"/>Hola Simon!
+                        <a href="http://localhost:3000/user/profile"><FontAwesomeIcon icon={faUser} className="fas fa-user"/>Hola Simon!
                         </a>
                         <div className="options_box">
                             <div className="caja_separadora"></div>
-                            <div className="profile_option a"><a href="../user/profile" className="po_txt perfilConteiner">
+                            <div className="profile_option a"><a href="http://localhost:3000/user/profile" className="po_txt perfilConteiner">
                                 <p>Perfil</p>
                             </a></div>
                             <hr  className="hrPerfil" />
-                            <div className="profile_option b"><a href="../user/logout" className="po_txt CerrarSesionContainer"
+                            <div className="profile_option b"><a href="http://localhost:3000/user/logout" className="po_txt CerrarSesionContainer"
                                >
                                 <p>Cerrar Sesion</p>
                             </a></div>
@@ -73,7 +73,7 @@ function Header(props){
 
                     <div></div>
 
-                    <a href="../products/carrito"><FontAwesomeIcon icon={faShoppingCart} className="fas fa-shopping-cart"/>Carrito</a>
+                    <a href="http://localhost:3000/products/carrito"><FontAwesomeIcon icon={faShoppingCart} className="fas fa-shopping-cart"/>Carrito</a>
 
                     <a href="/"><FontAwesomeIcon icon={faSearch} className="fas fa-search"/></a>
 

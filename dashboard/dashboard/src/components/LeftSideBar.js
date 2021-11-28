@@ -5,6 +5,8 @@ import {faBars, faHouseUser, faCog, faBoxOpen, faPiggyBank, faTruck, faCartArrow
 
 function LeftSideBar(){
     return(
+
+        
         <article className="mainControlPanel">
             <section className="optionsConteinerPhone">
                 <FontAwesomeIcon icon={faBars} className="fas fa-bars"/>
@@ -24,10 +26,10 @@ function LeftSideBar(){
                 <h4><FontAwesomeIcon icon={faHouseUser} className="fas fa-house-user"/> Inicio</h4>
                 <h4>Mi tienda</h4>
 
-                <p><FontAwesomeIcon icon={faCog} className="fas fa-cog"/> Datos</p>
-                <p id="productos"><FontAwesomeIcon icon={faBoxOpen} className="fas fa-box-open" /> Productos</p>
-                <p><FontAwesomeIcon icon={faPiggyBank} className="fas fa-piggy-bank" /> Formas de pago</p>
-                <p><FontAwesomeIcon icon={faTruck} className="fas fa-truck" /> Formas de envío</p>
+                <a href="/"><p><FontAwesomeIcon icon={faCog} className="fas fa-cog"/> Datos</p></a>
+                <a href="http://localhost:3000/user/control-panel"><p id="productos" className="productosss"><FontAwesomeIcon icon={faBoxOpen} className="fas fa-box-open" /> Productos</p></a>
+                <a href="/"> <p><FontAwesomeIcon icon={faPiggyBank} className="fas fa-piggy-bank" /> Formas de pago</p></a>
+                <a href="/"><p><FontAwesomeIcon icon={faTruck} className="fas fa-truck" /> Formas de envío</p></a>
 
                 <h4>Mis ventas</h4>
                 <p><FontAwesomeIcon icon={faCartArrowDown} className="fas fa-cart-arrow-down" /> Ventas</p>
