@@ -3,80 +3,80 @@
 
 <head>
     <%- include("../partials/head") %>
-        <title>Registro</title>
-        <link href="/css/registro.css" rel="stylesheet">
-        <link rel="stylesheet" href="/css/video.css">
-
+    <title>Registro</title>
+    <link href="/css/registro.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/video.css">
+    
 </head>
 
 <body>
     <%- include("../partials/header") %>
 
 
-        <main class="background">
-            <video autoplay muted loop id="myVideo">
-                <source src="/img/pexels-ron-lach-7087627.mp4" type="video/mp4">
-            </video>
-            <br>
-            <br>
+    <main  class="background">
+        <video autoplay muted loop id="myVideo">
+            <source src="/img/pexels-ron-lach-7087627.mp4" type="video/mp4">
+          </video>
+        <br>
+        <br>
+       
 
-
-            <div class="cajaRegistro">
-                <img src="/img/Logo Horizotal Fondo blanco.png" alt="AvantGard" class="marca">
-                <hr>
-                <p class="completarDatos">Completa tus datos!</p>
+        <div class="cajaRegistro">
+            <img src="/img/Logo Horizotal Fondo blanco.png" alt="AvantGard" class="marca">
+            <hr>
+            <p class="completarDatos">Completa tus datos!</p>
+            <br>
+            <form action="/user" method="POST" class="formulario" id= "formulario" >
+                <div class="field first_name">
+                    <input type="text" name="first_name" placeholder="Nombre" class=" renglon" id=" renglon" value="<%= locals.oldData ? oldData.first_name: null %>">   
+                    <p class="error"></p>
+                </div>
+       
                 <br>
-                <form action="/user" method="POST" class="formulario" id="formulario">
-                    <input type="text" name="first_name" placeholder="Nombre" class=" renglon" id=" renglon"
-                        value="<%= locals.oldData ? oldData.first_name: null %>">
-
-                    <br>
-                    <% if (locals.errors && errors.first_name) { %>
-                        <p style="color: rgb(173, 2, 2); font-size: 13px; margin-right: 40%;">
-                            <%= locals.errors.first_name.msg %>
-                        </p>
-                        <% } %>
-                            <br>
-                            <input type="text" name="last_name" placeholder="Apellido" class="renglon "
-                                value="<%= locals.oldData ? oldData.last_name: null %>">
-
-                            <br>
-                            <% if (locals.errors && errors.last_name) { %>
-                                <p style="color: rgb(173, 2, 2); font-size: 13px; margin-right: 40%;">
-                                    <%= locals.errors.last_name.msg %>
-                                </p>
-                                <% } %>
-                                    <br>
-                                    <input type="email" name="email" placeholder="E-Mail" class="renglon"
-                                        value="<%= locals.oldData ? oldData.email: null %>">
-                                    <br>
-                                    <% if (locals.errors && errors.email) { %>
-                                        <p style="color: rgb(173, 2, 2); font-size: 13px; margin-right: 40%;">
-                                            <%= locals.errors.email.msg %>
-                                        </p>
-                                        <% } %>
-                                            <br>
-                                            <input type="password" name="password" placeholder="Clave" class="renglon"
-                                                value="<%= locals.oldData ? oldData.password: null %>">
-                                            <br>
-                                            <% if (locals.errors && errors.password) { %>
-                                                <p style="color: rgb(173, 2, 2); font-size: 13px; margin-right: 40%;">
-                                                    <%= locals.errors.password.msg %>
-                                                </p>
-                                                <% } %>
-                                                    <br>
-                                                    <div class="ubicacionBoton">
-                                                        <button class="boton" type="submit">Continuar</button>
-                                                    </div>
-                </form>
-
-            </div>
-
+                <% if (locals.errors && errors.first_name) { %>
+                    <p style="color: rgb(173, 2, 2); font-size: 13px; margin-right: 40%;" ><%= locals.errors.first_name.msg %>  </p>
+                   <% } %>  
+                <br>
+                <div class="field last_name">
+                    <input type="text" name="last_name" placeholder="Apellido" class="renglon " value="<%= locals.oldData ? oldData.last_name: null %>">
+                    <p class="error"></p>
+                </div>
+                
+                <br>
+                <% if (locals.errors && errors.last_name) { %>
+                    <p style="color: rgb(173, 2, 2); font-size: 13px; margin-right: 40%;" ><%= locals.errors.last_name.msg %>  </p>
+                   <% } %>  
+                <br>
+                <div class="field email">
+                    <input type="email" name="email" placeholder="E-Mail" class="renglon" value="<%= locals.oldData ? oldData.email: null %>">
+                    <p class="error"></p>
+                </div>
+                <br>
+                <% if (locals.errors && errors.email) { %>
+                    <p style="color: rgb(173, 2, 2); font-size: 13px; margin-right: 40%;" ><%= locals.errors.email.msg %>  </p>
+                   <% } %>  
+                <br>
+                <div class="field password">
+                    <input type="password" name="password" placeholder="Clave" class="renglon" value="<%= locals.oldData ? oldData.password: null %>">
+                    <p class="error"></p>
+                </div>
+                <br>
+                <% if (locals.errors && errors.password) { %>
+                    <p style="color: rgb(173, 2, 2); font-size: 13px; margin-right: 40%;" ><%= locals.errors.password.msg %>  </p>
+                   <% } %>  
             <br>
-            <br>
-        </main>
-        <%- include("../partials/footer") %>
-            <!-- <script src="/js/registerValidation.js"> </script> -->
+                <div class="ubicacionBoton">
+                <button class="boton" type="submit">Continuar</button>
+                 </div>
+            </form>
+            
+        </div>
+        
+        <br>
+        <br>
+    </main>
+    <%- include("../partials/footer") %>
+    <script src = "/js/registerValidation.js"> </script> 
 </body>
 
 </html>
