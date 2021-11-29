@@ -4,7 +4,7 @@ window.addEventListener("load", function () {
     let inputs = document.querySelectorAll("form.formulario input");
 
     const expresiones = {
-        password: /^.{4,12}$/, // 4 a 12 digitos.
+        password: /^.{8,1200}$/, // 4 a 12 digitos.
         email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
         first_name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
         last_name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -20,10 +20,10 @@ window.addEventListener("load", function () {
     const validarFormulario = (e) => {
         switch (e.target.name) {
             case "email":
-                validarCampo(expresiones.email, e.target, 'email', "debe ser valido");
+                validarCampo(expresiones.email, e.target, 'email', "Debes usar un email valido");
                 break;
             case "password":
-                validarCampo(expresiones.password, e.target, 'password', "acepta de 4 a 12 caracteres");
+                validarCampo(expresiones.password, e.target, 'password', "La contraseña tiene que ser de 8 caracteres o mas");
                 break;
             case "first_name":
                 validarCampo(expresiones.first_name, e.target, "first_name", "El nombre no es válido");
@@ -37,12 +37,12 @@ window.addEventListener("load", function () {
         let card = document.querySelector(`.field.${campo} p.error`);
         card.innerHTML = ""
         if (input.value == "") {
-            card.innerHTML = `El campo ${input.name} no puede estar vacio`
+            card.innerHTML = `El campo no puede estar vacio`
             card.style.margin = "revert"
             campos[campo] = false
 
         } else if (!expresion.test(input.value)) {
-            card.innerHTML = `El campo ${input.name} ${validacion}`
+            card.innerHTML = `${validacion}`
             card.style.margin = "revert"
             campos[campo] = false
         } else {
