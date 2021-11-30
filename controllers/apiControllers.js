@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path")
 const fs = require("fs");
 const db = require("../database/models");
+const { info } = require("console");
 
 let apiControllers = {
     userList: function (req, res) {
@@ -16,7 +17,8 @@ let apiControllers = {
                             name: usuario.first_name,
                             last_name: usuario.last_name,
                             email: usuario.email,
-                            detail: "/api/users/" + usuario.id
+                            detail: "/api/users/" + usuario.id,
+                            date: usuario.creationDate
 
                         }
                     })
@@ -82,7 +84,8 @@ let apiControllers = {
                         name: producto.name,
                         description: producto.description,
                         detail: "api/products/" + producto.id,
-                        image: "http://localhost:3000/img/Productos/" + producto.image
+                        image: "http://localhost:3000/img/Productos/" + producto.image,
+                        date: producto.creationDate
 
                     }
                 }),

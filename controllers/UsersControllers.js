@@ -79,7 +79,8 @@ let usersController = {
                             documento: "",
                             phone: "",
                             address: "",
-                            cityId: 1
+                            cityId: 1,
+                            creationDate: new Date()
                         })
 
                         res.redirect("/user/login");

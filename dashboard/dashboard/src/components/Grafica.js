@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useEffect, useState} from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -23,8 +23,90 @@ ChartJS.register(
 
 
 function Grafica(props){
+
+    const [infoDataBase, setInfoDataBase] = useState({ products: [] });
+    const [infoDataBaseUser, setInfoDataBaseUser] = useState({ users: [] });
+
+    useEffect(() => {
+        fetch('/api/products')
+            .then(response => {
+                return response.json()
+            })
+            .then(data => {
+                setInfoDataBase(data)
+                fetch('/api/users')
+                    .then(response => {
+                        return response.json()
+                    })
+                    .then(data => {
+                        setInfoDataBaseUser(data)
+                        
+                    })
+            })
+            
+
+    },[])
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+            function hallarMes(numeroDeMes){
+                var contador = 0;
+                if(infoDataBaseUser.users[1]){
+                    for(let i = 0; i < infoDataBaseUser.users.length; i++){
+                        var date = new Date(infoDataBaseUser.users[i].date);
+                        var month =  date.getMonth() 
+                        if( month === numeroDeMes){
+                            contador = contador + 1 
+                        }
+                    }
+                    return contador
+                }
+                
+            };
+            function hallarMesProductos(numeroDeMes){
+                var contador = 0;
+                if(infoDataBase.products[1]){
+                    for(let i = 0; i < infoDataBase.products.length; i++){
+                        var date = new Date(infoDataBase.products[i].date);
+                        var month =  date.getMonth() + 1
+                        if( month === numeroDeMes){
+                            contador = contador + 1 
+                        }
+                    }
+                    return contador
+                }
+                
+            }
+           
+
+            
+
+
+
+
+
+
+
+
+
+
+
     const data= {
-        labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre' ],
+        labels: ['En', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ag', 'Sept', 'Oct', 'Nov', 'Dic'  ],
         datasets:[
             {
             label:'Usuarios registrados',
@@ -38,7 +120,7 @@ function Grafica(props){
             pointHoverBorderColor: 'rgba(73,155,234,1)',
             pointRadius:1,
             pointHitRadius: 10,
-            data: [.17,19,156,357,565,1149]
+            data: [hallarMes(1),hallarMes(2),hallarMes(3),hallarMes(4),hallarMes(5),hallarMes(6),hallarMes(7),hallarMes(8),hallarMes(9),hallarMes(10),hallarMes(11),hallarMes(12)]
             },
             {
                 label:'Productos publicados',
@@ -52,7 +134,7 @@ function Grafica(props){
                 pointHoverBorderColor: 'red',
                 pointRadius:1,
                 pointHitRadius: 10,
-                data: [0,3,5,357,5,1]
+                data: [hallarMesProductos(1),hallarMesProductos(2),hallarMesProductos(3),hallarMesProductos(4),hallarMesProductos(5),hallarMesProductos(6),hallarMesProductos(7),hallarMesProductos(8),hallarMesProductos(9),hallarMesProductos(10),hallarMesProductos(11),hallarMesProductos(12)]
                 }
 
         ]

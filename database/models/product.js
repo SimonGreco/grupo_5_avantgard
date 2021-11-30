@@ -46,6 +46,9 @@ module.exports = function (sequelize, dataTypes) {
         userId: {
             type: dataTypes.INTEGER,
 
+        },
+        creationDate: {
+            type: dataTypes.DATEONLY    
         }
 
     };

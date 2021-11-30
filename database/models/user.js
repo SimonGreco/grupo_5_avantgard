@@ -48,6 +48,9 @@ module.exports = function (sequelize, dataTypes) {
 
 
         },
+        creationDate: {
+            type: dataTypes.DATEONLY
+        }
     };
 
     let config = {

@@ -114,6 +114,7 @@ let productController = {
                 oferta: req.body.oferta,
                 categoryId: req.body.categoria,
                 userId: req.session.userLoged.id,
+                creationDate: new Date()
             }).then(function () {
                 res.redirect("/products/")
             })
