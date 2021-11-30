@@ -1,10 +1,7 @@
 import React from 'react'
-import {Card, Typography, CardContent, CardActions } from '@material-ui/core';
+import {Card, Typography, CardContent } from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles'
-import Navbar from '../components/Navbar' 
 import 'fontsource-montserrat'
-import Header from '../components/Header'
-import LeftSideBar from "../components/LeftSideBar";
 import 'font-awesome/css/font-awesome.min.css';
 
 

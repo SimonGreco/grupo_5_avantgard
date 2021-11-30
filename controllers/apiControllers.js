@@ -81,7 +81,9 @@ let apiControllers = {
                         id: producto.id,
                         name: producto.name,
                         description: producto.description,
-                        detail: "api/products/" + producto.id
+                        detail: "api/products/" + producto.id,
+                        image: "http://localhost:3000/img/Productos/" + producto.image
+
                     }
                 }),
 

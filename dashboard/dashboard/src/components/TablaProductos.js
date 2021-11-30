@@ -1,4 +1,4 @@
-import React from 'react';
+import {React} from 'react';
 import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core';
 import {withStyles} from '@material-ui/core/styles' 
 import 'fontsource-montserrat'
@@ -16,13 +16,17 @@ const StyledTableCell= withStyles(()=>({
     }))(TableCell);
 
 function TablaProductos(props){
+
+   
+
+
     return(
         <TableContainer>
             <Table className='Tabla'>
             <TableHead>
             <TableRow>
             <StyledTableCell>Imagen</StyledTableCell> 
-               <StyledTableCell>Vídeo</StyledTableCell> 
+               <StyledTableCell>Titulo</StyledTableCell> 
                <StyledTableCell>Fecha de Publicación</StyledTableCell> 
                <StyledTableCell>Número de Visualizaciones</StyledTableCell> 
             </TableRow>
@@ -30,13 +34,14 @@ function TablaProductos(props){
             <TableBody>
                 {props.data.map(elemento=>(
                     <TableRow key={elemento.id}>
-                        <TableCell align='center'><img  src={elemento.imagen}  width="80px"/></TableCell>
+                        <TableCell align='center'><img  src={elemento.imagen}  width="80px" alt='imagen del producto'/></TableCell>
                         
                         <TableCell align='center' >{"  "}{elemento.video}</TableCell>
                         <TableCell align="center">{elemento.fecha}</TableCell>
                         <TableCell align="center">{elemento.visualizaciones}</TableCell>
                     </TableRow>
                 ))}
+
             </TableBody>
             </Table>
         </TableContainer>

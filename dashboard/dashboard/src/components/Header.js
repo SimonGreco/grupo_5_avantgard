@@ -12,7 +12,7 @@ function Header(props){
                 
 
         <header className="main-headder">
-                <a href="http://localhost:3000/" id="hipervinculoLogo"><img src={logo} id="LGOG" /></a>
+                <a href="http://localhost:3000/" id="hipervinculoLogo"><img src={logo} id="LGOG" alt='imagen del producto' /></a>
 
 
                 <div className="phone-menu">

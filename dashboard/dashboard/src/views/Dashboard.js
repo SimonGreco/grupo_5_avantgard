@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState,useEffect} from "react";
 import {Grid} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles'
 import 'fontsource-montserrat'
@@ -18,12 +18,6 @@ import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import CategoryIcon from '@material-ui/icons/Category';
 import ViewListIcon from '@material-ui/icons/ViewList';
 
-
-
-
-import imagen1 from '../assets/img/Productos/SintB.png'
-import imagen2 from '../assets/img/Productos/1.webp'
-import imagen3 from '../assets/img/Productos/D_NQ_NP_2X_656031-MLA41372451261_042020-F.webp'
 
 
 
@@ -54,32 +48,7 @@ const useStyles = makeStyles (()=>({
     }
 }))
 
-const data = [
-    {
-      id:1,
-      video:
-        "Controlador Midi Novation Launchpad",
-      fecha: "6 de sep. 2020",
-      visualizaciones: 32,
-      imagen: imagen1,
-    },
-    {
-      id:2,
-        video:
-          "Novation Peak Sintetizador Polifónico",
-        fecha: "5 de sep. 2020",
-        visualizaciones: 31,
-        imagen: imagen2,
-      },
-      {
-      id:3,
-        video:
-          "Procesador Sampler De Efectos Dinámicos Korg",
-        fecha: "4 de sep. 2020",
-        visualizaciones: 21,
-        imagen: imagen3,
-      },
-  ];
+
 
 
 
@@ -88,6 +57,60 @@ const data = [
 
 
 function Dashboard(props){
+
+  const [infoDataBase, setInfoDataBase] = useState({ products: [] });
+    const [infoDataBaseUser, setInfoDataBaseUser] = useState({ users: [] });
+
+    useEffect(() => {
+        fetch('/api/products')
+            .then(response => {
+                return response.json()
+            })
+            .then(data => {
+                setInfoDataBase(data)
+                fetch('/api/users')
+                    .then(response => {
+                        return response.json()
+                    })
+                    .then(data => {
+                        setInfoDataBaseUser(data)
+                        
+                    })
+            })
+            
+
+    },[])
+
+    const data = [
+      {
+        id: infoDataBase.products[1] ? infoDataBase.products[(infoDataBase.products.length -1)].id: "1" ,
+        video:
+        infoDataBase.products[1] ? infoDataBase.products[(infoDataBase.products.length -1)].name: "Titulo del producto" ,
+        fecha: "6 de sep. 2020",
+        visualizaciones: 32,
+        imagen: infoDataBase.products[1] ? infoDataBase.products[(infoDataBase.products.length -1)].image: "",
+      },
+      {
+        id:infoDataBase.products[1] ? infoDataBase.products[(infoDataBase.products.length -2)].id: "2",
+          video:
+          infoDataBase.products[1] ? infoDataBase.products[(infoDataBase.products.length -2)].name: "Titulo del producto",
+          fecha: "5 de sep. 2020",
+          visualizaciones: 31,
+          imagen: infoDataBase.products[1] ? infoDataBase.products[(infoDataBase.products.length -2)].image: "",
+        },
+        {
+        id:infoDataBase.products[1] ? infoDataBase.products[(infoDataBase.products.length -3)].id: "3",
+          video:
+          infoDataBase.products[1] ? infoDataBase.products[(infoDataBase.products.length -3)].name: "Titulo del producto",
+          fecha: "4 de sep. 2020",
+          visualizaciones: 21,
+          imagen: infoDataBase.products[1] ? infoDataBase.products[(infoDataBase.products.length -3)].image: "",
+        },
+    ];
+
+
+
+
     const classes = useStyles()
     return(
         <div className={classes.root}>
@@ -95,19 +118,19 @@ function Dashboard(props){
            <LeftSideBar />
             <Grid container spacing={3} className={classes.SeparacionDeGrid}>
            <Grid item xs={12} sm={4} md={4} lg={4} xl={4} >
-            <CardsHeader icono={<PeopleAltIcon className={classes.iconos} />} titulo='Cantidad de usuarios' texto='100' color='#11111' font='black'>
+            <CardsHeader icono={<PeopleAltIcon className={classes.iconos} />} titulo='Cantidad de usuarios' texto={infoDataBaseUser.count} color='#11111' font='black'>
 
             </CardsHeader>
 
            </Grid>
            <Grid item xs={12} sm={4} md={4} lg={4} xl={4} >
-           <CardsHeader icono={<CategoryIcon className={classes.iconos} />} titulo='Cantidad de Categorias' texto='3' color='#11111' font='black'>
+           <CardsHeader icono={<CategoryIcon className={classes.iconos} />} titulo='Cantidad de Categorias' texto={5} color='#11111' font='black'>
 
 </CardsHeader>
 
            </Grid>
            <Grid item xs={12} sm={4} md={4} lg={4} xl={4} >
-           <CardsHeader icono={<ViewListIcon className={classes.iconos} />} titulo='Cantidad de productos' texto='37' color='#11111' font='black'>
+           <CardsHeader icono={<ViewListIcon className={classes.iconos} />} titulo='Cantidad de productos' texto={infoDataBase.count} color='#11111' font='black'>
 
 </CardsHeader>
 

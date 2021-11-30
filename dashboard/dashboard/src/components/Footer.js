@@ -6,7 +6,7 @@ function Footer(){
     return(
         <footer class="main-footer">
     <div class="footer">
-        <div class="img"><img src={logo} /></div>
+        <div class="img"><img src={logo}  alt='imagen del producto'/></div>
 
         <div class="footer-text-conteiner">
             <div class="footer-text">

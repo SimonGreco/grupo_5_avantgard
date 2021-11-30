@@ -34,7 +34,7 @@ function Navbar(props){
                     AvantGard
                     </Typography>
                     <IconButton color='inherit'>
-                           <img src={require('../assets/img/isotipo.png')} width='40px' height='40px' className={classes.imagen} />
+                           <img src={require('../assets/img/isotipo.png')} width='40px' height='40px' className={classes.imagen} alt='imagen del producto' />
                         </IconButton>
                 </Toolbar>
                 </AppBar>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Typography, CardContent, CardActions } from '@material-ui/core';
+import {Card, Typography, CardContent } from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles' 
 import 'fontsource-montserrat'
 
