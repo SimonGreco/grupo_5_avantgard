@@ -80,13 +80,17 @@ function Dashboard(props){
             
 
     },[])
-
+    function getDate(producto){
+        var date = new Date(producto);
+        var fecha = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear()
+        return fecha
+    }
     const data = [
       {
         id: infoDataBase.products[1] ? infoDataBase.products[(infoDataBase.products.length -1)].id: "1" ,
         video:
         infoDataBase.products[1] ? infoDataBase.products[(infoDataBase.products.length -1)].name: "Titulo del producto" ,
-        fecha: "6 de sep. 2020",
+        fecha: infoDataBase.products[1] ? getDate(infoDataBase.products[(infoDataBase.products.length -1)].date): "1" ,
         visualizaciones: 32,
         imagen: infoDataBase.products[1] ? infoDataBase.products[(infoDataBase.products.length -1)].image: "",
       },
@@ -94,7 +98,7 @@ function Dashboard(props){
         id:infoDataBase.products[1] ? infoDataBase.products[(infoDataBase.products.length -2)].id: "2",
           video:
           infoDataBase.products[1] ? infoDataBase.products[(infoDataBase.products.length -2)].name: "Titulo del producto",
-          fecha: "5 de sep. 2020",
+          fecha: infoDataBase.products[1] ? getDate(infoDataBase.products[(infoDataBase.products.length -2)].date): "1",
           visualizaciones: 31,
           imagen: infoDataBase.products[1] ? infoDataBase.products[(infoDataBase.products.length -2)].image: "",
         },
@@ -102,11 +106,12 @@ function Dashboard(props){
         id:infoDataBase.products[1] ? infoDataBase.products[(infoDataBase.products.length -3)].id: "3",
           video:
           infoDataBase.products[1] ? infoDataBase.products[(infoDataBase.products.length -3)].name: "Titulo del producto",
-          fecha: "4 de sep. 2020",
+          fecha: infoDataBase.products[1] ? getDate(infoDataBase.products[(infoDataBase.products.length -3)].date): "1",
           visualizaciones: 21,
           imagen: infoDataBase.products[1] ? infoDataBase.products[(infoDataBase.products.length -3)].image: "",
         },
     ];
+
 
 
 

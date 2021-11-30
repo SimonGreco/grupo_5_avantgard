@@ -5,8 +5,8 @@ import {faBars, faHouseUser, faCog, faBoxOpen, faPiggyBank, faTruck, faCartArrow
 
 function LeftSideBar(){
     return(
-
-        
+        <main>
+<div className="control-panel-cover"></div>
         <article className="mainControlPanel">
             <section className="optionsConteinerPhone">
                 <FontAwesomeIcon icon={faBars} className="fas fa-bars"/>
@@ -38,6 +38,9 @@ function LeftSideBar(){
             </section>
 
         </article>
+
+        </main>
+        
     )
 }
 
