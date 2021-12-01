@@ -82,7 +82,7 @@ function Dashboard(props){
     },[])
     function getDate(producto){
         var date = new Date(producto);
-        var fecha = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear()
+        var fecha = (date.getDate() + 1) + "/" + (date.getMonth() + 1) + "/" + date.getFullYear()
         return fecha
     }
     const data = [

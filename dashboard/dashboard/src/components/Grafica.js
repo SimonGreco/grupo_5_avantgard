@@ -68,7 +68,7 @@ function Grafica(props){
                 if(infoDataBaseUser.users[1]){
                     for(let i = 0; i < infoDataBaseUser.users.length; i++){
                         var date = new Date(infoDataBaseUser.users[i].date);
-                        var month =  date.getMonth() 
+                        var month =  date.getMonth() + 1
                         if( month === numeroDeMes){
                             contador = contador + 1 
                         }
