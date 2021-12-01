@@ -53,7 +53,7 @@ function Header(props){
 
 
                     <div className="user-options-conteiner">
-                        <a href="http://localhost:3000/user/profile"><FontAwesomeIcon icon={faUser} className="fas fa-user"/>Hola Simon!
+                        <a href="http://localhost:3000/user/profile" c><FontAwesomeIcon icon={faUser} className="fas fa-user"/>Hola Simon!
                         </a>
                         <div className="options_box">
                             <div className="caja_separadora"></div>

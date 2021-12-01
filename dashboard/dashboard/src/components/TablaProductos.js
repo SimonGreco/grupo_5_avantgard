@@ -34,11 +34,13 @@ function TablaProductos(props){
             <TableBody>
                 {props.data.map(elemento=>(
                     <TableRow key={elemento.id}>
-                        <TableCell align='center'><img  src={elemento.imagen}  width="80px" alt='imagen del producto'/></TableCell>
+                       
+                        <TableCell align='center'> <a href={'http://localhost:3000/products/' + elemento.id}><img  src={elemento.imagen}  width="80px" alt='imagen del producto'/></a></TableCell>
                         
                         <TableCell align='center' >{"  "}{elemento.video}</TableCell>
                         <TableCell align="center">{elemento.fecha}</TableCell>
                         <TableCell align="center">{elemento.visualizaciones}</TableCell>
+                        
                     </TableRow>
                 ))}
 
