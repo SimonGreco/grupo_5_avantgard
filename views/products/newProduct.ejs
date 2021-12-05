@@ -71,6 +71,7 @@
                         <%= locals.errors.image.msg %>
                     </p>
                     <% } %>
+                    <p class="formato-imagen" style="display: none; color: red;">El formato del archivo debe ser válido (JPG, JPEG, PNG, GIF)</p>
 
 
                         <h4>Titulo</h4>
@@ -86,6 +87,9 @@
                                     <%= locals.errors.name.msg %>
                                 </p>
                                 <% } %>
+                                <p class="titulo-obligatorio" style="display: none; color: red;">El nombre del producto es obligatorio</p>
+                                <br>
+                                <p class="titulo-caracteres" style="display: none; color: red;">El título debe tener al menos 5 caracteres</p>
 
 
                                 <h4>Descripcion</h4>
@@ -101,6 +105,7 @@
                                             <%= locals.errors.description.msg %>
                                         </p>
                                         <% } %>
+                                        <p class="descripcion-caracteres" style="display: none; color: red;">La descripción debe tener al menos 20 caracteres</p>
 
                                         <h4>Precio</h4>
                                         <p>Elige una divisa y agrega el precio completo del artículo tal como se muestra
@@ -187,7 +192,7 @@
             <%- include("../partials/footer") %>
         </div>
 
-        <script src="/js/frontValidation.js"></script>
+        <script src="/js/productValidation.js"></script>
 
 </body>
 

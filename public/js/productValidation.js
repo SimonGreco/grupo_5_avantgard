@@ -6,23 +6,23 @@ window.addEventListener("load", function () {
     putTitle.addEventListener("change", function (e) {
         e.preventDefault();
         if (putTitle.value == "") {
-            alert("El nombre del producto es obligatorio");
+            document.querySelector("p.titulo-obligatorio").style.display = "inline-block"
         } else if (putTitle.value.length < 5) {
-            alert("El título debe tener al menos 5 caracteres");
+            document.querySelector("p.titulo-caracteres").style.display = "inline-block"
         }
     })
     
     putDescription.addEventListener("change", function (e) {
         e.preventDefault();
         if (putDescription.value.length < 20) {
-            alert("La descripción debe tener al menos 20 caracteres y no puede estar vacia");
+            document.querySelector("p.descripcion-caracteres").style.display = "inline-block"
         }
     })
 
     putImage.addEventListener("change", function (e) {
         e.preventDefault();
-        if (putImage.file != "JPG", "JPEG", "PNG") {
-            alert("El formato del archivo debe ser válido (JPG, JPEG, PNG)");
+        if (putImage.file != "JPG", "JPEG", "PNG", "GIF") {
+            document.querySelector("p.formato-imagen").style.display = "inline-block"
         }})
 });
 
