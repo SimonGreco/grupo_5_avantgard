@@ -79,13 +79,13 @@
                             recomendamos usar menos de 65.
                         </p>
 
-                        <input type="text" name="name" id="Titulo" maxlength="150" class="formulario-txt"
-                            value="<%= locals.oldData ? oldData.name: null %>">
-                        <% if (locals.errors && errors.name) { %>
-                            <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
-                                <%= locals.errors.name.msg %>
-                            </p>
-                            <% } %>
+                            <input type="text" name="name" id="Titulo" maxlength="150" class="formulario-txt"
+                                value="<%= locals.oldData ? oldData.name: null %>">
+                            <% if (locals.errors && errors.name) { %>
+                                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                                    <%= locals.errors.name.msg %>
+                                </p>
+                                <% } %>
 
 
                                 <h4>Descripcion</h4>
@@ -93,14 +93,14 @@
                                     que las personas
                                     comprendan los beneficios que ofrece.</p>
 
-                                <textarea type="text" name="description" id="Titulo" maxlength="1500"
-                                    class="Descripcion"
-                                    value="<%= locals.oldData ? oldData.description: null %>"></textarea>
-                                <% if (locals.errors && errors.description) { %>
-                                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
-                                        <%= locals.errors.description.msg %>
-                                    </p>
-                                    <% } %>
+                                    <textarea type="text" name="description" id="Titulo" maxlength="1500"
+                                        class="Descripcion"
+                                        value="<%= locals.oldData ? oldData.description: null %>"></textarea>
+                                    <% if (locals.errors && errors.description) { %>
+                                        <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                                            <%= locals.errors.description.msg %>
+                                        </p>
+                                        <% } %>
 
                                         <h4>Precio</h4>
                                         <p>Elige una divisa y agrega el precio completo del artículo tal como se muestra
@@ -187,7 +187,7 @@
             <%- include("../partials/footer") %>
         </div>
 
-        <!-- <script src="/js/frontValidation.js"></script> -->
+        <script src="/js/frontValidation.js"></script>
 
 </body>
 
